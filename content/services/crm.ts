@@ -75,7 +75,7 @@ const service: Service = {
         {
           h2: 'Maxsus CRM yoki tayyor CRM: qaysi biri sizga mos?',
           paragraphs: [
-            "Tayyor CRM (amoCRM, Bitrix24) — tez boshlash uchun yaxshi variant: bir necha kunda ishga tushadi. Lekin jamoa o'sgani sari cheklovlar paydo bo'ladi: har bir foydalanuvchi uchun oylik to'lov, o'zbek tilidagi interfeys yo'qligi, mahalliy to'lov tizimlari bilan murakkab integratsiya va jarayonni shablonga moslashtirish.",
+            "Tayyor CRM (amoCRM, Bitrix24) — tez boshlash uchun yaxshi variant: bir necha kunda ishga tushadi. Lekin jamoa o'sgani sari cheklovlar paydo bo'ladi: har bir foydalanuvchi uchun oylik to'lov, o'zbek tiliga moslashuvning cheklanganligi, mahalliy to'lov tizimlari bilan murakkab integratsiya va jarayonni shablonga moslashtirish.",
             "Maxsus CRM tizimi aynan sizning jarayoningizni raqamlashtiradi: o'quv markazi uchun guruhlar va to'lovlar, klinika uchun yozilish va shifokorlar jadvali, distribyutor uchun agentlar va marshrutlar. Litsenziya uchun har oy to'lov yo'q — kod va ma'lumotlar sizga tegishli.",
           ],
         },
@@ -178,7 +178,7 @@ const service: Service = {
         {
           h2: 'Заказная CRM или готовая: что выбрать',
           paragraphs: [
-            'Готовая CRM (amoCRM, Bitrix24) — хороший вариант для быстрого старта: запускается за несколько дней. Но с ростом команды появляются ограничения: ежемесячная оплата за каждого пользователя, нет узбекского интерфейса, сложная интеграция с местными платёжными системами и необходимость подгонять процесс под шаблон.',
+            'Готовая CRM (amoCRM, Bitrix24) — хороший вариант для быстрого старта: запускается за несколько дней. Но с ростом команды появляются ограничения: ежемесячная оплата за каждого пользователя, ограниченная локализация на узбекский, сложная интеграция с местными платёжными системами и необходимость подгонять процесс под шаблон.',
             'Заказная CRM-система оцифровывает именно ваш процесс: группы и оплаты для учебного центра, запись и расписание врачей для клиники, агенты и маршруты для дистрибьютора. Никаких ежемесячных платежей за лицензии — код и данные принадлежат вам.',
           ],
         },
@@ -281,7 +281,7 @@ const service: Service = {
         {
           h2: 'Custom CRM or off-the-shelf: which fits you?',
           paragraphs: [
-            'An off-the-shelf CRM such as amoCRM or Bitrix24 is a good way to start fast — it is running within days. As the team grows, limits appear: a monthly fee per user, no Uzbek interface, awkward integration with local payment systems, and processes bent to fit a template.',
+            'An off-the-shelf CRM such as amoCRM or Bitrix24 is a good way to start fast — it is running within days. As the team grows, limits appear: a monthly fee per user, limited Uzbek localization, awkward integration with local payment systems, and processes bent to fit a template.',
             'A custom CRM digitizes exactly your process: groups and payments for a training center, appointments and doctor schedules for a clinic, agents and routes for a distributor. No monthly license fees — the code and data are yours.',
           ],
         },

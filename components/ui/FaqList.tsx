@@ -1,5 +1,6 @@
 import type { Faq } from '@/lib/types'
 import { Icon } from './Icon'
+import { Rich } from './Todo'
 
 /** Native <details>: readable without JS, keyboard accessible, indexable. */
 export function FaqList({ items }: { items: Faq[] }) {
@@ -15,7 +16,9 @@ export function FaqList({ items }: { items: Faq[] }) {
               <Icon name="plus" className="size-4" />
             </span>
           </summary>
-          <p className="px-5 pb-6 text-muted sm:px-7">{item.a}</p>
+          <p className="px-5 pb-6 text-muted sm:px-7">
+            <Rich text={item.a} />
+          </p>
         </details>
       ))}
     </div>

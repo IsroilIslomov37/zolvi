@@ -121,6 +121,8 @@ const dictionaries = {
       home: 'Bosh sahifaga qaytish',
     },
     blog: {
+      published: 'Chop etilgan',
+      reading: "O'qish vaqti",
       toc: 'Mundarija',
       minutes: "daqiqa o'qish",
       updated: 'Yangilangan',
@@ -247,6 +249,8 @@ const dictionaries = {
       home: 'На главную',
     },
     blog: {
+      published: 'Опубликовано',
+      reading: 'Время чтения',
       toc: 'Содержание',
       minutes: 'мин чтения',
       updated: 'Обновлено',
@@ -372,6 +376,8 @@ const dictionaries = {
       home: 'Back to home',
     },
     blog: {
+      published: 'Published',
+      reading: 'Reading time',
       toc: 'Contents',
       minutes: 'min read',
       updated: 'Updated',
