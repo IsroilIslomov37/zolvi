@@ -93,6 +93,27 @@ const dictionaries = {
       rights: 'Barcha huquqlar himoyalangan.',
       city: "Toshkent, O'zbekiston",
     },
+    why: {
+      title: 'Nega ZOLVI',
+      items: [
+        {
+          title: 'Avval jarayon, keyin kod',
+          text: 'Har bir loyiha jarayonlaringiz xaritasi va muammolar auditidan boshlanadi — biz avval nimani va nima uchun qurishni tushunamiz.',
+        },
+        {
+          title: 'Har hafta ishlaydigan versiya',
+          text: "Oylab kutmaysiz: har hafta jonli test muhitida yangi versiyani ko'rasiz va yo'nalishni o'zgartira olasiz.",
+        },
+        {
+          title: "Kod va ma'lumotlar sizniki",
+          text: "Manba kodi, hujjatlar va kirish huquqlari sizga topshiriladi. Istalgan vaqtda boshqa jamoaga o'tishingiz mumkin.",
+        },
+        {
+          title: 'Mahalliy sharoitga moslangan',
+          text: "O'zbek, rus va ingliz tillari, Click, Payme, Uzum, 1C va Telegram bilan integratsiya — boshidanoq hisobga olinadi.",
+        },
+      ],
+    },
     todo: 'TODO',
     notFound: {
       title: 'Sahifa topilmadi',
@@ -198,6 +219,27 @@ const dictionaries = {
       rights: 'Все права защищены.',
       city: 'Ташкент, Узбекистан',
     },
+    why: {
+      title: 'Почему ZOLVI',
+      items: [
+        {
+          title: 'Сначала процесс, потом код',
+          text: 'Каждый проект начинается с карты процессов и аудита проблем — сначала понимаем, что и зачем строить.',
+        },
+        {
+          title: 'Рабочая версия каждую неделю',
+          text: 'Не нужно ждать месяцами: каждую неделю вы видите новую версию на живом стенде и можете скорректировать курс.',
+        },
+        {
+          title: 'Код и данные — ваши',
+          text: 'Исходный код, документация и доступы передаются вам. Перейти к другой команде можно в любой момент.',
+        },
+        {
+          title: 'Под местные условия',
+          text: 'Узбекский, русский и английский языки, интеграции с Click, Payme, Uzum, 1С и Telegram — с самого начала.',
+        },
+      ],
+    },
     todo: 'TODO',
     notFound: {
       title: 'Страница не найдена',
@@ -301,6 +343,27 @@ const dictionaries = {
       privacy: 'Privacy policy',
       rights: 'All rights reserved.',
       city: 'Tashkent, Uzbekistan',
+    },
+    why: {
+      title: 'Why ZOLVI',
+      items: [
+        {
+          title: 'Process first, code second',
+          text: 'Every project starts with a process map and a problem audit — we understand what to build and why before writing code.',
+        },
+        {
+          title: 'A working version every week',
+          text: 'No waiting for months: every week you see a new version on a live staging site and can change course.',
+        },
+        {
+          title: 'Your code, your data',
+          text: 'Source code, documentation and access are handed over to you. You can move to another team at any time.',
+        },
+        {
+          title: 'Built for local conditions',
+          text: 'Uzbek, Russian and English, plus Click, Payme, Uzum, 1C and Telegram integrations — from day one.',
+        },
+      ],
     },
     todo: 'TODO',
     notFound: {

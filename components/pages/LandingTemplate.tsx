@@ -208,44 +208,55 @@ export function LandingTemplate({ item, locale }: { item: Landing; locale: Local
         </div>
       </Section>
 
+      <Section id="why" title={d.why.title}>
+        <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {d.why.items.map((w) => (
+            <li key={w.title} className="border-t-2 border-accent pt-5">
+              <h3 className="font-sans text-lg font-bold tracking-normal">{w.title}</h3>
+              <p className="mt-2 text-muted">{w.text}</p>
+            </li>
+          ))}
+        </ul>
+      </Section>
+
       {item.caseId && (
-        <Section id="case" title={d.landing.case}>
+        <Section id="case" title={d.landing.case} className="bg-bg-soft">
           <CaseCards locale={locale} ids={[item.caseId]} />
         </Section>
       )}
 
-      <Section id="faq" title={d.landing.faq} className={item.caseId ? 'bg-bg-soft' : ''}>
+      <Section id="faq" title={d.landing.faq} className={item.caseId ? '' : 'bg-bg-soft'}>
         <div className="max-w-4xl">
           <FaqList items={c.faq} />
         </div>
       </Section>
 
-      {/* Internal links */}
-      <section className="border-t border-line py-16">
-        <div className="container-page grid gap-12 md:grid-cols-2">
-          {relatedServices.length > 0 && (
-            <nav aria-labelledby="rel-services">
-              <h2
-                id="rel-services"
-                className="font-sans text-sm font-bold tracking-[0.14em] text-muted uppercase"
+      {/* Internal links: related services as cards (with summaries), industries as chips */}
+      {relatedServices.length > 0 && (
+        <Section id="related" title={d.landing.relatedServices} className="border-t border-line">
+          <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {relatedServices.map((s) => (
+              <li
+                key={s.id}
+                className="card group relative flex flex-col p-5 transition hover:border-line-strong"
               >
-                {d.landing.relatedServices}
-              </h2>
-              <ul className="mt-5 flex flex-wrap gap-2">
-                {relatedServices.map((s) => (
-                  <li key={s.id}>
-                    <Link
-                      href={pathFor({ type: 'service', id: s.id }, locale)}
-                      className="inline-flex items-center gap-2 rounded-full border border-line-strong px-4 py-2 text-sm font-semibold transition hover:border-accent"
-                    >
-                      <Icon name={s.icon} className="size-4 text-accent-text" />
-                      {s.locales[locale].name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-          )}
+                <Icon name={s.icon} className="size-5 text-accent-text" />
+                <h3 className="mt-4 font-sans text-base font-bold tracking-normal">
+                  <Link
+                    href={pathFor({ type: 'service', id: s.id }, locale)}
+                    className="after:absolute after:inset-0"
+                  >
+                    {s.locales[locale].name}
+                  </Link>
+                </h3>
+                <p className="mt-2 text-sm text-muted">{s.locales[locale].summary}</p>
+              </li>
+            ))}
+          </ul>
+        </Section>
+      )}
+      <section className="border-t border-line py-12">
+        <div className="container-page">
           {relatedIndustries.length > 0 && (
             <nav aria-labelledby="rel-industries">
               <h2
