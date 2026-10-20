@@ -66,7 +66,7 @@ export function LeadForm({
   if (status === 'success') {
     return (
       <div role="status" className="card flex flex-col items-start gap-4 p-8">
-        <span className="bg-accent text-accent-ink grid size-12 place-items-center rounded-full">
+        <span className="grid size-12 place-items-center rounded-full bg-accent text-accent-ink">
           <Icon name="check" className="size-6" />
         </span>
         <p className="text-lg font-semibold">{t.success}</p>
@@ -95,7 +95,7 @@ export function LeadForm({
           className={field}
         />
         {errors.name && (
-          <p id={`${id}-name-err`} className="text-danger mt-1.5 text-sm">
+          <p id={`${id}-name-err`} className="mt-1.5 text-sm text-danger">
             {t.invalidName}
           </p>
         )}
@@ -105,8 +105,8 @@ export function LeadForm({
         <label htmlFor={`${id}-phone`} className={label}>
           {t.phone} <span className="text-muted">*</span>
         </label>
-        <div className="border-line-strong bg-bg focus-within:border-accent flex rounded-xl border">
-          <span className="border-line text-muted flex items-center border-r pr-3 pl-4 select-none">
+        <div className="flex rounded-xl border border-line-strong bg-bg focus-within:border-accent">
+          <span className="flex items-center border-r border-line pr-3 pl-4 text-muted select-none">
             +998
           </span>
           <input
@@ -121,11 +121,11 @@ export function LeadForm({
             onChange={(e) => setPhone(formatUzPhone(e.target.value))}
             aria-invalid={errors.phone || undefined}
             aria-describedby={errors.phone ? `${id}-phone-err` : undefined}
-            className="text-text placeholder:text-muted/70 w-full rounded-r-xl bg-transparent px-3 py-3 text-base focus:outline-none"
+            className="w-full rounded-r-xl bg-transparent px-3 py-3 text-base text-text placeholder:text-muted/70 focus:outline-none"
           />
         </div>
         {errors.phone && (
-          <p id={`${id}-phone-err`} className="text-danger mt-1.5 text-sm">
+          <p id={`${id}-phone-err`} className="mt-1.5 text-sm text-danger">
             {t.invalidPhone}
           </p>
         )}
@@ -179,14 +179,14 @@ export function LeadForm({
       </button>
 
       {(status === 'error' || status === 'rate_limited') && (
-        <p role="alert" className="text-danger text-sm">
+        <p role="alert" className="text-sm text-danger">
           {status === 'error' ? t.error : t.rateLimited}{' '}
           <a href={telegramUrl} className="underline">
             Telegram
           </a>
         </p>
       )}
-      <p className="text-muted text-xs">
+      <p className="text-xs text-muted">
         <a href={privacyHref} className="underline underline-offset-2">
           {t.consent}
         </a>

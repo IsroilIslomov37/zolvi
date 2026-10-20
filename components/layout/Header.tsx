@@ -31,7 +31,7 @@ export function Header({
   const d = getDictionary(locale)
   const items = navItems(locale)
   return (
-    <header className="border-line bg-bg/80 sticky top-0 z-50 border-b backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-line bg-bg/80 backdrop-blur-xl">
       <div className="container-page flex h-16 items-center justify-between gap-4">
         <Logo
           href={pathFor({ type: 'home' }, locale)}
@@ -47,7 +47,7 @@ export function Header({
                   <Link
                     href={item.href}
                     aria-current={active === item.type ? 'page' : undefined}
-                    className={`hover:text-text rounded-lg px-3 py-2 transition ${
+                    className={`rounded-lg px-3 py-2 transition hover:text-text ${
                       active === item.type ? 'text-text' : 'text-muted'
                     }`}
                   >
@@ -78,15 +78,15 @@ export function Header({
                   <Link
                     href={item.href}
                     aria-current={active === item.type ? 'page' : undefined}
-                    className="hover:bg-surface flex items-center justify-between rounded-xl px-3 py-3"
+                    className="flex items-center justify-between rounded-xl px-3 py-3 hover:bg-surface"
                   >
                     {item.label}
-                    <Icon name="arrow" className="text-muted size-4" />
+                    <Icon name="arrow" className="size-4 text-muted" />
                   </Link>
                 </li>
               ))}
             </ul>
-            <div className="border-line mt-6 flex items-center justify-between gap-4 border-t pt-6">
+            <div className="mt-6 flex items-center justify-between gap-4 border-t border-line pt-6">
               <LangSwitcher locale={locale} paths={paths} label={d.language} />
               <a href={site.telegram.url} className="btn btn-secondary min-h-10 py-2 text-sm">
                 <Icon name="telegram" className="size-4" /> Telegram

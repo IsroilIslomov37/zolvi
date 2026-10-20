@@ -219,6 +219,9 @@
   .prose-zolvi > * + * {
     margin-top: 1.1em;
   }
+  .prose-zolvi > :first-child {
+    margin-top: 0;
+  }
   .prose-zolvi h2 {
     margin-top: 2.2em;
     font-size: clamp(1.35rem, 1.1rem + 1vw, 1.75rem);

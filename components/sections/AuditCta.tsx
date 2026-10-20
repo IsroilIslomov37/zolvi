@@ -31,7 +31,7 @@ export function AuditCta({
           <h2 id="audit-title" className="text-[clamp(1.7rem,1.2rem+2.4vw,2.8rem)] font-bold">
             {title ?? d.landing.ctaTitle}
           </h2>
-          <p className="text-muted mt-5 max-w-xl text-lg">{text ?? d.landing.ctaText}</p>
+          <p className="mt-5 max-w-xl text-lg text-muted">{text ?? d.landing.ctaText}</p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a href={site.telegram.url} className="btn btn-secondary">
               <Icon name="telegram" className="size-4" /> {d.cta.telegram}

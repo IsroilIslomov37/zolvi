@@ -8,7 +8,7 @@ export function Breadcrumbs({
   label: string
 }) {
   return (
-    <nav aria-label={label} className="text-muted text-sm">
+    <nav aria-label={label} className="text-sm text-muted">
       <ol className="flex flex-wrap items-center gap-x-2 gap-y-1">
         {items.map((item, i) => {
           const last = i === items.length - 1

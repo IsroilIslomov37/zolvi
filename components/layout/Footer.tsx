@@ -26,11 +26,11 @@ export function Footer({ locale }: { locale: Locale }) {
   ]
   const linkClass = 'text-muted transition hover:text-text'
   return (
-    <footer className="border-line bg-bg-soft border-t pb-28 md:pb-0">
+    <footer className="border-t border-line bg-bg-soft pb-28 md:pb-0">
       <div className="container-page grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1fr]">
         <div className="space-y-5">
           <Logo href={pathFor({ type: 'home' }, locale)} label={site.name} />
-          <p className="text-muted max-w-xs">{d.brandTagline}.</p>
+          <p className="max-w-xs text-muted">{d.brandTagline}.</p>
           <ul className="space-y-3 text-sm">
             <li>
               <a
@@ -45,7 +45,7 @@ export function Footer({ locale }: { locale: Locale }) {
                 <Icon name="telegram" className="size-4" /> {site.telegram.handle}
               </a>
             </li>
-            <li className="text-muted flex items-center gap-2">
+            <li className="flex items-center gap-2 text-muted">
               <Icon name="phone" className="size-4" />
               {site.phone ? (
                 <a href={phoneHref(site.phone)} className={linkClass}>
@@ -55,11 +55,11 @@ export function Footer({ locale }: { locale: Locale }) {
                 <Todo>telefon</Todo>
               )}
             </li>
-            <li className="text-muted flex items-center gap-2">
+            <li className="flex items-center gap-2 text-muted">
               <Icon name="pin" className="size-4" />
               {site.address ? `${site.address.street}, ${site.address.city}` : <Todo>manzil</Todo>}
             </li>
-            <li className="text-muted flex items-center gap-2">
+            <li className="flex items-center gap-2 text-muted">
               <Icon name="linkedin" className="size-4" />
               {site.linkedin ? (
                 <a href={site.linkedin} className={linkClass}>
@@ -102,8 +102,8 @@ export function Footer({ locale }: { locale: Locale }) {
           ))}
         </FooterColumn>
       </div>
-      <div className="border-line border-t">
-        <div className="container-page text-muted flex flex-col gap-2 py-6 text-sm sm:flex-row sm:justify-between">
+      <div className="border-t border-line">
+        <div className="container-page flex flex-col gap-2 py-6 text-sm text-muted sm:flex-row sm:justify-between">
           <p>
             © {new Date().getFullYear()} {site.name}. {d.footer.rights}
           </p>
@@ -117,7 +117,7 @@ export function Footer({ locale }: { locale: Locale }) {
 function FooterColumn({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <div>
-      <h2 className="text-text mb-5 font-sans text-sm font-bold tracking-[0.14em] uppercase">
+      <h2 className="mb-5 font-sans text-sm font-bold tracking-[0.14em] text-text uppercase">
         {title}
       </h2>
       <ul className="space-y-2.5 text-sm">{children}</ul>

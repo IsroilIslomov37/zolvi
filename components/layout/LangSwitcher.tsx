@@ -12,7 +12,7 @@ export function LangSwitcher({
 }) {
   return (
     <nav aria-label={label}>
-      <ul className="border-line flex items-center rounded-xl border p-1 text-xs font-bold">
+      <ul className="flex items-center rounded-xl border border-line p-1 text-xs font-bold">
         {locales.map((l) => (
           <li key={l}>
             <a

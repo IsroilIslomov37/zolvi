@@ -140,11 +140,14 @@ export function breadcrumbLd(items: { name: string; path: string }[]) {
 export function faqLd(faq: Faq[]) {
   return {
     '@type': 'FAQPage',
-    mainEntity: faq.map((f) => ({
-      '@type': 'Question',
-      name: f.q,
-      acceptedAnswer: { '@type': 'Answer', text: f.a },
-    })),
+    // Unconfirmed answers stay on the page but never reach structured data.
+    mainEntity: faq
+      .filter((f) => !f.a.includes('TODO') && !f.q.includes('TODO'))
+      .map((f) => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
   }
 }
 

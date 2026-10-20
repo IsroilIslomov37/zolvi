@@ -54,7 +54,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps<'/[
       <body>
         <a
           href="#main"
-          className="bg-accent text-accent-ink fixed top-3 left-3 z-[100] -translate-y-24 rounded-xl px-4 py-3 font-bold transition focus:translate-y-0"
+          className="fixed top-3 left-3 z-[100] -translate-y-24 rounded-xl bg-accent px-4 py-3 font-bold text-accent-ink transition focus:translate-y-0"
         >
           {d.skipToContent}
         </a>

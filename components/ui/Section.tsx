@@ -37,7 +37,7 @@ export function Section({
                 {title}
               </Heading>
             )}
-            {intro && <div className="text-muted mt-5 text-lg">{intro}</div>}
+            {intro && <div className="mt-5 text-lg text-muted">{intro}</div>}
           </header>
         )}
         {children}

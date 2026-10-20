@@ -7,7 +7,7 @@ import { Icon } from '@/components/ui/Icon'
 export function StickyCta({ locale }: { locale: Locale }) {
   const d = getDictionary(locale)
   return (
-    <div className="border-line bg-bg/90 fixed inset-x-0 bottom-0 z-40 border-t p-3 backdrop-blur-xl md:hidden">
+    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-line bg-bg/90 p-3 backdrop-blur-xl md:hidden">
       <div className="flex gap-2">
         <a
           href="#audit"
