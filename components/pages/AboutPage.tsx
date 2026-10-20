@@ -258,7 +258,7 @@ export function Page({ locale, routeKey }: PageProps) {
               <p key={p}>{p}</p>
             ))}
           </div>
-          <dl className="grid grid-cols-2 gap-4">
+          <dl className="grid gap-4 min-[420px]:grid-cols-2">
             {stats.items.map((s) => (
               <div key={s.label} className="card p-5">
                 <dt className="text-sm text-muted">{s.label}</dt>

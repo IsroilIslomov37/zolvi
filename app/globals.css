@@ -200,6 +200,8 @@
     font-weight: 700;
     font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
     line-height: 1.5;
+    max-width: 100%;
+    overflow-wrap: anywhere;
   }
 
   .grid-bg {

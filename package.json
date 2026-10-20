@@ -10,7 +10,7 @@
     "format": "prettier --write .",
     "typecheck": "tsc --noEmit",
     "seo-check": "tsx scripts/seo-check.ts",
-    "lighthouse": "tsx scripts/lighthouse.ts",
+    "lighthouse": "tsx scripts/lighthouse.mts",
     "check-content": "tsx scripts/check-content.ts",
     "word-count": "tsx scripts/word-count.ts"
   },

@@ -1,0 +1,11 @@
+/
+  performance 97 · accessibility 100 · best-practices 100 · seo 100
+  LCP 2.7 s · CLS 0 · TBT 40 ms · FCP 1.0 s
+  runs (perf): 95, 97, 97
+  report: reports\lighthouse\home.html
+
+/xizmatlar/crm-tizimi
+  performance 97 · accessibility 100 · best-practices 100 · seo 100
+  LCP 2.7 s · CLS 0 · TBT 40 ms · FCP 0.9 s
+  runs (perf): 97, 97, 97
+  report: reports\lighthouse\xizmatlar_crm-tizimi.html

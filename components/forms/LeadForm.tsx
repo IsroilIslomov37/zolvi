@@ -4,7 +4,7 @@ import { useId, useState, type FormEvent } from 'react'
 import { track } from '@/lib/analytics'
 import type { Dictionary } from '@/lib/dictionary'
 import type { Locale } from '@/lib/i18n'
-import { formatUzPhone } from '@/lib/lead'
+import { formatUzPhone } from '@/lib/phone'
 import { Icon } from '@/components/ui/Icon'
 
 type Status = 'idle' | 'sending' | 'success' | 'error' | 'rate_limited'

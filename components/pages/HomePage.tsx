@@ -142,7 +142,7 @@ export function Page({ locale }: PageProps) {
       </Section>
 
       <Section id="numbers" eyebrow={c.stats.eyebrow} title={c.stats.title}>
-        <dl className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+        <dl className="grid gap-4 min-[420px]:grid-cols-2 lg:grid-cols-4">
           {c.stats.items.map((s) => (
             <div key={s.label} className="card p-6">
               <dt className="text-sm text-muted">{s.label}</dt>
