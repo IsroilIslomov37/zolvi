@@ -1,0 +1,39 @@
+import { getDictionary } from '@/lib/dictionary'
+import type { Locale } from '@/lib/i18n'
+import { phoneHref, site } from '@/lib/site'
+import { Icon } from '@/components/ui/Icon'
+
+/** Bottom bar on phones: the audit offer is always one tap away. */
+export function StickyCta({ locale }: { locale: Locale }) {
+  const d = getDictionary(locale)
+  return (
+    <div className="border-line bg-bg/90 fixed inset-x-0 bottom-0 z-40 border-t p-3 backdrop-blur-xl md:hidden">
+      <div className="flex gap-2">
+        <a
+          href="#audit"
+          data-track="cta"
+          data-track-label="sticky"
+          className="btn btn-primary flex-1"
+        >
+          {d.cta.audit}
+        </a>
+        <a
+          href={site.telegram.url}
+          aria-label={d.cta.telegram}
+          className="btn btn-secondary w-12 px-0"
+        >
+          <Icon name="telegram" />
+        </a>
+        {site.phone && (
+          <a
+            href={phoneHref(site.phone)}
+            aria-label={d.cta.call}
+            className="btn btn-secondary w-12 px-0"
+          >
+            <Icon name="phone" />
+          </a>
+        )}
+      </div>
+    </div>
+  )
+}

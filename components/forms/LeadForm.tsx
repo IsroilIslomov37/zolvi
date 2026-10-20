@@ -1,0 +1,196 @@
+'use client'
+
+import { useId, useState, type FormEvent } from 'react'
+import { track } from '@/lib/analytics'
+import type { Dictionary } from '@/lib/dictionary'
+import type { Locale } from '@/lib/i18n'
+import { formatUzPhone } from '@/lib/lead'
+import { Icon } from '@/components/ui/Icon'
+
+type Status = 'idle' | 'sending' | 'success' | 'error' | 'rate_limited'
+
+export function LeadForm({
+  locale,
+  t,
+  privacyHref,
+  telegramUrl,
+  defaultBusiness = '',
+}: {
+  locale: Locale
+  t: Dictionary['form']
+  privacyHref: string
+  telegramUrl: string
+  defaultBusiness?: string
+}) {
+  const id = useId()
+  const [status, setStatus] = useState<Status>('idle')
+  const [phone, setPhone] = useState('')
+  const [errors, setErrors] = useState<{ name?: boolean; phone?: boolean }>({})
+
+  async function onSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+    const form = new FormData(e.currentTarget)
+    const name = String(form.get('name') ?? '').trim()
+    const digits = phone.replace(/\D/g, '')
+    const nextErrors = { name: name.length < 2, phone: digits.length !== 9 }
+    setErrors(nextErrors)
+    if (nextErrors.name || nextErrors.phone) return
+
+    setStatus('sending')
+    try {
+      const res = await fetch('/api/lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name,
+          phone: digits,
+          business: form.get('business') ?? '',
+          comment: form.get('comment') ?? '',
+          website: form.get('website') ?? '',
+          locale,
+          page: location.pathname,
+        }),
+      })
+      if (res.status === 429) return setStatus('rate_limited')
+      if (!res.ok) throw new Error(String(res.status))
+      setStatus('success')
+      track('lead_submit', {
+        page: location.pathname,
+        business: String(form.get('business') ?? ''),
+      })
+    } catch {
+      setStatus('error')
+    }
+  }
+
+  if (status === 'success') {
+    return (
+      <div role="status" className="card flex flex-col items-start gap-4 p-8">
+        <span className="bg-accent text-accent-ink grid size-12 place-items-center rounded-full">
+          <Icon name="check" className="size-6" />
+        </span>
+        <p className="text-lg font-semibold">{t.success}</p>
+      </div>
+    )
+  }
+
+  const field =
+    'w-full rounded-xl border border-line-strong bg-bg px-4 py-3 text-base text-text placeholder:text-muted/70 focus:border-accent focus:outline-none'
+  const label = 'mb-1.5 block text-sm font-semibold'
+
+  return (
+    <form onSubmit={onSubmit} noValidate className="card space-y-4 p-5 sm:p-8">
+      <div>
+        <label htmlFor={`${id}-name`} className={label}>
+          {t.name} <span className="text-muted">*</span>
+        </label>
+        <input
+          id={`${id}-name`}
+          name="name"
+          autoComplete="name"
+          required
+          maxLength={80}
+          aria-invalid={errors.name || undefined}
+          aria-describedby={errors.name ? `${id}-name-err` : undefined}
+          className={field}
+        />
+        {errors.name && (
+          <p id={`${id}-name-err`} className="text-danger mt-1.5 text-sm">
+            {t.invalidName}
+          </p>
+        )}
+      </div>
+
+      <div>
+        <label htmlFor={`${id}-phone`} className={label}>
+          {t.phone} <span className="text-muted">*</span>
+        </label>
+        <div className="border-line-strong bg-bg focus-within:border-accent flex rounded-xl border">
+          <span className="border-line text-muted flex items-center border-r pr-3 pl-4 select-none">
+            +998
+          </span>
+          <input
+            id={`${id}-phone`}
+            name="phone"
+            type="tel"
+            inputMode="tel"
+            autoComplete="tel-national"
+            required
+            placeholder="90 123 45 67"
+            value={phone}
+            onChange={(e) => setPhone(formatUzPhone(e.target.value))}
+            aria-invalid={errors.phone || undefined}
+            aria-describedby={errors.phone ? `${id}-phone-err` : undefined}
+            className="text-text placeholder:text-muted/70 w-full rounded-r-xl bg-transparent px-3 py-3 text-base focus:outline-none"
+          />
+        </div>
+        {errors.phone && (
+          <p id={`${id}-phone-err`} className="text-danger mt-1.5 text-sm">
+            {t.invalidPhone}
+          </p>
+        )}
+      </div>
+
+      <div>
+        <label htmlFor={`${id}-business`} className={label}>
+          {t.business}
+        </label>
+        <select
+          id={`${id}-business`}
+          name="business"
+          defaultValue={defaultBusiness}
+          className={field}
+        >
+          <option value="">{t.businessPlaceholder}</option>
+          {t.businessTypes.map((b) => (
+            <option key={b} value={b}>
+              {b}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      <div>
+        <label htmlFor={`${id}-comment`} className={label}>
+          {t.comment}
+        </label>
+        <textarea
+          id={`${id}-comment`}
+          name="comment"
+          rows={3}
+          maxLength={1000}
+          placeholder={t.commentPlaceholder}
+          className={field}
+        />
+      </div>
+
+      {/* Honeypot: hidden from people and assistive tech. */}
+      <div aria-hidden="true" className="absolute -left-[9999px] h-px w-px overflow-hidden">
+        <label htmlFor={`${id}-website`}>Website</label>
+        <input id={`${id}-website`} name="website" tabIndex={-1} autoComplete="off" />
+      </div>
+
+      <button
+        type="submit"
+        disabled={status === 'sending'}
+        className="btn btn-primary w-full disabled:opacity-70"
+      >
+        {status === 'sending' ? t.sending : t.submit}
+      </button>
+
+      {(status === 'error' || status === 'rate_limited') && (
+        <p role="alert" className="text-danger text-sm">
+          {status === 'error' ? t.error : t.rateLimited}{' '}
+          <a href={telegramUrl} className="underline">
+            Telegram
+          </a>
+        </p>
+      )}
+      <p className="text-muted text-xs">
+        <a href={privacyHref} className="underline underline-offset-2">
+          {t.consent}
+        </a>
+      </p>
+    </form>
+  )
+}

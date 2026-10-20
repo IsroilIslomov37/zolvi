@@ -1,0 +1,14 @@
+node_modules
+.next
+out
+.env
+.env.local
+.env.*.local
+*.tsbuildinfo
+next-env.d.ts
+.vercel
+reports/lighthouse/*.html
+
+# Source materials kept locally, not part of the site
+/zolvi-claude-code-prompt.md
+/image.png
