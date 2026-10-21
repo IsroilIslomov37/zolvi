@@ -4,6 +4,7 @@ import type { L10n, Locale } from '@/lib/i18n'
 import { pathFor } from '@/lib/routes'
 import { site } from '@/lib/site'
 import { Icon } from '@/components/ui/Icon'
+import { HeaderFrame } from './HeaderFrame'
 import { LangSwitcher } from './LangSwitcher'
 import { Logo } from './Logo'
 import { MobileMenu } from './MobileMenu'
@@ -31,7 +32,7 @@ export function Header({
   const d = getDictionary(locale)
   const items = navItems(locale)
   return (
-    <header className="sticky top-0 z-50 border-b border-line bg-bg/80 backdrop-blur-xl">
+    <HeaderFrame>
       <div className="container-page flex h-16 items-center justify-between gap-4">
         <Logo
           href={pathFor({ type: 'home' }, locale)}
@@ -39,7 +40,7 @@ export function Header({
         />
 
         <nav aria-label={d.menu.label} className="hidden lg:block">
-          <ul className="flex items-center gap-1 text-sm font-semibold">
+          <ul className="flex items-center gap-1 text-sm font-medium">
             {items
               .filter((i) => i.type !== 'about')
               .map((item) => (
@@ -47,9 +48,7 @@ export function Header({
                   <Link
                     href={item.href}
                     aria-current={active === item.type ? 'page' : undefined}
-                    className={`rounded-lg px-3 py-2 transition hover:text-text ${
-                      active === item.type ? 'text-text' : 'text-muted'
-                    }`}
+                    className="relative block rounded-lg px-3 py-2 text-muted transition-colors after:absolute after:inset-x-3 after:bottom-0.5 after:h-0.5 after:rounded-full after:bg-accent after:opacity-0 after:transition-opacity hover:bg-surface-2 hover:text-text aria-[current=page]:text-text aria-[current=page]:after:opacity-100"
                   >
                     {item.label}
                   </Link>
@@ -67,34 +66,54 @@ export function Header({
             href="#audit"
             data-track="cta"
             data-track-label="header"
-            className="btn btn-primary hidden min-h-10 px-4 py-2 text-sm md:inline-flex"
+            className="btn btn-primary btn-sm hidden md:inline-flex"
           >
             {d.cta.auditShort}
           </a>
           <MobileMenu labels={d.menu}>
-            <ul className="space-y-1 text-lg font-semibold">
-              {items.map((item) => (
-                <li key={item.type}>
+            <ul className="space-y-1">
+              {items.map((item, i) => (
+                <li
+                  key={item.type}
+                  style={{ '--i': i } as React.CSSProperties}
+                  className="menu-item"
+                >
                   <Link
                     href={item.href}
                     aria-current={active === item.type ? 'page' : undefined}
-                    className="flex items-center justify-between rounded-control px-3 py-3 hover:bg-surface"
+                    className="group flex items-center justify-between rounded-control py-3 font-display text-2xl font-bold tracking-tight aria-[current=page]:text-accent-text"
                   >
                     {item.label}
-                    <Icon name="arrow" className="size-4 text-muted" />
+                    <Icon
+                      name="arrow"
+                      className="size-5 text-muted transition-transform group-hover:translate-x-1"
+                    />
                   </Link>
                 </li>
               ))}
             </ul>
-            <div className="mt-6 flex items-center justify-between gap-4 border-t border-line pt-6">
-              <LangSwitcher locale={locale} paths={paths} label={d.language} />
-              <a href={site.telegram.url} className="btn btn-secondary min-h-10 py-2 text-sm">
-                <Icon name="telegram" className="size-4" /> Telegram
+            <div
+              style={{ '--i': items.length } as React.CSSProperties}
+              className="menu-item mt-10 space-y-4"
+            >
+              <a
+                href="#audit"
+                data-track="cta"
+                data-track-label="menu"
+                className="btn btn-primary w-full"
+              >
+                {d.cta.audit}
               </a>
+              <div className="flex items-center justify-between gap-4">
+                <LangSwitcher locale={locale} paths={paths} label={d.language} large />
+                <a href={site.telegram.url} className="btn btn-secondary btn-sm">
+                  <Icon name="telegram" className="size-4" /> Telegram
+                </a>
+              </div>
             </div>
           </MobileMenu>
         </div>
       </div>
-    </header>
+    </HeaderFrame>
   )
 }

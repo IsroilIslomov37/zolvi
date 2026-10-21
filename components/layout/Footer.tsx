@@ -1,16 +1,18 @@
 import Link from 'next/link'
+import type { ReactNode } from 'react'
 import { services } from '@/content/services'
 import { industries } from '@/content/industries'
 import { comparisons } from '@/content/compare'
 import { getDictionary } from '@/lib/dictionary'
-import type { Locale } from '@/lib/i18n'
+import type { L10n, Locale } from '@/lib/i18n'
 import { pathFor } from '@/lib/routes'
 import { phoneHref, site } from '@/lib/site'
-import { Icon } from '@/components/ui/Icon'
+import { Icon, type IconName } from '@/components/ui/Icon'
 import { Todo } from '@/components/ui/Todo'
+import { LangSwitcher } from './LangSwitcher'
 import { Logo } from './Logo'
 
-export function Footer({ locale }: { locale: Locale }) {
+export function Footer({ locale, paths }: { locale: Locale; paths: L10n<string> }) {
   const d = getDictionary(locale)
   const company = [
     { label: d.nav.cases, href: pathFor({ type: 'cases' }, locale) },
@@ -22,31 +24,37 @@ export function Footer({ locale }: { locale: Locale }) {
       label: c.locales[locale].name,
       href: pathFor({ type: 'compare', id: c.id }, locale),
     })),
-    { label: d.footer.privacy, href: pathFor({ type: 'privacy' }, locale) },
   ]
-  const linkClass = 'text-muted transition hover:text-text'
+  const socials: { name: string; icon: IconName; href: string | null }[] = [
+    { name: 'Telegram', icon: 'telegram', href: site.telegram.url },
+    { name: 'LinkedIn', icon: 'linkedin', href: site.linkedin },
+  ]
+  const linkClass = 'text-muted transition-colors hover:text-text'
   return (
-    <footer className="border-t border-line bg-bg-soft pb-28 md:pb-0">
-      <div className="container-page grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1fr]">
-        <div className="space-y-5">
+    <footer className="overflow-hidden bg-bg-soft pb-24 md:pb-0">
+      <div className="container-page grid gap-12 pt-16 pb-12 sm:grid-cols-2 lg:grid-cols-12 lg:pt-24">
+        <div className="space-y-6 sm:col-span-2 lg:col-span-4">
           <Logo href={pathFor({ type: 'home' }, locale)} label={site.name} />
           <p className="max-w-xs text-muted">{d.brandTagline}.</p>
-          <ul className="space-y-3 text-sm">
+          <ul className="space-y-3">
             <li>
               <a
                 href={`mailto:${site.email}`}
-                className={`inline-flex items-center gap-2 ${linkClass}`}
+                className={`inline-flex items-center gap-2.5 ${linkClass}`}
               >
-                <Icon name="mail" className="size-4" /> {site.email}
+                <Icon name="mail" className="size-4 shrink-0" /> {site.email}
               </a>
             </li>
             <li>
-              <a href={site.telegram.url} className={`inline-flex items-center gap-2 ${linkClass}`}>
-                <Icon name="telegram" className="size-4" /> {site.telegram.handle}
+              <a
+                href={site.telegram.url}
+                className={`inline-flex items-center gap-2.5 ${linkClass}`}
+              >
+                <Icon name="telegram" className="size-4 shrink-0" /> {site.telegram.handle}
               </a>
             </li>
-            <li className="flex items-center gap-2 text-muted">
-              <Icon name="phone" className="size-4" />
+            <li className="flex items-center gap-2.5 text-muted">
+              <Icon name="phone" className="size-4 shrink-0" />
               {site.phone ? (
                 <a href={phoneHref(site.phone)} className={linkClass}>
                   {site.phone}
@@ -55,24 +63,34 @@ export function Footer({ locale }: { locale: Locale }) {
                 <Todo>telefon</Todo>
               )}
             </li>
-            <li className="flex items-center gap-2 text-muted">
-              <Icon name="pin" className="size-4" />
+            <li className="flex items-center gap-2.5 text-muted">
+              <Icon name="pin" className="size-4 shrink-0" />
               {site.address ? `${site.address.street}, ${site.address.city}` : <Todo>manzil</Todo>}
             </li>
-            <li className="flex items-center gap-2 text-muted">
-              <Icon name="linkedin" className="size-4" />
-              {site.linkedin ? (
-                <a href={site.linkedin} className={linkClass}>
-                  LinkedIn
-                </a>
-              ) : (
-                <Todo>LinkedIn URL</Todo>
-              )}
-            </li>
           </ul>
+          <div>
+            <h2 className="sr-only">{d.footer.socials}</h2>
+            <ul className="flex gap-2">
+              {socials.map((s) => (
+                <li key={s.name}>
+                  {s.href ? (
+                    <a
+                      href={s.href}
+                      aria-label={s.name}
+                      className="grid size-11 place-items-center rounded-control border border-line text-muted transition-colors hover:border-line-strong hover:bg-surface-2 hover:text-text"
+                    >
+                      <Icon name={s.icon} className="size-5" />
+                    </a>
+                  ) : (
+                    <Todo>{s.name} URL</Todo>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
-        <FooterColumn title={d.footer.services}>
+        <FooterColumn title={d.footer.services} className="lg:col-span-3">
           {services.map((s) => (
             <li key={s.id}>
               <Link href={pathFor({ type: 'service', id: s.id }, locale)} className={linkClass}>
@@ -82,7 +100,7 @@ export function Footer({ locale }: { locale: Locale }) {
           ))}
         </FooterColumn>
 
-        <FooterColumn title={d.footer.industries}>
+        <FooterColumn title={d.footer.industries} className="lg:col-span-3">
           {industries.map((s) => (
             <li key={s.id}>
               <Link href={pathFor({ type: 'industry', id: s.id }, locale)} className={linkClass}>
@@ -92,7 +110,7 @@ export function Footer({ locale }: { locale: Locale }) {
           ))}
         </FooterColumn>
 
-        <FooterColumn title={d.footer.company}>
+        <FooterColumn title={d.footer.company} className="lg:col-span-2">
           {company.map((c) => (
             <li key={c.href}>
               <Link href={c.href} className={linkClass}>
@@ -102,21 +120,45 @@ export function Footer({ locale }: { locale: Locale }) {
           ))}
         </FooterColumn>
       </div>
-      <div className="border-t border-line">
-        <div className="container-page flex flex-col gap-2 py-6 text-sm text-muted sm:flex-row sm:justify-between">
-          <p>
-            © {new Date().getFullYear()} {site.name}. {d.footer.rights}
-          </p>
-          <p>{d.footer.city}</p>
+
+      <div className="container-page">
+        <div className="flex flex-col gap-4 border-t border-line py-6 text-sm text-muted md:flex-row md:items-center md:justify-between">
+          <div className="space-y-1">
+            <p>
+              © {new Date().getFullYear()} {site.name}. {d.footer.rights}
+            </p>
+            <p>
+              {d.footer.legal}: {site.legalName ?? <Todo>MCHJ</Todo>} ·{' '}
+              <Link href={pathFor({ type: 'privacy' }, locale)} className={linkClass}>
+                {d.footer.privacy}
+              </Link>
+            </p>
+          </div>
+          <div className="flex items-center gap-4">
+            <LangSwitcher locale={locale} paths={paths} label={d.language} large />
+            <p>{d.footer.city}</p>
+          </div>
         </div>
       </div>
+
+      <p aria-hidden="true" className="footer-wordmark container-page select-none">
+        ZOLVI
+      </p>
     </footer>
   )
 }
 
-function FooterColumn({ title, children }: { title: string; children: React.ReactNode }) {
+function FooterColumn({
+  title,
+  className = '',
+  children,
+}: {
+  title: string
+  className?: string
+  children: ReactNode
+}) {
   return (
-    <div>
+    <div className={className}>
       <h2 className="mb-5 font-sans text-sm font-semibold text-text">{title}</h2>
       <ul className="space-y-2.5 text-sm">{children}</ul>
     </div>

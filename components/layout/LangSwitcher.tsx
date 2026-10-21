@@ -5,14 +5,17 @@ export function LangSwitcher({
   locale,
   paths,
   label,
+  large = false,
 }: {
   locale: Locale
   paths: L10n<string>
   label: string
+  /** 44px targets for touch layouts (mobile menu, footer). */
+  large?: boolean
 }) {
   return (
     <nav aria-label={label}>
-      <ul className="flex items-center rounded-control border border-line p-1 text-xs font-bold">
+      <ul className="flex items-center rounded-control border border-line p-1 text-xs font-semibold">
         {locales.map((l) => (
           <li key={l}>
             <a
@@ -21,9 +24,9 @@ export function LangSwitcher({
               lang={localeMeta[l].htmlLang}
               aria-current={l === locale ? 'true' : undefined}
               title={localeMeta[l].label}
-              className={`block rounded-lg px-2.5 py-1.5 transition ${
-                l === locale ? 'bg-surface-2 text-text' : 'text-muted hover:text-text'
-              }`}
+              className={`grid place-items-center rounded-lg px-2.5 transition-colors ${
+                large ? 'min-h-10 min-w-11' : 'min-h-8 min-w-9'
+              } ${l === locale ? 'bg-surface-2 text-text' : 'text-muted hover:text-text'}`}
             >
               {localeMeta[l].short}
             </a>

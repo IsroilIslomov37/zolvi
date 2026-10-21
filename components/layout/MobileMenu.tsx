@@ -4,6 +4,7 @@ import { useEffect, useId, useState, type ReactNode } from 'react'
 import { usePathname } from 'next/navigation'
 import { Icon } from '@/components/ui/Icon'
 
+/** Full-screen menu under the header bar; `.menu-item` children rise in one after another. */
 export function MobileMenu({
   labels,
   children,
@@ -40,15 +41,16 @@ export function MobileMenu({
         aria-controls={panelId}
         aria-label={open ? labels.close : labels.open}
         onClick={() => setOpen((o) => !o)}
-        className="grid size-10 place-items-center rounded-control border border-line"
+        className="relative z-10 grid size-11 place-items-center rounded-control border border-line transition-colors hover:bg-surface-2"
       >
         <Icon name={open ? 'close' : 'menu'} />
       </button>
       <div
         id={panelId}
-        hidden={!open}
+        inert={!open}
+        data-open={open || undefined}
         onClick={(e) => (e.target as Element).closest('a') && setOpen(false)}
-        className="fixed inset-x-0 top-16 bottom-0 z-40 overflow-y-auto border-t border-line bg-bg px-4 pt-6 pb-28"
+        className="mobile-menu fixed inset-x-0 top-16 bottom-0 z-40 overflow-y-auto bg-bg px-4 pt-6 pb-10 sm:px-6"
       >
         <nav aria-label={labels.label}>{children}</nav>
       </div>

@@ -30,7 +30,7 @@ export function SiteShell({
         {children}
         <AuditCta locale={locale} defaultBusiness={formBusiness} />
       </main>
-      <Footer locale={locale} />
+      <Footer locale={locale} paths={alternatePaths(routeKey)} />
       <StickyCta locale={locale} />
       <JsonLd data={graph(organizationLd(locale, d.brandTagline), websiteLd(locale))} />
     </>
