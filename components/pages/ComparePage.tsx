@@ -74,7 +74,7 @@ export function Page({ locale, routeKey }: PageProps) {
       />
 
       <Section id="table" title={t.table} className="bg-bg-soft">
-        <div className="overflow-x-auto rounded-2xl border border-line bg-surface">
+        <div className="overflow-x-auto rounded-card border border-line bg-surface">
           <table className="w-full min-w-[40rem] text-left">
             <thead className="border-b border-line">
               <tr>
@@ -122,7 +122,7 @@ export function Page({ locale, routeKey }: PageProps) {
         </div>
       </Section>
 
-      <section className="bg-bg-soft py-16 sm:py-24">
+      <section className="section-y bg-bg-soft">
         <div className="container-page">
           <div className="prose-zolvi max-w-3xl">
             {c.sections.map((s) => (

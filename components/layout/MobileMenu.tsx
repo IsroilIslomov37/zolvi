@@ -40,7 +40,7 @@ export function MobileMenu({
         aria-controls={panelId}
         aria-label={open ? labels.close : labels.open}
         onClick={() => setOpen((o) => !o)}
-        className="grid size-10 place-items-center rounded-xl border border-line"
+        className="grid size-10 place-items-center rounded-control border border-line"
       >
         <Icon name={open ? 'close' : 'menu'} />
       </button>

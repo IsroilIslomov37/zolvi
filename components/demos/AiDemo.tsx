@@ -201,7 +201,7 @@ export default function AiDemo({ locale }: { locale: Locale }) {
     <DemoFrame title={t.title} note={demoNote[locale]}>
       <p className="mb-3 text-xs text-muted">{t.hint}</p>
       <div className="grid gap-3 md:grid-cols-[1fr_1.15fr]">
-        <div className="rounded-xl bg-bg p-2">
+        <div className="rounded-control bg-bg p-2">
           <p className="px-2 py-1.5 text-[10px] font-bold tracking-widest text-muted uppercase">
             {t.inbox}
           </p>
@@ -230,7 +230,7 @@ export default function AiDemo({ locale }: { locale: Locale }) {
             ))}
           </ul>
         </div>
-        <div className="flex flex-col rounded-xl bg-bg p-3" aria-live="polite">
+        <div className="flex flex-col rounded-control bg-bg p-3" aria-live="polite">
           {state === 'idle' && (
             <div className="grid flex-1 place-items-center py-8">
               <button type="button" onClick={analyze} className={smallBtn}>

@@ -39,7 +39,7 @@ export function SavingsCalculator({ copy }: { copy: Copy }) {
   const fte = ((base * selectedProblem.range[1]) / HOURS_PER_FTE).toFixed(1)
 
   const field =
-    'w-full rounded-xl border border-line-strong bg-bg px-4 py-3 text-base text-text focus:border-accent focus:outline-none'
+    'w-full rounded-control border border-line-strong bg-bg px-4 py-3 text-base text-text focus:border-accent focus:outline-none'
   const label = 'mb-2 block text-sm font-semibold'
 
   return (
@@ -68,7 +68,7 @@ export function SavingsCalculator({ copy }: { copy: Copy }) {
             {copy.problems.map((p) => (
               <label
                 key={p.id}
-                className={`flex cursor-pointer items-center gap-3 rounded-xl border px-4 py-3 text-sm font-semibold transition ${
+                className={`flex cursor-pointer items-center gap-3 rounded-control border px-4 py-3 text-sm font-semibold transition ${
                   problem === p.id
                     ? 'border-accent bg-accent/10'
                     : 'border-line hover:border-line-strong'
@@ -107,14 +107,14 @@ export function SavingsCalculator({ copy }: { copy: Copy }) {
 
       <div className="card flex flex-col p-6 sm:p-8" aria-live="polite">
         <p className="eyebrow">{copy.resultTitle}</p>
-        <p className="mt-5 font-display text-[clamp(2.4rem,1.6rem+3vw,3.6rem)] leading-none font-bold">
+        <p className="text-figure mt-5 font-display font-bold">
           {lo}–{hi}
         </p>
         <p className="mt-2 text-muted">{copy.resultHours}</p>
         <p className="mt-4 text-sm text-muted">
           {fte} {copy.resultFte}
         </p>
-        <div className="mt-6 flex gap-3 rounded-xl border border-line bg-bg p-4 text-sm">
+        <div className="mt-6 flex gap-3 rounded-control border border-line bg-bg p-4 text-sm">
           <Icon name="check" className="mt-0.5 size-4 shrink-0 text-accent-text" />
           {selectedProblem.effect}
         </div>

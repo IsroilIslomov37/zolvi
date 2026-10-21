@@ -5,7 +5,7 @@ import { themeInitScript } from '@/components/layout/ThemeToggle'
 import { getDictionary } from '@/lib/dictionary'
 import { isLocale, localeMeta, locales } from '@/lib/i18n'
 import { env, site } from '@/lib/site'
-import { manrope, unbounded } from '../fonts'
+import { inter, unbounded } from '../fonts'
 import '../globals.css'
 
 export const dynamicParams = false
@@ -45,7 +45,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps<'/[
   return (
     <html
       lang={localeMeta[locale].htmlLang}
-      className={`${manrope.variable} ${unbounded.variable}`}
+      className={`${inter.variable} ${unbounded.variable}`}
       // Lets Next.js switch off smooth scrolling while it resets scroll on navigation.
       data-scroll-behavior="smooth"
       suppressHydrationWarning
@@ -56,7 +56,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps<'/[
       <body>
         <a
           href="#main"
-          className="fixed top-3 left-3 z-[100] -translate-y-24 rounded-xl bg-accent px-4 py-3 font-bold text-accent-ink transition focus:translate-y-0"
+          className="fixed top-3 left-3 z-[100] -translate-y-24 rounded-control bg-accent px-4 py-3 font-bold text-accent-ink transition focus:translate-y-0"
         >
           {d.skipToContent}
         </a>

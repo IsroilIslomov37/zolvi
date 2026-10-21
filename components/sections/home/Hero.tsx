@@ -27,9 +27,7 @@ export function Hero({ locale }: { locale: Locale }) {
           <h1 className="font-sans text-lg font-bold tracking-normal text-muted sm:text-xl">
             {hero.h1}
           </h1>
-          <p className="mt-4 font-display text-[clamp(2.4rem,1.4rem+4.6vw,4.6rem)] leading-[1.02] font-bold tracking-[-0.03em] text-balance">
-            {hero.display}
-          </p>
+          <p className="text-display mt-4 font-display font-bold text-balance">{hero.display}</p>
           <p className="mt-6 max-w-xl text-lg text-muted">{hero.lead}</p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <a href="#audit" data-track="cta" data-track-label="hero" className="btn btn-primary">

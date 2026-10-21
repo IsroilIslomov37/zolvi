@@ -107,7 +107,7 @@ function Channel({
 }) {
   return (
     <li className="card flex gap-4 p-6">
-      <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-accent/12 text-accent-text">
+      <span className="grid size-11 shrink-0 place-items-center rounded-control bg-accent/12 text-accent-text">
         <Icon name={icon} />
       </span>
       <div>
@@ -191,11 +191,11 @@ export function Page({ locale, routeKey }: PageProps) {
           <iframe
             title={c.mapTitle}
             loading="lazy"
-            className="aspect-[16/9] w-full rounded-2xl border border-line"
+            className="aspect-[16/9] w-full rounded-card border border-line"
             src={`https://www.openstreetmap.org/export/embed.html?bbox=${geo.lng - 0.01},${geo.lat - 0.006},${geo.lng + 0.01},${geo.lat + 0.006}&layer=mapnik&marker=${geo.lat},${geo.lng}`}
           />
         ) : (
-          <div className="grid aspect-[16/9] w-full place-items-center rounded-2xl border border-dashed border-line-strong bg-surface sm:aspect-[21/9]">
+          <div className="grid aspect-[16/9] w-full place-items-center rounded-card border border-dashed border-line-strong bg-surface sm:aspect-[21/9]">
             <Todo>{c.mapTodo}</Todo>
           </div>
         )}

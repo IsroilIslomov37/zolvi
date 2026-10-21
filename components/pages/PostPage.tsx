@@ -62,7 +62,7 @@ export async function Page({ locale, routeKey }: PageProps) {
           <div className="container-page relative">
             <Breadcrumbs items={crumbs} label={d.breadcrumbsLabel} />
             <div className="mt-10 max-w-3xl">
-              <h1 className="text-[clamp(1.9rem,1.3rem+2.6vw,3.2rem)] font-bold">{p.h1}</h1>
+              <h1 className="text-title font-bold">{p.h1}</h1>
               <p className="mt-5 text-lg text-muted">{p.description}</p>
               <dl className="mt-8 flex flex-wrap gap-x-8 gap-y-3 text-sm">
                 <div>
@@ -120,10 +120,7 @@ export async function Page({ locale, routeKey }: PageProps) {
             <div className="space-y-8 lg:sticky lg:top-24">
               {toc.length > 0 && (
                 <nav aria-labelledby="toc-title" className="card p-5">
-                  <h2
-                    id="toc-title"
-                    className="font-sans text-sm font-bold tracking-[0.14em] text-muted uppercase"
-                  >
+                  <h2 id="toc-title" className="font-sans text-sm font-semibold text-muted">
                     {d.blog.toc}
                   </h2>
                   <ol className="mt-4 space-y-2 text-sm">
@@ -139,10 +136,7 @@ export async function Page({ locale, routeKey }: PageProps) {
               )}
               {(relatedServices.length > 0 || relatedIndustries.length > 0) && (
                 <nav aria-labelledby="post-related" className="card p-5">
-                  <h2
-                    id="post-related"
-                    className="font-sans text-sm font-bold tracking-[0.14em] text-muted uppercase"
-                  >
+                  <h2 id="post-related" className="font-sans text-sm font-semibold text-muted">
                     {d.blog.related}
                   </h2>
                   <ul className="mt-4 space-y-2 text-sm">

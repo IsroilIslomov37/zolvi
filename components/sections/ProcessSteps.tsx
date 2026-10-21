@@ -12,9 +12,7 @@ export function ProcessSteps({ locale }: { locale: Locale }) {
             <span className="grid size-9 place-items-center rounded-full bg-accent font-display text-sm font-bold text-accent-ink">
               {i + 1}
             </span>
-            <span className="text-xs font-bold tracking-[0.12em] text-accent-text uppercase">
-              {step.when}
-            </span>
+            <span className="text-xs font-semibold text-accent-text">{step.when}</span>
           </span>
           <h3 className="font-sans text-lg font-bold tracking-normal">{step.title}</h3>
           <ul className="mt-3 space-y-1.5 text-sm text-muted">

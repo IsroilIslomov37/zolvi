@@ -5,7 +5,7 @@ import { Rich } from './Todo'
 /** Native <details>: readable without JS, keyboard accessible, indexable. */
 export function FaqList({ items }: { items: Faq[] }) {
   return (
-    <div className="divide-y divide-line overflow-hidden rounded-2xl border border-line bg-surface">
+    <div className="divide-y divide-line overflow-hidden rounded-card border border-line bg-surface">
       {items.map((item) => (
         <details key={item.q} className="group">
           <summary className="flex cursor-pointer list-none items-start justify-between gap-6 px-5 py-5 text-left font-semibold sm:px-7 [&::-webkit-details-marker]:hidden">

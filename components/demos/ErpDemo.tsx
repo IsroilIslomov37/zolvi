@@ -70,7 +70,7 @@ export default function ErpDemo({ locale }: { locale: Locale }) {
 
   return (
     <DemoFrame title={t.title} note={demoNote[locale]}>
-      <div className="overflow-x-auto rounded-xl bg-bg">
+      <div className="overflow-x-auto rounded-control bg-bg">
         <table className="w-full min-w-[30rem] text-left text-xs sm:text-sm">
           <thead className="text-[10px] tracking-widest text-muted uppercase">
             <tr>
@@ -123,7 +123,7 @@ export default function ErpDemo({ locale }: { locale: Locale }) {
           </tbody>
         </table>
       </div>
-      <div className="mt-3 rounded-xl bg-bg p-3" aria-live="polite">
+      <div className="mt-3 rounded-control bg-bg p-3" aria-live="polite">
         <p className="mb-2 text-[10px] font-bold tracking-widest text-muted uppercase">
           {t.alerts}
         </p>

@@ -171,7 +171,7 @@ export function Page({ locale, routeKey }: PageProps) {
       </Section>
 
       <Section id="by-service" title={c.tableTitle} className="bg-bg-soft">
-        <div className="overflow-x-auto rounded-2xl border border-line bg-surface">
+        <div className="overflow-x-auto rounded-card border border-line bg-surface">
           <table className="w-full min-w-[40rem] text-left">
             <thead className="border-b border-line text-sm text-muted">
               <tr>

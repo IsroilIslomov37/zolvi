@@ -91,7 +91,7 @@ export function LeadForm({
   }
 
   const field =
-    'w-full rounded-xl border border-line-strong bg-bg px-4 py-3 text-base text-text placeholder:text-muted/70 focus:border-accent focus:outline-none'
+    'w-full rounded-control border border-line-strong bg-bg px-4 py-3 text-base text-text placeholder:text-muted/70 focus:border-accent focus:outline-none'
   const label = 'mb-1.5 block text-sm font-semibold'
 
   return (
@@ -121,7 +121,7 @@ export function LeadForm({
         <label htmlFor={`${id}-phone`} className={label}>
           {t.phone} <span className="text-muted">*</span>
         </label>
-        <div className="flex rounded-xl border border-line-strong bg-bg focus-within:border-accent">
+        <div className="flex rounded-control border border-line-strong bg-bg focus-within:border-accent">
           <span className="flex items-center border-r border-line pr-3 pl-4 text-muted select-none">
             +998
           </span>

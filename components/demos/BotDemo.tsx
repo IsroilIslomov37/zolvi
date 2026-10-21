@@ -118,7 +118,7 @@ export default function BotDemo({ locale }: { locale: Locale }) {
 
   return (
     <DemoFrame title={t.title} note={demoNote[locale]}>
-      <div className="mx-auto max-w-md overflow-hidden rounded-2xl border border-line bg-[#0e1621] text-[#e9eef5]">
+      <div className="mx-auto max-w-md overflow-hidden rounded-card border border-line bg-[#0e1621] text-[#e9eef5]">
         <div className="flex items-center gap-3 border-b border-white/10 bg-[#17212b] px-4 py-3">
           <span className="grid size-9 place-items-center rounded-full bg-[#2aabee] text-white">
             <Icon name="bot" className="size-5" />
@@ -132,7 +132,7 @@ export default function BotDemo({ locale }: { locale: Locale }) {
           {messages.map((m, i) => (
             <div key={i} className={`flex ${m.from === 'user' ? 'justify-end' : 'justify-start'}`}>
               <p
-                className={`animate-fade-up max-w-[85%] rounded-2xl px-3 py-2 text-sm ${
+                className={`animate-fade-up max-w-[85%] rounded-card px-3 py-2 text-sm ${
                   m.from === 'user' ? 'rounded-br-md bg-[#2b5278]' : 'rounded-bl-md bg-[#182533]'
                 }`}
               >
@@ -142,7 +142,7 @@ export default function BotDemo({ locale }: { locale: Locale }) {
           ))}
           {typing && (
             <div className="flex">
-              <span className="rounded-2xl rounded-bl-md bg-[#182533] px-3 py-2 text-sm">
+              <span className="rounded-card rounded-bl-md bg-[#182533] px-3 py-2 text-sm">
                 <span className="animate-pulse-dot">•••</span>
               </span>
             </div>
@@ -154,7 +154,7 @@ export default function BotDemo({ locale }: { locale: Locale }) {
               key={r.label}
               type="button"
               onClick={() => ask(r)}
-              className="rounded-lg bg-[#2b5278]/60 px-2 py-2 text-xs font-semibold transition hover:bg-[#2b5278]"
+              className="rounded-lg bg-[#2b5278]/60 px-2 py-2 text-sm font-semibold transition hover:bg-[#2b5278]"
             >
               {r.label}
             </button>

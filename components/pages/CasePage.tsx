@@ -173,9 +173,7 @@ export function Page({ locale, routeKey }: PageProps) {
         <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {c.results.map((r) => (
             <li key={r.label} className="card p-6">
-              <p className="font-display text-[clamp(2.2rem,1.6rem+2vw,3.2rem)] leading-none font-bold text-accent-text">
-                {r.value}
-              </p>
+              <p className="text-figure font-display font-bold text-accent-text">{r.value}</p>
               <p className="mt-3 text-muted">{r.label}</p>
             </li>
           ))}
@@ -228,7 +226,7 @@ export function Page({ locale, routeKey }: PageProps) {
           {[1, 2].map((n) => (
             <li
               key={n}
-              className="grid aspect-[16/10] place-items-center rounded-2xl border border-dashed border-line-strong bg-surface"
+              className="grid aspect-[16/10] place-items-center rounded-card border border-dashed border-line-strong bg-surface"
             >
               <Todo>
                 {t.screenshotTodo} {n}

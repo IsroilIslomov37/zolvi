@@ -76,7 +76,7 @@ export default function PosDemo({ locale }: { locale: Locale }) {
   return (
     <DemoFrame title={t.title} note={demoNote[locale]}>
       <div className="grid gap-3 md:grid-cols-[1.2fr_1fr]">
-        <div className="rounded-xl bg-bg p-3">
+        <div className="rounded-control bg-bg p-3">
           <div className="grid grid-cols-3 gap-2">
             {t.menu.map((dish, i) => (
               <button
@@ -115,7 +115,7 @@ export default function PosDemo({ locale }: { locale: Locale }) {
             </div>
           </div>
         </div>
-        <div className="rounded-xl bg-[#0d1520] p-3 text-[#eef2f7]" aria-live="polite">
+        <div className="rounded-control bg-[#0d1520] p-3 text-[#eef2f7]" aria-live="polite">
           <p className="mb-2 flex items-center gap-2 text-[10px] font-bold tracking-widest text-[#a3b0c2] uppercase">
             <Icon name="restaurant" className="size-3.5" /> {t.kitchen}
           </p>

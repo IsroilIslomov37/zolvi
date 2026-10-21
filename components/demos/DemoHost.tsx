@@ -5,7 +5,7 @@ import type { Locale } from '@/lib/i18n'
 import type { DemoId } from '@/lib/types'
 
 function Loading() {
-  return <div className="h-[26rem] w-full animate-pulse rounded-2xl bg-surface-2" />
+  return <div className="h-[26rem] w-full animate-pulse rounded-card bg-surface-2" />
 }
 
 // Each demo is its own chunk, fetched only when it is about to be shown.

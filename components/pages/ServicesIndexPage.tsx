@@ -138,7 +138,7 @@ export function Page({ locale, routeKey }: PageProps) {
                   key={s.id}
                   className="card group relative flex flex-col p-6 transition hover:border-line-strong"
                 >
-                  <span className="mb-5 grid size-11 place-items-center rounded-xl bg-accent/12 text-accent-text">
+                  <span className="mb-5 grid size-11 place-items-center rounded-control bg-accent/12 text-accent-text">
                     <Icon name={s.icon} />
                   </span>
                   <h3 className="font-sans text-lg font-bold tracking-normal">

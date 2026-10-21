@@ -78,7 +78,7 @@ export function Header({
                   <Link
                     href={item.href}
                     aria-current={active === item.type ? 'page' : undefined}
-                    className="flex items-center justify-between rounded-xl px-3 py-3 hover:bg-surface"
+                    className="flex items-center justify-between rounded-control px-3 py-3 hover:bg-surface"
                   >
                     {item.label}
                     <Icon name="arrow" className="size-4 text-muted" />

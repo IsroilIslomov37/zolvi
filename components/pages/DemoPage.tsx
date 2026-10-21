@@ -40,7 +40,7 @@ export function Page({ locale, routeKey }: PageProps) {
           <Breadcrumbs items={crumbs} label={d.breadcrumbsLabel} />
           <div className="mt-10 max-w-3xl">
             <p className="eyebrow mb-4">{d.landing.demo}</p>
-            <h1 className="text-[clamp(1.9rem,1.3rem+2.6vw,3.2rem)] font-bold">{c.h1}</h1>
+            <h1 className="text-title font-bold">{c.h1}</h1>
             <p className="mt-5 text-lg text-muted">{c.lead}</p>
           </div>
           <div className="mt-10">

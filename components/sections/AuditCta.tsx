@@ -23,13 +23,13 @@ export function AuditCta({
     <section
       id="audit"
       aria-labelledby="audit-title"
-      className="relative overflow-hidden py-16 sm:py-24"
+      className="section-y relative overflow-hidden"
     >
       <div className="grid-bg pointer-events-none absolute inset-0 opacity-60" aria-hidden="true" />
       <div className="container-page relative grid items-start gap-10 lg:grid-cols-[1.1fr_1fr] lg:gap-16">
         <div className="lg:sticky lg:top-28">
           <p className="eyebrow mb-4">{d.form.title}</p>
-          <h2 id="audit-title" className="text-[clamp(1.7rem,1.2rem+2.4vw,2.8rem)] font-bold">
+          <h2 id="audit-title" className="text-heading font-bold">
             {title ?? d.landing.ctaTitle}
           </h2>
           <p className="mt-5 max-w-xl text-lg text-muted">{text ?? d.landing.ctaText}</p>

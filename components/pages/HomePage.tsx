@@ -146,9 +146,7 @@ export function Page({ locale }: PageProps) {
           {c.stats.items.map((s) => (
             <div key={s.label} className="card p-6">
               <dt className="text-sm text-muted">{s.label}</dt>
-              <dd className="mt-3 font-display text-[clamp(2rem,1.4rem+2vw,3rem)] leading-none font-bold">
-                {s.value}
-              </dd>
+              <dd className="text-figure mt-3 font-display font-bold">{s.value}</dd>
               <dd className="mt-3">
                 <Todo>{c.stats.confirm}</Todo>
               </dd>
@@ -158,9 +156,7 @@ export function Page({ locale }: PageProps) {
 
         <div className="mt-20">
           <p className="eyebrow mb-4">{c.testimonials.eyebrow}</p>
-          <h2 className="text-[clamp(1.6rem,1.1rem+2.2vw,2.6rem)] font-bold">
-            {c.testimonials.title}
-          </h2>
+          <h2 className="text-heading font-bold">{c.testimonials.title}</h2>
           <p className="mt-4 max-w-2xl text-lg text-muted">{c.testimonials.intro}</p>
           <ul className="mt-10 grid gap-4 md:grid-cols-3">
             {[1, 2, 3].map((n) => (

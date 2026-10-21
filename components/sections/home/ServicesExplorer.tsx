@@ -79,7 +79,7 @@ export function ServicesExplorer({
             className="card group relative flex flex-col p-6 transition hover:border-line-strong"
           >
             <div className="mb-5 flex items-center justify-between">
-              <span className="grid size-11 place-items-center rounded-xl bg-accent/12 text-accent-text">
+              <span className="grid size-11 place-items-center rounded-control bg-accent/12 text-accent-text">
                 <Icon name={card.icon} />
               </span>
               {card.demo && (
@@ -111,7 +111,7 @@ export function ServicesExplorer({
         onClose={() => setDemo(null)}
         onClick={(e) => e.target === dialogRef.current && dialogRef.current?.close()}
         aria-label={demo?.title}
-        className="m-auto w-[min(64rem,calc(100vw-2rem))] max-w-none rounded-3xl border border-line bg-bg p-0 text-text backdrop:bg-black/70 backdrop:backdrop-blur-sm"
+        className="m-auto w-[min(64rem,calc(100vw-2rem))] max-w-none rounded-panel border border-line bg-bg p-0 text-text backdrop:bg-black/70 backdrop:backdrop-blur-sm"
       >
         <div className="flex items-center justify-between border-b border-line px-5 py-4">
           <p className="font-bold">{demo?.title}</p>

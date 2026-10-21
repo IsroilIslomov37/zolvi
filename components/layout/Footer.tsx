@@ -117,9 +117,7 @@ export function Footer({ locale }: { locale: Locale }) {
 function FooterColumn({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <div>
-      <h2 className="mb-5 font-sans text-sm font-bold tracking-[0.14em] text-text uppercase">
-        {title}
-      </h2>
+      <h2 className="mb-5 font-sans text-sm font-semibold text-text">{title}</h2>
       <ul className="space-y-2.5 text-sm">{children}</ul>
     </div>
   )

@@ -3,6 +3,7 @@
  * Start the production server first (`npm run build && npm run start`), then:
  *   npx tsx scripts/screens.mts before            → design-audit/before/
  *   npx tsx scripts/screens.mts after http://localhost:3100
+ * Optional filters: SCREENS_PAGES=home,pricing SCREENS_WIDTHS=1440 SCREENS_THEMES=dark
  */
 import fs from 'node:fs'
 import path from 'node:path'
@@ -10,15 +11,20 @@ import { Launcher } from 'chrome-launcher'
 import puppeteer from 'puppeteer-core'
 
 const [label = 'before', base = 'http://localhost:3000'] = process.argv.slice(2)
-const pages: Record<string, string> = {
+const only = (name: string) => process.env[name]?.split(',').filter(Boolean)
+const allPages: Record<string, string> = {
   home: '/ru',
   service: '/ru/uslugi/razrabotka-crm',
   case: '/ru/kejsy/platforma-dlya-gostinichnoj-seti',
   pricing: '/ru/ceny',
   contact: '/ru/kontakty',
 }
-const widths = [1440, 390]
-const themes = ['dark', 'light'] as const
+const pageFilter = only('SCREENS_PAGES')
+const pages = Object.fromEntries(
+  Object.entries(allPages).filter(([name]) => !pageFilter || pageFilter.includes(name)),
+)
+const widths = only('SCREENS_WIDTHS')?.map(Number) ?? [1440, 390]
+const themes = (only('SCREENS_THEMES') ?? ['dark', 'light']) as ('dark' | 'light')[]
 const outDir = path.join(process.cwd(), 'design-audit', label)
 fs.mkdirSync(outDir, { recursive: true })
 

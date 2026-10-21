@@ -54,10 +54,10 @@ export function LandingTemplate({ item, locale }: { item: Landing; locale: Local
           <Breadcrumbs items={crumbs} label={d.breadcrumbsLabel} />
           <div className="mt-10 grid items-end gap-10 lg:grid-cols-[1.4fr_1fr]">
             <div>
-              <span className="mb-6 grid size-14 place-items-center rounded-2xl bg-accent/12 text-accent-text">
+              <span className="mb-6 grid size-14 place-items-center rounded-card bg-accent/12 text-accent-text">
                 <Icon name={item.icon} className="size-7" />
               </span>
-              <h1 className="text-[clamp(2rem,1.3rem+3vw,3.6rem)] font-bold">{c.h1}</h1>
+              <h1 className="text-title font-bold">{c.h1}</h1>
               <p className="mt-6 max-w-2xl text-lg text-muted">{c.lead}</p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a
@@ -97,7 +97,7 @@ export function LandingTemplate({ item, locale }: { item: Landing; locale: Local
       <Section id="pains" title={d.landing.pains} className="bg-bg-soft">
         <div className="grid gap-10 lg:grid-cols-[1fr_2fr]">
           <div>
-            <h3 className="font-sans text-sm font-bold tracking-[0.14em] text-accent-text uppercase">
+            <h3 className="font-sans text-sm font-semibold text-accent-text">
               {d.landing.audience}
             </h3>
             <ul className="mt-5 space-y-3">
@@ -151,7 +151,7 @@ export function LandingTemplate({ item, locale }: { item: Landing; locale: Local
       )}
 
       {/* Long-form copy */}
-      <section className="py-16 sm:py-24">
+      <section className="section-y">
         <div className="container-page">
           <div className="prose-zolvi max-w-3xl">
             {c.sections.map((s) => (
@@ -259,10 +259,7 @@ export function LandingTemplate({ item, locale }: { item: Landing; locale: Local
         <div className="container-page">
           {relatedIndustries.length > 0 && (
             <nav aria-labelledby="rel-industries">
-              <h2
-                id="rel-industries"
-                className="font-sans text-sm font-bold tracking-[0.14em] text-muted uppercase"
-              >
+              <h2 id="rel-industries" className="font-sans text-sm font-semibold text-muted">
                 {item.kind === 'service' ? d.landing.relatedIndustries : d.nav.industries}
               </h2>
               <ul className="mt-5 flex flex-wrap gap-2">

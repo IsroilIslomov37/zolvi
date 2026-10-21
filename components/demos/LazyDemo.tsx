@@ -31,7 +31,7 @@ export function LazyDemo({ id, locale }: { id: DemoId; locale: Locale }) {
       {visible ? (
         <DemoHost id={id} locale={locale} />
       ) : (
-        <div className="h-[26rem] w-full rounded-2xl border border-line bg-surface-2" />
+        <div className="h-[26rem] w-full rounded-card border border-line bg-surface-2" />
       )}
     </div>
   )

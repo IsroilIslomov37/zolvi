@@ -90,7 +90,7 @@ export default function CrmDemo({ locale }: { locale: Locale }) {
           const items = leads.filter((l) => l.stage === si)
           const sum = items.reduce((s, l) => s + l.amount, 0)
           return (
-            <div key={stage} className="min-h-40 rounded-xl bg-bg p-2">
+            <div key={stage} className="min-h-40 rounded-control bg-bg p-2">
               <div className="mb-1 flex items-baseline justify-between px-1">
                 <span className="text-xs font-bold">{stage}</span>
                 <span className="text-[10px] text-muted">{items.length}</span>
@@ -125,7 +125,7 @@ export default function CrmDemo({ locale }: { locale: Locale }) {
           )
         })}
       </div>
-      <div className="mt-3 rounded-xl bg-bg p-3" aria-live="polite">
+      <div className="mt-3 rounded-control bg-bg p-3" aria-live="polite">
         <p className="mb-1 text-[10px] font-bold tracking-widest text-muted uppercase">{t.log}</p>
         <ul className="space-y-0.5 text-xs">
           {log.length === 0 ? (

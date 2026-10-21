@@ -27,7 +27,7 @@ export function ThemeToggle({ labels }: { labels: { toLight: string; toDark: str
       }}
       aria-label={next === 'light' ? labels.toLight : labels.toDark}
       title={next === 'light' ? labels.toLight : labels.toDark}
-      className="grid size-10 place-items-center rounded-xl border border-line text-muted transition hover:border-line-strong hover:text-text"
+      className="grid size-10 place-items-center rounded-control border border-line text-muted transition hover:border-line-strong hover:text-text"
     >
       <Icon name={theme === 'dark' ? 'sun' : 'moon'} />
     </button>

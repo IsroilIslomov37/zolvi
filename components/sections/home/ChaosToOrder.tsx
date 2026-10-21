@@ -112,15 +112,13 @@ export function ChaosToOrder({
         <div
           aria-hidden="true"
           style={{ opacity: 'var(--p)' }}
-          className="absolute -inset-3 rounded-[1.75rem] border border-line bg-surface/60 shadow-[var(--shadow)] sm:-inset-5"
+          className="absolute -inset-3 rounded-panel border border-line bg-surface/60 shadow-float sm:-inset-5"
         >
           <div className="flex items-center gap-1.5 border-b border-line px-4 py-2.5">
             <span className="size-2 rounded-full bg-[#ff6b5b]" />
             <span className="size-2 rounded-full bg-accent" />
             <span className="size-2 rounded-full bg-[#4ade80]" />
-            <span className="ml-3 text-[10px] font-bold tracking-[0.16em] text-muted uppercase">
-              ZOLVI · Dashboard
-            </span>
+            <span className="ml-3 font-semibold text-muted">ZOLVI · Dashboard</span>
           </div>
         </div>
         <div aria-hidden="true" className="absolute inset-x-0 top-8 bottom-0 sm:top-10">
@@ -144,7 +142,7 @@ export function ChaosToOrder({
                 {/* Chaos face */}
                 <div
                   style={{ opacity: 'calc(1 - var(--p))' }}
-                  className="absolute inset-0 flex flex-col justify-between rounded-2xl border border-[#ff8a5b]/30 bg-[linear-gradient(160deg,#3a2418,#2a1b16)] p-3 text-[#ffd6c2] shadow-lg sm:p-4"
+                  className="absolute inset-0 flex flex-col justify-between rounded-card border border-[#ff8a5b]/30 bg-[linear-gradient(160deg,#3a2418,#2a1b16)] p-3 text-[#ffd6c2] shadow-lg sm:p-4"
                 >
                   <span className="grid size-6 place-items-center rounded-full bg-[#ff6b5b]/20 text-xs font-black text-[#ff9a85]">
                     !
@@ -156,7 +154,7 @@ export function ChaosToOrder({
                 {/* Order face */}
                 <div
                   style={{ opacity: 'var(--p)' }}
-                  className="absolute inset-0 flex flex-col justify-between rounded-2xl border border-line bg-surface-2 p-3 sm:p-4"
+                  className="absolute inset-0 flex flex-col justify-between rounded-card border border-line bg-surface-2 p-3 sm:p-4"
                 >
                   <div className="flex items-center justify-between">
                     <span className="text-[10px] font-semibold text-muted sm:text-xs">
