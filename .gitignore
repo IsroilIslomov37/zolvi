@@ -12,3 +12,4 @@ reports/lighthouse/*.html
 # Source materials kept locally, not part of the site
 /zolvi-claude-code-prompt.md
 /image.png
+/zolvi-design-prompt.md

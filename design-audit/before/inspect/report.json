@@ -1,0 +1,4197 @@
+{
+ "url": "http://localhost:3100/ru",
+ "at": "2026-10-21T12:40:17.692Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 12,
+   "filled": [
+    0.46,
+    0.21,
+    1,
+    1,
+    1,
+    0.57,
+    1,
+    0.47,
+    0.89,
+    0.6,
+    0.68,
+    0.72
+   ],
+   "motion": {
+    "elements": 2,
+    "css": 2,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 11971,
+     "screens": 13.3,
+     "words": 1438,
+     "img": 2,
+     "video": 0,
+     "canvas": 0,
+     "svg": 116,
+     "sections": 11,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [
+      "✕"
+     ],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Превращаем хаос в систему",
+     "words": 4,
+     "chars": 25,
+     "lines": 3,
+     "size": 73.6,
+     "vw": 5.1,
+     "font": "Unbounded",
+     "weight": 700,
+     "tracking": -0.03,
+     "leading": 1.02,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.43,
+     "top": 235,
+     "tag": "p",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Разработка CRM, ERP и автоматизация бизнеса — Ташкент",
+     "words": 8,
+     "lines": 1,
+     "size": 20,
+     "font": "Manrope"
+    },
+    "headings": [
+     {
+      "text": "Превращаем хаос в систему",
+      "words": 4,
+      "chars": 25,
+      "lines": 3,
+      "size": 73.6,
+      "vw": 5.1,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": -0.03,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.43,
+      "top": 235,
+      "tag": "p",
+      "kind": "heading"
+     },
+     {
+      "text": "Тот же бизнес — через 90 дней с ZOLVI",
+      "words": 9,
+      "chars": 37,
+      "lines": 2,
+      "size": 41.6,
+      "vw": 2.9,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.53,
+      "top": 1031,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "+34%",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 36,
+      "vw": 2.5,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.11,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.09,
+      "top": 1354,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "−60%",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 36,
+      "vw": 2.5,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.11,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.09,
+      "top": 1440,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "×3",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 36,
+      "vw": 2.5,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.11,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.04,
+      "top": 1526,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "Системы для бизнеса: CRM, ERP, POS, боты и AI",
+      "words": 9,
+      "chars": 45,
+      "lines": 2,
+      "size": 41.6,
+      "vw": 2.9,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.53,
+      "top": 1919,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Результат виден с первой недели",
+      "words": 5,
+      "chars": 31,
+      "lines": 2,
+      "size": 41.6,
+      "vw": 2.9,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.53,
+      "top": 4881,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Результат в цифрах",
+      "words": 3,
+      "chars": 18,
+      "lines": 1,
+      "size": 41.6,
+      "vw": 2.9,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.53,
+      "top": 5565,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "−38%",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 36,
+      "vw": 2.5,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.11,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.09,
+      "top": 5776,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "2,1 s",
+      "words": 2,
+      "chars": 5,
+      "lines": 1,
+      "size": 36,
+      "vw": 2.5,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.11,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.06,
+      "top": 5776,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "−24%",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 36,
+      "vw": 2.5,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.11,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.09,
+      "top": 6063,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "200+",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 36,
+      "vw": 2.5,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.11,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.08,
+      "top": 6063,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "ZOLVI в цифрах",
+      "words": 3,
+      "chars": 14,
+      "lines": 1,
+      "size": 41.6,
+      "vw": 2.9,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.53,
+      "top": 6622,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "12+",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 48,
+      "vw": 3.3,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.16,
+      "top": 6781,
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "180+",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 48,
+      "vw": 3.3,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.16,
+      "top": 6781,
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "20",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 48,
+      "vw": 3.3,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.16,
+      "top": 6781,
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "99.98%",
+      "words": 1,
+      "chars": 6,
+      "lines": 1,
+      "size": 48,
+      "vw": 3.3,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.16,
+      "top": 6781,
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "Что говорят клиенты",
+      "words": 3,
+      "chars": 19,
+      "lines": 1,
+      "size": 41.6,
+      "vw": 2.9,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.81,
+      "top": 7014,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Сколько времени вернёт автоматизация?",
+      "words": 4,
+      "chars": 37,
+      "lines": 2,
+      "size": 41.6,
+      "vw": 2.9,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.53,
+      "top": 7597,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "50–90",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 57.6,
+      "vw": 4,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.35,
+      "top": 7895,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "Открытые цены: пакеты «от …»",
+      "words": 5,
+      "chars": 28,
+      "lines": 2,
+      "size": 41.6,
+      "vw": 2.9,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.53,
+      "top": 8686,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Частые вопросы",
+      "words": 2,
+      "chars": 14,
+      "lines": 1,
+      "size": 41.6,
+      "vw": 2.9,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.53,
+      "top": 9773,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Разберём ваши процессы за 30 минут",
+      "words": 6,
+      "chars": 34,
+      "lines": 3,
+      "size": 44.8,
+      "vw": 3.1,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.4,
+      "top": 10718,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 23,
+     "maxLines": 3,
+     "over2Lines": 2,
+     "statements": 9,
+     "centered": 0,
+     "medianWords": 2,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Manrope",
+       "share": 0.9,
+       "mono": false
+      },
+      {
+       "family": "Unbounded",
+       "share": 0.05,
+       "mono": false
+      },
+      {
+       "family": "ui-monospace",
+       "share": 0.04,
+       "mono": false
+      }
+     ],
+     "familyCount": 3,
+     "sizes": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      18,
+      19,
+      20,
+      24,
+      36,
+      42,
+      45,
+      48,
+      58,
+      74
+     ],
+     "sizeCount": 17,
+     "notLoaded": [],
+     "body": {
+      "font": "Manrope",
+      "size": 14,
+      "leading": 1.43,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 7.5
+     },
+     "measureChars": 112,
+     "max": {
+      "size": 73.6,
+      "vw": 5.1,
+      "font": "Unbounded",
+      "text": "Превращаем хаос в систему"
+     },
+     "monoShare": 0.04,
+     "monoProseShare": 0.04,
+     "monoFamilies": [
+      "ui-monospace"
+     ],
+     "monoSamples": [
+      "TODO: подтвердить",
+      "TODO: подтвердить",
+      "TODO: подтвердить",
+      "TODO: подтвердить",
+      "TODO: подтвердить",
+      "TODO: отзыв клиента: текст, имя, должнос"
+     ],
+     "microLabels": 27,
+     "microLabelShare": 0.028,
+     "microSamples": [
+      "Ташкент · CRM · ERP · AI",
+      "ZOLVI · Dashboard",
+      "До / после",
+      "До",
+      "Через 90 дней",
+      "Услуги"
+     ],
+     "upperShare": 0.03,
+     "centerShare": 0.04,
+     "smallText": 28
+    },
+    "eyebrows": [
+     {
+      "text": "Ташкент · CRM · ERP · AI",
+      "above": "Превращаем хаос в систему",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 151
+     },
+     {
+      "text": "До / после",
+      "above": "Тот же бизнес — через 90 дней с ZOLVI",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 995
+     },
+     {
+      "text": "Через 90 дней",
+      "above": "+34%",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 1297
+     },
+     {
+      "text": "Услуги",
+      "above": "Системы для бизнеса: CRM, ERP, POS, боты",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 1883
+     },
+     {
+      "text": "Процесс",
+      "above": "Результат виден с первой недели",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 4845
+     },
+     {
+      "text": "Кейсы",
+      "above": "Результат в цифрах",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 5529
+     },
+     {
+      "text": "Цифры",
+      "above": "ZOLVI в цифрах",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 6586
+     },
+     {
+      "text": "лет опыта",
+      "above": "12+",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 14,
+      "top": 6749
+     },
+     {
+      "text": "запущенных систем",
+      "above": "180+",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 14,
+      "top": 6749
+     },
+     {
+      "text": "отраслей",
+      "above": "20",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 14,
+      "top": 6749
+     },
+     {
+      "text": "uptime",
+      "above": "99.98%",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 14,
+      "top": 6749
+     },
+     {
+      "text": "Отзывы",
+      "above": "Что говорят клиенты",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 6978
+     },
+     {
+      "text": "Калькулятор",
+      "above": "Сколько времени вернёт автоматизация?",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 7561
+     },
+     {
+      "text": "Примерный эффект",
+      "above": "50–90",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 7855
+     },
+     {
+      "text": "Цены",
+      "above": "Открытые цены: пакеты «от …»",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 8650
+     },
+     {
+      "text": "FAQ",
+      "above": "Частые вопросы",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 9737
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#0b1119",
+     "bodyBgHsl": {
+      "h": 214,
+      "s": 0.39,
+      "l": 0.07
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#0f1722",
+       "top": 1782,
+       "hsl": {
+        "h": 215,
+        "s": 0.39,
+        "l": 0.1
+       }
+      },
+      {
+       "color": "#16202e",
+       "top": 9875,
+       "hsl": {
+        "h": 215,
+        "s": 0.35,
+        "l": 0.13
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#a3b0c2",
+       "share": 0.64
+      },
+      {
+       "color": "#eef2f7",
+       "share": 0.21
+      },
+      {
+       "color": "#f5b521",
+       "share": 0.06
+      },
+      {
+       "color": "#ff9ccd",
+       "share": 0.04
+      },
+      {
+       "color": "#ffd6c2",
+       "share": 0.03
+      }
+     ],
+     "button": {
+      "bg": "#16202f",
+      "hsl": {
+       "h": 216,
+       "s": 0.36,
+       "l": 0.14
+      },
+      "fg": "#eef2f7"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 19,
+     "inHero": 5,
+     "radius": 14,
+     "height": 48,
+     "withShadow": 5,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Перейти к основному содержимому",
+      "Бесплатный аудит",
+      "Бесплатный аудит — 30 минут",
+      "Написать в Telegram",
+      "Навести порядок"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 13,
+     "shadowOverlay": 1,
+     "shadowSamples": [
+      "a.btn.btn-primary → rgba(245, 181, 33, 0.6) 0px 10px 30px -12px",
+      "div.absolute.-inset-3 → rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0",
+      "div.absolute.inset-0 → rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0",
+      "div.absolute.inset-0 → rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0"
+     ],
+     "gradients": 8,
+     "scrims": 2,
+     "gradientSamples": [
+      "div.absolute.inset-0 → linear-gradient(160deg, rgb(58, 36, 24), rgb(42, 27, 22))",
+      "div.absolute.inset-0 → linear-gradient(160deg, rgb(58, 36, 24), rgb(42, 27, 22))",
+      "div.absolute.inset-0 → linear-gradient(160deg, rgb(58, 36, 24), rgb(42, 27, 22))",
+      "div.absolute.inset-0 → linear-gradient(160deg, rgb(58, 36, 24), rgb(42, 27, 22))"
+     ],
+     "gradientText": 0,
+     "hairlines": 14,
+     "hairlineSamples": [
+      "header.sticky.top-0 1440px",
+      "div.flex.items-center 525px",
+      "section.marquee.overflow-hidden 1440px",
+      "ul.mt-6.flex-1 321px",
+      "ul.mt-6.flex-1 321px"
+     ],
+     "outlinedBoxes": 62,
+     "dashed": 19,
+     "blurred": 1,
+     "roundedBoxes": 64,
+     "boxRadius": 20,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 25,
+       "iconTopped": true,
+       "rounded": true,
+       "top": 2222
+      },
+      {
+       "count": 5,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 5106
+      },
+      {
+       "count": 4,
+       "iconTopped": true,
+       "rounded": true,
+       "top": 5743
+      },
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 6724
+      },
+      {
+       "count": 3,
+       "iconTopped": true,
+       "rounded": true,
+       "top": 7144
+      },
+      {
+       "count": 3,
+       "iconTopped": true,
+       "rounded": true,
+       "top": 8883
+      }
+     ]
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 11,
+     "fixed": true,
+     "height": 65,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "manrope",
+     "manrope fallback",
+     "unbounded",
+     "unbounded fallback"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 11971,
+    "margins": {
+     "left": 136,
+     "right": 161
+    },
+    "sections": [
+     {
+      "sel": "section.relative.overflow-hidden",
+      "tag": "section",
+      "top": 65,
+      "height": 747,
+      "words": 84,
+      "media": 0,
+      "middle": 81,
+      "heading": {
+       "text": "Превращаем хаос в систему",
+       "size": 74,
+       "tag": "p"
+      },
+      "left": 136,
+      "right": 202,
+      "textLeft": 136,
+      "textRight": 202,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#before-after.py-16.sm:py-24",
+      "tag": "section",
+      "top": 894,
+      "height": 888,
+      "words": 79,
+      "media": 0,
+      "middle": 114,
+      "heading": {
+       "text": "Тот же бизнес — через 90 дней с ZOLVI",
+       "size": 42,
+       "tag": "h2"
+      },
+      "left": 136,
+      "right": 177,
+      "textLeft": 136,
+      "textRight": 177,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#services.py-16.sm:py-24",
+      "tag": "section",
+      "top": 1782,
+      "height": 2962,
+      "words": 459,
+      "media": 0,
+      "middle": 66,
+      "heading": {
+       "text": "Системы для бизнеса: CRM, ERP, POS, боты и AI",
+       "size": 42,
+       "tag": "h2"
+      },
+      "left": 136,
+      "right": 161,
+      "textLeft": 136,
+      "textRight": 166,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#process.py-16.sm:py-24",
+      "tag": "section",
+      "top": 4744,
+      "height": 684,
+      "words": 66,
+      "media": 0,
+      "middle": 64,
+      "heading": {
+       "text": "Результат виден с первой недели",
+       "size": 42,
+       "tag": "h2"
+      },
+      "left": 136,
+      "right": 181,
+      "textLeft": 136,
+      "textRight": 181,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#cases.py-16.sm:py-24",
+      "tag": "section",
+      "top": 5428,
+      "height": 1057,
+      "words": 111,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Результат в цифрах",
+       "size": 42,
+       "tag": "h2"
+      },
+      "left": 136,
+      "right": 169,
+      "textLeft": 136,
+      "textRight": 169,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#numbers.py-16.sm:py-24",
+      "tag": "section",
+      "top": 6485,
+      "height": 976,
+      "words": 81,
+      "media": 0,
+      "middle": 78,
+      "heading": {
+       "text": "12+",
+       "size": 48,
+       "tag": "dd"
+      },
+      "left": 136,
+      "right": 149,
+      "textLeft": 136,
+      "textRight": 149,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#calculator.py-16.sm:py-24",
+      "tag": "section",
+      "top": 7460,
+      "height": 1089,
+      "words": 116,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "50",
+       "size": 58,
+       "tag": "p"
+      },
+      "left": 136,
+      "right": 192,
+      "textLeft": 136,
+      "textRight": 192,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#pricing.py-16.sm:py-24",
+      "tag": "section",
+      "top": 8549,
+      "height": 1087,
+      "words": 154,
+      "media": 0,
+      "middle": 81,
+      "heading": {
+       "text": "Открытые цены: пакеты «от …»",
+       "size": 42,
+       "tag": "h2"
+      },
+      "left": 136,
+      "right": 200,
+      "textLeft": 136,
+      "textRight": 200,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#faq.py-16.sm:py-24",
+      "tag": "section",
+      "top": 9636,
+      "height": 833,
+      "words": 232,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Частые вопросы",
+       "size": 42,
+       "tag": "h2"
+      },
+      "left": 136,
+      "right": 437,
+      "textLeft": 136,
+      "textRight": 437,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#audit.relative.overflow-hidden",
+      "tag": "section",
+      "top": 10469,
+      "height": 853,
+      "words": 48,
+      "media": 0,
+      "middle": 9839,
+      "heading": {
+       "text": "Разберём ваши процессы за 30 минут",
+       "size": 45,
+       "tag": "h2"
+      },
+      "left": 0,
+      "right": 169,
+      "textLeft": -9887,
+      "textRight": 221,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.border-t.border-line",
+      "tag": "footer",
+      "top": 11323,
+      "height": 648,
+      "words": 85,
+      "media": 0,
+      "middle": 122,
+      "heading": {
+       "text": "Услуги",
+       "size": 14,
+       "tag": "h2"
+      },
+      "left": 136,
+      "right": 136,
+      "textLeft": 136,
+      "textRight": 136,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Разработка CRM, ERP и автоматизация бизнеса — Ташкент",
+      "size": 20,
+      "top": 191,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 165,
+      "n": 14
+     },
+     {
+      "x": 136,
+      "n": 13
+     }
+    ],
+    "leftBlocks": 27,
+    "bodySize": 14,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0.09,
+    "voidBox": {
+     "x": 1260,
+     "y": 120,
+     "w": 180,
+     "h": 660
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 12,
+   "filled": [
+    0.62,
+    0.49,
+    0.86,
+    0.99,
+    0.99,
+    0.99,
+    0.51,
+    0.99,
+    0.57,
+    0.87,
+    0.73,
+    0.73
+   ],
+   "motion": {
+    "elements": 2,
+    "css": 2,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 15334,
+     "screens": 15,
+     "words": 1432,
+     "img": 2,
+     "video": 0,
+     "canvas": 0,
+     "svg": 116,
+     "sections": 11,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [
+      "✕"
+     ],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Превращаем хаос в систему",
+     "words": 4,
+     "chars": 25,
+     "lines": 2,
+     "size": 57.7,
+     "vw": 7.5,
+     "font": "Unbounded",
+     "weight": 700,
+     "tracking": -0.03,
+     "leading": 1.02,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.94,
+     "top": 219,
+     "tag": "p",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Разработка CRM, ERP и автоматизация бизнеса — Ташкент",
+     "words": 8,
+     "lines": 1,
+     "size": 20,
+     "font": "Manrope"
+    },
+    "headings": [
+     {
+      "text": "Превращаем хаос в систему",
+      "words": 4,
+      "chars": 25,
+      "lines": 2,
+      "size": 57.7,
+      "vw": 7.5,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": -0.03,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.94,
+      "top": 219,
+      "tag": "p",
+      "kind": "heading"
+     },
+     {
+      "text": "Тот же бизнес — через 90 дней с ZOLVI",
+      "words": 9,
+      "chars": 37,
+      "lines": 2,
+      "size": 34.5,
+      "vw": 4.5,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.94,
+      "top": 1549,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "+34%",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 36,
+      "vw": 4.7,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.11,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.17,
+      "top": 1856,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "−60%",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 36,
+      "vw": 4.7,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.11,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.17,
+      "top": 1942,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "×3",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 36,
+      "vw": 4.7,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.11,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.07,
+      "top": 2028,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "Системы для бизнеса: CRM, ERP, POS, боты и AI",
+      "words": 9,
+      "chars": 45,
+      "lines": 2,
+      "size": 34.5,
+      "vw": 4.5,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.94,
+      "top": 2421,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Результат виден с первой недели",
+      "words": 5,
+      "chars": 31,
+      "lines": 2,
+      "size": 34.5,
+      "vw": 4.5,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.94,
+      "top": 6499,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Результат в цифрах",
+      "words": 3,
+      "chars": 18,
+      "lines": 1,
+      "size": 34.5,
+      "vw": 4.5,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.94,
+      "top": 7227,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "−38%",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 36,
+      "vw": 4.7,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.11,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.17,
+      "top": 7431,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "2,1 s",
+      "words": 2,
+      "chars": 5,
+      "lines": 1,
+      "size": 36,
+      "vw": 4.7,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.11,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.12,
+      "top": 7431,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "−24%",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 36,
+      "vw": 4.7,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.11,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.17,
+      "top": 7776,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "200+",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 36,
+      "vw": 4.7,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.11,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.15,
+      "top": 7776,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "ZOLVI в цифрах",
+      "words": 3,
+      "chars": 14,
+      "lines": 1,
+      "size": 34.5,
+      "vw": 4.5,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.94,
+      "top": 8393,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "12+",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 37.8,
+      "vw": 4.9,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.39,
+      "top": 8545,
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "180+",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 37.8,
+      "vw": 4.9,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.39,
+      "top": 8545,
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "20",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 37.8,
+      "vw": 4.9,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.39,
+      "top": 8719,
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "99.98%",
+      "words": 1,
+      "chars": 6,
+      "lines": 1,
+      "size": 37.8,
+      "vw": 4.9,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.39,
+      "top": 8719,
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "Что говорят клиенты",
+      "words": 3,
+      "chars": 19,
+      "lines": 1,
+      "size": 34.5,
+      "vw": 4.5,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.94,
+      "top": 8941,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Сколько времени вернёт автоматизация?",
+      "words": 4,
+      "chars": 37,
+      "lines": 2,
+      "size": 34.5,
+      "vw": 4.5,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.94,
+      "top": 9536,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "50–90",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 48.6,
+      "vw": 6.3,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.85,
+      "top": 10473,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "Открытые цены: пакеты «от …»",
+      "words": 5,
+      "chars": 28,
+      "lines": 1,
+      "size": 34.5,
+      "vw": 4.5,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.94,
+      "top": 11142,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Частые вопросы",
+      "words": 2,
+      "chars": 14,
+      "lines": 1,
+      "size": 34.5,
+      "vw": 4.5,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.94,
+      "top": 12415,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Разберём ваши процессы за 30 минут",
+      "words": 6,
+      "chars": 34,
+      "lines": 2,
+      "size": 37.6,
+      "vw": 4.9,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.94,
+      "top": 13240,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 23,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 9,
+     "centered": 0,
+     "medianWords": 2,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Manrope",
+       "share": 0.9,
+       "mono": false
+      },
+      {
+       "family": "Unbounded",
+       "share": 0.05,
+       "mono": false
+      },
+      {
+       "family": "ui-monospace",
+       "share": 0.04,
+       "mono": false
+      }
+     ],
+     "familyCount": 3,
+     "sizes": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      18,
+      19,
+      20,
+      24,
+      35,
+      36,
+      38,
+      49,
+      58
+     ],
+     "sizeCount": 16,
+     "notLoaded": [],
+     "body": {
+      "font": "Manrope",
+      "size": 14,
+      "leading": 1.43,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 7.5
+     },
+     "measureChars": 90,
+     "max": {
+      "size": 57.7,
+      "vw": 7.5,
+      "font": "Unbounded",
+      "text": "Превращаем хаос в систему"
+     },
+     "monoShare": 0.04,
+     "monoProseShare": 0.04,
+     "monoFamilies": [
+      "ui-monospace"
+     ],
+     "monoSamples": [
+      "TODO: подтвердить",
+      "TODO: подтвердить",
+      "TODO: подтвердить",
+      "TODO: подтвердить",
+      "TODO: подтвердить",
+      "TODO: отзыв клиента: текст, имя, должнос"
+     ],
+     "microLabels": 27,
+     "microLabelShare": 0.028,
+     "microSamples": [
+      "Ташкент · CRM · ERP · AI",
+      "ZOLVI · Dashboard",
+      "До / после",
+      "До",
+      "Через 90 дней",
+      "Услуги"
+     ],
+     "upperShare": 0.03,
+     "centerShare": 0.04,
+     "smallText": 28
+    },
+    "eyebrows": [
+     {
+      "text": "Ташкент · CRM · ERP · AI",
+      "above": "Превращаем хаос в систему",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 135
+     },
+     {
+      "text": "До / после",
+      "above": "Тот же бизнес — через 90 дней с ZOLVI",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 1513
+     },
+     {
+      "text": "До",
+      "above": "+34%",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 1799
+     },
+     {
+      "text": "Клиенты в 5 мессенджерах и блокноте",
+      "above": "−60%",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 16,
+      "top": 1833
+     },
+     {
+      "text": "Остатки на складе считают раз в неделю",
+      "above": "×3",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 16,
+      "top": 1965
+     },
+     {
+      "text": "Услуги",
+      "above": "Системы для бизнеса: CRM, ERP, POS, боты",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 2385
+     },
+     {
+      "text": "Процесс",
+      "above": "Результат виден с первой недели",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 6463
+     },
+     {
+      "text": "Кейсы",
+      "above": "Результат в цифрах",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 7191
+     },
+     {
+      "text": "Цифры",
+      "above": "ZOLVI в цифрах",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 8357
+     },
+     {
+      "text": "лет опыта",
+      "above": "12+",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 14,
+      "top": 8513
+     },
+     {
+      "text": "запущенных систем",
+      "above": "180+",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 14,
+      "top": 8513
+     },
+     {
+      "text": "отраслей",
+      "above": "20",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 14,
+      "top": 8687
+     },
+     {
+      "text": "uptime",
+      "above": "99.98%",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 14,
+      "top": 8687
+     },
+     {
+      "text": "Отзывы",
+      "above": "Что говорят клиенты",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 8906
+     },
+     {
+      "text": "Калькулятор",
+      "above": "Сколько времени вернёт автоматизация?",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 9500
+     },
+     {
+      "text": "Примерный эффект",
+      "above": "50–90",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 10433
+     },
+     {
+      "text": "Цены",
+      "above": "Открытые цены: пакеты «от …»",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 11106
+     },
+     {
+      "text": "FAQ",
+      "above": "Частые вопросы",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 12379
+     },
+     {
+      "text": "Записаться на бесплатный аудит",
+      "above": "Разберём ваши процессы за 30 минут",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 13204
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#0b1119",
+     "bodyBgHsl": {
+      "h": 214,
+      "s": 0.39,
+      "l": 0.07
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#0f1722",
+       "top": 2284,
+       "hsl": {
+        "h": 215,
+        "s": 0.39,
+        "l": 0.1
+       }
+      },
+      {
+       "color": "#16202e",
+       "top": 9745,
+       "hsl": {
+        "h": 215,
+        "s": 0.35,
+        "l": 0.13
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#a3b0c2",
+       "share": 0.64
+      },
+      {
+       "color": "#eef2f7",
+       "share": 0.21
+      },
+      {
+       "color": "#f5b521",
+       "share": 0.06
+      },
+      {
+       "color": "#ff9ccd",
+       "share": 0.04
+      },
+      {
+       "color": "#ffd6c2",
+       "share": 0.03
+      }
+     ],
+     "button": {
+      "bg": "#16202f",
+      "hsl": {
+       "h": 216,
+       "s": 0.36,
+       "l": 0.14
+      },
+      "fg": "#eef2f7"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 19,
+     "inHero": 4,
+     "radius": 14,
+     "height": 48,
+     "withShadow": 5,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Перейти к основному содержимому",
+      "Бесплатный аудит",
+      "Бесплатный аудит — 30 минут",
+      "Написать в Telegram"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 13,
+     "shadowOverlay": 1,
+     "shadowSamples": [
+      "a.btn.btn-primary → rgba(245, 181, 33, 0.6) 0px 10px 30px -12px",
+      "div.absolute.-inset-3 → rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0",
+      "div.absolute.inset-0 → rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0",
+      "div.absolute.inset-0 → rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0"
+     ],
+     "gradients": 8,
+     "scrims": 2,
+     "gradientSamples": [
+      "div.absolute.inset-0 → linear-gradient(160deg, rgb(58, 36, 24), rgb(42, 27, 22))",
+      "div.absolute.inset-0 → linear-gradient(160deg, rgb(58, 36, 24), rgb(42, 27, 22))",
+      "div.absolute.inset-0 → linear-gradient(160deg, rgb(58, 36, 24), rgb(42, 27, 22))",
+      "div.absolute.inset-0 → linear-gradient(160deg, rgb(58, 36, 24), rgb(42, 27, 22))"
+     ],
+     "gradientText": 0,
+     "hairlines": 11,
+     "hairlineSamples": [
+      "header.sticky.top-0 768px",
+      "div.flex.items-center 710px",
+      "section.marquee.overflow-hidden 768px",
+      "details.group 718px",
+      "details.group 718px"
+     ],
+     "outlinedBoxes": 57,
+     "dashed": 19,
+     "blurred": 1,
+     "roundedBoxes": 59,
+     "boxRadius": 20,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 25,
+       "iconTopped": true,
+       "rounded": true,
+       "top": 2708
+      },
+      {
+       "count": 4,
+       "iconTopped": true,
+       "rounded": true,
+       "top": 7398
+      },
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 8488
+      },
+      {
+       "count": 3,
+       "iconTopped": true,
+       "rounded": true,
+       "top": 9064
+      },
+      {
+       "count": 3,
+       "iconTopped": true,
+       "rounded": true,
+       "top": 11284
+      }
+     ]
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 5,
+     "fixed": true,
+     "height": 65,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "manrope",
+     "manrope fallback",
+     "unbounded",
+     "unbounded fallback"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 15334,
+    "margins": {
+     "left": 24,
+     "right": 49
+    },
+    "sections": [
+     {
+      "sel": "section.relative.overflow-hidden",
+      "tag": "section",
+      "top": 65,
+      "height": 1265,
+      "words": 84,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Превращаем хаос в систему",
+       "size": 58,
+       "tag": "p"
+      },
+      "left": 24,
+      "right": 165,
+      "textLeft": 24,
+      "textRight": 165,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#before-after.py-16.sm:py-24",
+      "tag": "section",
+      "top": 1412,
+      "height": 872,
+      "words": 79,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "+34%",
+       "size": 36,
+       "tag": "span"
+      },
+      "left": 24,
+      "right": 65,
+      "textLeft": 24,
+      "textRight": 65,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#services.py-16.sm:py-24",
+      "tag": "section",
+      "top": 2284,
+      "height": 4078,
+      "words": 459,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Системы для бизнеса: CRM, ERP, POS, боты и AI",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 24,
+      "right": 46,
+      "textLeft": 24,
+      "textRight": 46,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#process.py-16.sm:py-24",
+      "tag": "section",
+      "top": 6362,
+      "height": 728,
+      "words": 66,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Результат виден с первой недели",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 24,
+      "right": 26,
+      "textLeft": 24,
+      "textRight": 26,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#cases.py-16.sm:py-24",
+      "tag": "section",
+      "top": 7090,
+      "height": 1166,
+      "words": 111,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "−38%",
+       "size": 36,
+       "tag": "span"
+      },
+      "left": 24,
+      "right": 57,
+      "textLeft": 24,
+      "textRight": 57,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#numbers.py-16.sm:py-24",
+      "tag": "section",
+      "top": 8256,
+      "height": 1143,
+      "words": 81,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "12+",
+       "size": 38,
+       "tag": "dd"
+      },
+      "left": 24,
+      "right": 65,
+      "textLeft": 24,
+      "textRight": 65,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#calculator.py-16.sm:py-24",
+      "tag": "section",
+      "top": 9399,
+      "height": 1606,
+      "words": 116,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Сколько времени вернёт автоматизация?",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 24,
+      "right": 42,
+      "textLeft": 24,
+      "textRight": 42,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#pricing.py-16.sm:py-24",
+      "tag": "section",
+      "top": 11005,
+      "height": 1273,
+      "words": 154,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Открытые цены: пакеты «от …»",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 24,
+      "right": 57,
+      "textLeft": 24,
+      "textRight": 57,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#faq.py-16.sm:py-24",
+      "tag": "section",
+      "top": 12278,
+      "height": 825,
+      "words": 232,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Частые вопросы",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 24,
+      "right": 55,
+      "textLeft": 24,
+      "textRight": 55,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#audit.relative.overflow-hidden",
+      "tag": "section",
+      "top": 13103,
+      "height": 1174,
+      "words": 48,
+      "media": 0,
+      "middle": 9939,
+      "heading": {
+       "text": "Разберём ваши процессы за 30 минут",
+       "size": 38,
+       "tag": "h2"
+      },
+      "left": 0,
+      "right": 57,
+      "textLeft": -9999,
+      "textRight": 209,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.border-t.border-line",
+      "tag": "footer",
+      "top": 14278,
+      "height": 1056,
+      "words": 85,
+      "media": 0,
+      "middle": 148,
+      "heading": {
+       "text": "Услуги",
+       "size": 14,
+       "tag": "h2"
+      },
+      "left": 24,
+      "right": 24,
+      "textLeft": 24,
+      "textRight": 24,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Разработка CRM, ERP и автоматизация бизнеса — Ташкент",
+      "size": 20,
+      "top": 175,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 53,
+      "n": 14
+     },
+     {
+      "x": 24,
+      "n": 13
+     }
+    ],
+    "leftBlocks": 27,
+    "bodySize": 14,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 12,
+   "filled": [
+    0.58,
+    0.45,
+    0.74,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0.88,
+    0.74
+   ],
+   "motion": {
+    "elements": 2,
+    "css": 2,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 21498,
+     "screens": 25.5,
+     "words": 1432,
+     "img": 2,
+     "video": 0,
+     "canvas": 0,
+     "svg": 116,
+     "sections": 11,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 1,
+     "brokenImages": [],
+     "emoji": [
+      "✕"
+     ],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Превращаем хаос в систему",
+     "words": 4,
+     "chars": 25,
+     "lines": 3,
+     "size": 40.3,
+     "vw": 10.3,
+     "font": "Unbounded",
+     "weight": 700,
+     "tracking": -0.03,
+     "leading": 1.02,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.92,
+     "top": 223,
+     "tag": "p",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Разработка CRM, ERP и автоматизация бизнеса — Ташкент",
+     "words": 8,
+     "lines": 2,
+     "size": 18,
+     "font": "Manrope"
+    },
+    "headings": [
+     {
+      "text": "Превращаем хаос в систему",
+      "words": 4,
+      "chars": 25,
+      "lines": 3,
+      "size": 40.3,
+      "vw": 10.3,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": -0.03,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 223,
+      "tag": "p",
+      "kind": "heading"
+     },
+     {
+      "text": "Тот же бизнес — через 90 дней с ZOLVI",
+      "words": 9,
+      "chars": 37,
+      "lines": 3,
+      "size": 26.2,
+      "vw": 6.7,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 1332,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "+34%",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 30,
+      "vw": 7.7,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.28,
+      "top": 1646,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "−60%",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 30,
+      "vw": 7.7,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.28,
+      "top": 1728,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "×3",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 30,
+      "vw": 7.7,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.11,
+      "top": 1810,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "Системы для бизнеса: CRM, ERP, POS, боты и AI",
+      "words": 9,
+      "chars": 45,
+      "lines": 3,
+      "size": 26.2,
+      "vw": 6.7,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 2183,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Результат виден с первой недели",
+      "words": 5,
+      "chars": 31,
+      "lines": 2,
+      "size": 26.2,
+      "vw": 6.7,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 9232,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Результат в цифрах",
+      "words": 3,
+      "chars": 18,
+      "lines": 1,
+      "size": 26.2,
+      "vw": 6.7,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 10697,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "−38%",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 30,
+      "vw": 7.7,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.28,
+      "top": 10896,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "2,1 s",
+      "words": 2,
+      "chars": 5,
+      "lines": 1,
+      "size": 30,
+      "vw": 7.7,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.2,
+      "top": 11213,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "−24%",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 30,
+      "vw": 7.7,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.28,
+      "top": 11502,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "200+",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 30,
+      "vw": 7.7,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.25,
+      "top": 11791,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "ZOLVI в цифрах",
+      "words": 3,
+      "chars": 14,
+      "lines": 1,
+      "size": 26.2,
+      "vw": 6.7,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 12324,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "12+",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.79,
+      "top": 12450,
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "180+",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.79,
+      "top": 12619,
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "20",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.79,
+      "top": 12788,
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "99.98%",
+      "words": 1,
+      "chars": 6,
+      "lines": 1,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.79,
+      "top": 12957,
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "Что говорят клиенты",
+      "words": 3,
+      "chars": 19,
+      "lines": 1,
+      "size": 26.2,
+      "vw": 6.7,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 13173,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Сколько времени вернёт автоматизация?",
+      "words": 4,
+      "chars": 37,
+      "lines": 3,
+      "size": 26.2,
+      "vw": 6.7,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 14175,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "50–90",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 38.4,
+      "vw": 9.8,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.79,
+      "top": 15131,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "Открытые цены: пакеты «от …»",
+      "words": 5,
+      "chars": 28,
+      "lines": 2,
+      "size": 26.2,
+      "vw": 6.7,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 15820,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Частые вопросы",
+      "words": 2,
+      "chars": 14,
+      "lines": 1,
+      "size": 26.2,
+      "vw": 6.7,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 17874,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Разберём ваши процессы за 30 минут",
+      "words": 6,
+      "chars": 34,
+      "lines": 3,
+      "size": 28.6,
+      "vw": 7.3,
+      "font": "Unbounded",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 18666,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 23,
+     "maxLines": 3,
+     "over2Lines": 5,
+     "statements": 9,
+     "centered": 0,
+     "medianWords": 2,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Manrope",
+       "share": 0.9,
+       "mono": false
+      },
+      {
+       "family": "Unbounded",
+       "share": 0.05,
+       "mono": false
+      },
+      {
+       "family": "ui-monospace",
+       "share": 0.04,
+       "mono": false
+      }
+     ],
+     "familyCount": 3,
+     "sizes": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      18,
+      19,
+      20,
+      26,
+      29,
+      30,
+      32,
+      38,
+      40
+     ],
+     "sizeCount": 16,
+     "notLoaded": [],
+     "body": {
+      "font": "Manrope",
+      "size": 14,
+      "leading": 1.43,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 7.5
+     },
+     "measureChars": 45,
+     "max": {
+      "size": 40.3,
+      "vw": 10.3,
+      "font": "Unbounded",
+      "text": "Превращаем хаос в систему"
+     },
+     "monoShare": 0.04,
+     "monoProseShare": 0.04,
+     "monoFamilies": [
+      "ui-monospace"
+     ],
+     "monoSamples": [
+      "TODO: подтвердить",
+      "TODO: подтвердить",
+      "TODO: подтвердить",
+      "TODO: подтвердить",
+      "TODO: подтвердить",
+      "TODO: отзыв клиента: текст, имя, должнос"
+     ],
+     "microLabels": 27,
+     "microLabelShare": 0.028,
+     "microSamples": [
+      "Ташкент · CRM · ERP · AI",
+      "ZOLVI · Dashboard",
+      "До / после",
+      "До",
+      "Через 90 дней",
+      "Услуги"
+     ],
+     "upperShare": 0.03,
+     "centerShare": 0.04,
+     "smallText": 40
+    },
+    "eyebrows": [
+     {
+      "text": "До / после",
+      "above": "Тот же бизнес — через 90 дней с ZOLVI",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 1297
+     },
+     {
+      "text": "До",
+      "above": "+34%",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 1589
+     },
+     {
+      "text": "Клиенты в 5 мессенджерах и блокноте",
+      "above": "−60%",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 14,
+      "top": 1625
+     },
+     {
+      "text": "Услуги",
+      "above": "Системы для бизнеса: CRM, ERP, POS, боты",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 2147
+     },
+     {
+      "text": "Процесс",
+      "above": "Результат виден с первой недели",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 9196
+     },
+     {
+      "text": "Кейсы",
+      "above": "Результат в цифрах",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 10662
+     },
+     {
+      "text": "Подробнее",
+      "above": "2,1 s",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 14,
+      "top": 11127
+     },
+     {
+      "text": "Подробнее",
+      "above": "−24%",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 14,
+      "top": 11416
+     },
+     {
+      "text": "Подробнее",
+      "above": "200+",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 14,
+      "top": 11705
+     },
+     {
+      "text": "Цифры",
+      "above": "ZOLVI в цифрах",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 12288
+     },
+     {
+      "text": "лет опыта",
+      "above": "12+",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 14,
+      "top": 12418
+     },
+     {
+      "text": "запущенных систем",
+      "above": "180+",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 14,
+      "top": 12587
+     },
+     {
+      "text": "отраслей",
+      "above": "20",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 14,
+      "top": 12756
+     },
+     {
+      "text": "uptime",
+      "above": "99.98%",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 14,
+      "top": 12925
+     },
+     {
+      "text": "Отзывы",
+      "above": "Что говорят клиенты",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 13138
+     },
+     {
+      "text": "Калькулятор",
+      "above": "Сколько времени вернёт автоматизация?",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 14140
+     },
+     {
+      "text": "Примерный эффект",
+      "above": "50–90",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 15091
+     },
+     {
+      "text": "Цены",
+      "above": "Открытые цены: пакеты «от …»",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 15784
+     },
+     {
+      "text": "FAQ",
+      "above": "Частые вопросы",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 17839
+     },
+     {
+      "text": "Записаться на бесплатный аудит",
+      "above": "Разберём ваши процессы за 30 минут",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 18631
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#0b1119",
+     "bodyBgHsl": {
+      "h": 214,
+      "s": 0.39,
+      "l": 0.07
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#0f1722",
+       "top": 2078,
+       "hsl": {
+        "h": 215,
+        "s": 0.39,
+        "l": 0.1
+       }
+      },
+      {
+       "color": "#16202e",
+       "top": 6855,
+       "hsl": {
+        "h": 215,
+        "s": 0.35,
+        "l": 0.13
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#a3b0c2",
+       "share": 0.64
+      },
+      {
+       "color": "#eef2f7",
+       "share": 0.21
+      },
+      {
+       "color": "#f5b521",
+       "share": 0.06
+      },
+      {
+       "color": "#ff9ccd",
+       "share": 0.04
+      },
+      {
+       "color": "#ffd6c2",
+       "share": 0.03
+      }
+     ],
+     "button": {
+      "bg": "#16202f",
+      "hsl": {
+       "h": 216,
+       "s": 0.36,
+       "l": 0.14
+      },
+      "fg": "#eef2f7"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 19,
+     "inHero": 4,
+     "radius": 14,
+     "height": 48,
+     "withShadow": 5,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Перейти к основному содержимому",
+      "Бесплатный аудит — 30 минут",
+      "Написать в Telegram",
+      "Бесплатный аудит — 30 минут"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 13,
+     "shadowOverlay": 1,
+     "shadowSamples": [
+      "a.btn.btn-primary → rgba(245, 181, 33, 0.6) 0px 10px 30px -12px",
+      "div.absolute.-inset-3 → rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0",
+      "div.absolute.inset-0 → rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0",
+      "div.absolute.inset-0 → rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0"
+     ],
+     "gradients": 8,
+     "scrims": 2,
+     "gradientSamples": [
+      "div.absolute.inset-0 → linear-gradient(160deg, rgb(58, 36, 24), rgb(42, 27, 22))",
+      "div.absolute.inset-0 → linear-gradient(160deg, rgb(58, 36, 24), rgb(42, 27, 22))",
+      "div.absolute.inset-0 → linear-gradient(160deg, rgb(58, 36, 24), rgb(42, 27, 22))",
+      "div.absolute.inset-0 → linear-gradient(160deg, rgb(58, 36, 24), rgb(42, 27, 22))"
+     ],
+     "gradientText": 0,
+     "hairlines": 15,
+     "hairlineSamples": [
+      "header.sticky.top-0 390px",
+      "div.flex.items-center 356px",
+      "section.marquee.overflow-hidden 390px",
+      "ul.mt-6.flex-1 308px",
+      "ul.mt-6.flex-1 308px"
+     ],
+     "outlinedBoxes": 63,
+     "dashed": 19,
+     "blurred": 2,
+     "roundedBoxes": 65,
+     "boxRadius": 20,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 65,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "manrope",
+     "manrope fallback",
+     "unbounded",
+     "unbounded fallback"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 21498,
+    "margins": {
+     "left": 16,
+     "right": 33
+    },
+    "sections": [
+     {
+      "sel": "section.relative.overflow-hidden",
+      "tag": "section",
+      "top": 65,
+      "height": 1085,
+      "words": 84,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Превращаем хаос в систему",
+       "size": 40,
+       "tag": "p"
+      },
+      "left": 16,
+      "right": 18,
+      "textLeft": 16,
+      "textRight": 18,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#before-after.py-16.sm:py-24",
+      "tag": "section",
+      "top": 1228,
+      "height": 851,
+      "words": 79,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "+34%",
+       "size": 30,
+       "tag": "span"
+      },
+      "left": 16,
+      "right": 41,
+      "textLeft": 16,
+      "textRight": 41,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#services.py-16.sm:py-24",
+      "tag": "section",
+      "top": 2078,
+      "height": 7049,
+      "words": 459,
+      "media": 0,
+      "middle": 132,
+      "heading": {
+       "text": "Системы для бизнеса: CRM, ERP, POS, боты и AI",
+       "size": 26,
+       "tag": "h2"
+      },
+      "left": 16,
+      "right": 0,
+      "textLeft": 16,
+      "textRight": -213,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#process.py-16.sm:py-24",
+      "tag": "section",
+      "top": 9127,
+      "height": 1465,
+      "words": 66,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Результат виден с первой недели",
+       "size": 26,
+       "tag": "h2"
+      },
+      "left": 16,
+      "right": 16,
+      "textLeft": 16,
+      "textRight": 16,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#cases.py-16.sm:py-24",
+      "tag": "section",
+      "top": 10593,
+      "height": 1627,
+      "words": 111,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "−38%",
+       "size": 30,
+       "tag": "span"
+      },
+      "left": 16,
+      "right": 35,
+      "textLeft": 16,
+      "textRight": 35,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#numbers.py-16.sm:py-24",
+      "tag": "section",
+      "top": 12219,
+      "height": 1851,
+      "words": 81,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "12+",
+       "size": 32,
+       "tag": "dd"
+      },
+      "left": 16,
+      "right": 30,
+      "textLeft": 16,
+      "textRight": 30,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#calculator.py-16.sm:py-24",
+      "tag": "section",
+      "top": 14071,
+      "height": 1645,
+      "words": 116,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Сколько времени вернёт автоматизация?",
+       "size": 26,
+       "tag": "h2"
+      },
+      "left": 16,
+      "right": 24,
+      "textLeft": 16,
+      "textRight": 24,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#pricing.py-16.sm:py-24",
+      "tag": "section",
+      "top": 15715,
+      "height": 2054,
+      "words": 154,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Открытые цены: пакеты «от …»",
+       "size": 26,
+       "tag": "h2"
+      },
+      "left": 16,
+      "right": 33,
+      "textLeft": 16,
+      "textRight": 33,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#faq.py-16.sm:py-24",
+      "tag": "section",
+      "top": 17770,
+      "height": 792,
+      "words": 205,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Частые вопросы",
+       "size": 26,
+       "tag": "h2"
+      },
+      "left": 16,
+      "right": 38,
+      "textLeft": 16,
+      "textRight": 38,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#audit.relative.overflow-hidden",
+      "tag": "section",
+      "top": 18562,
+      "height": 1142,
+      "words": 48,
+      "media": 0,
+      "middle": 9939,
+      "heading": {
+       "text": "Разберём ваши процессы за 30 минут",
+       "size": 29,
+       "tag": "h2"
+      },
+      "left": 0,
+      "right": 29,
+      "textLeft": -9999,
+      "textRight": 29,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.border-t.border-line",
+      "tag": "footer",
+      "top": 19704,
+      "height": 1794,
+      "words": 85,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Услуги",
+       "size": 14,
+       "tag": "h2"
+      },
+      "left": 16,
+      "right": 138,
+      "textLeft": 16,
+      "textRight": 138,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Разработка CRM, ERP и автоматизация бизнеса — Ташкент",
+      "size": 18,
+      "top": 151,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 37,
+      "n": 14
+     },
+     {
+      "x": 16,
+      "n": 13
+     }
+    ],
+    "leftBlocks": 27,
+    "bodySize": 14,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "FAIL",
+   "id": "headline-lines",
+   "width": 1440,
+   "message": "2 headline(s) wrap past two lines at 1440px: \"Превращаем хаос в систему\" → 3 lines (4 words, 73.6px); \"Разберём ваши процессы за 30 минут\" → 3 lines (6 words, 44.8px)",
+   "fix": "Cut words first (a headline is a title, not a sentence). Then give it a wider measure. Lower the size only as a last resort and never below the scale you chose. A real statement paragraph belongs in a <p> or <blockquote> at 36px or less."
+  },
+  {
+   "level": "FAIL",
+   "id": "eyebrow",
+   "width": 1440,
+   "message": "16 eyebrow/kicker label(s) above headings: \"Ташкент · CRM · ERP · AI\" above \"Превращаем хаос в систему\"; \"До / после\" above \"Тот же бизнес — через 90 дней с ZOLVI\"; \"Через 90 дней\" above \"+34%\"; \"Услуги\" above \"Системы для бизнеса: CRM, ERP, POS, боты\"; \"Процесс\" above \"Результат виден с первой недели\"",
+   "fix": "Delete them. If the label carried real information, fold it into the headline or the supporting sentence.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "mono",
+   "width": 1440,
+   "message": "Monospace type outside code: ui-monospace — e.g. \"TODO: подтвердить\", \"TODO: подтвердить\", \"TODO: подтвердить\", \"TODO: подтвердить\"",
+   "fix": "Set it in the text face. Monospace is for literal code inside <pre>/<code> only.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "micro-label",
+   "width": 1440,
+   "message": "27 tiny uppercase letter-spaced labels (e.g. \"Ташкент · CRM · ERP · AI\", \"ZOLVI · Dashboard\", \"До / после\", \"До\").",
+   "fix": "Use sentence-case text at a readable size, or delete the label.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "emoji",
+   "width": 1440,
+   "message": "Emoji in the page: ✕",
+   "fix": "Remove. Use words or real imagery.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "gradient",
+   "width": 1440,
+   "message": "8 gradient fill(s): div.absolute.inset-0 → linear-gradient(160deg, rgb(58, 36, 24), rgb(42, 27, 22)) | div.absolute.inset-0 → linear-gradient(160deg, rgb(58, 36, 24), rgb(42, 27, 22)) | div.absolute.inset-0 → linear-gradient(160deg, rgb(58, 36, 24), rgb(42, 27, 22))",
+   "fix": "Use a flat colour or a real image. The only gradient allowed by default is a neutral scrim over a photo for legibility.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "width": 1440,
+   "message": "13 box-shadow(s) on elements at rest: a.btn.btn-primary → rgba(245, 181, 33, 0.6) 0px 10px 30px -12px | div.absolute.-inset-3 → rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0 | div.absolute.inset-0 → rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0",
+   "fix": "Remove. Separate surfaces with a tone step or space. Shadows are for things that really float (menus, dialogs, sticky bars).",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "button-fx",
+   "width": 1440,
+   "message": "Buttons with shadow/glow.",
+   "fix": "Flat fill, one colour.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "width": 1440,
+   "message": "14 thin rule(s)/divider line(s): header.sticky.top-0 1440px | div.flex.items-center 525px | section.marquee.overflow-hidden 1440px | ul.mt-6.flex-1 321px",
+   "fix": "Delete. Separate with space, a tone change, or scale. Lines are only for real tables and form fields.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "outlined-box",
+   "width": 1440,
+   "message": "62 boxes drawn with a 1px outline.",
+   "fix": "Define a surface by its fill (one tone step from the page) or leave the content unboxed.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "dashed",
+   "width": 1440,
+   "message": "19 dashed/dotted border(s).",
+   "fix": "Remove unless it is a real drop zone.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "icon-cards",
+   "width": 1440,
+   "message": "4 row(s) of identical cards each topped with a small icon (25, 4, 3, 3 cards).",
+   "fix": "Replace with one composed section from the direction: a narrative split, a list set in large type, or real imagery per item.",
+   "alsoAt": [
+    768
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "font-count",
+   "width": 1440,
+   "message": "3 typefaces in use (Manrope, Unbounded, ui-monospace).",
+   "fix": "Two at most.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "size-count",
+   "width": 1440,
+   "message": "17 different font sizes (10, 11, 12, 13, 14, 15, 16, 18, 19, 20, 24, 36, 42, 45, 48, 58, 74).",
+   "fix": "A page needs about five: display, heading, lead, body, small.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "body-size",
+   "width": 1440,
+   "message": "Body text is 14px (the size most of the running text is set in).",
+   "fix": "Body copy 16–20px. Map small sizes from blueprints onto your body step.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "few-pictures",
+   "width": 1440,
+   "message": "Only 0 picture(s) on the page (0 photographs, footage or raster images, 0 interface fragments). Drawings in SVG do not count.",
+   "fix": "Find real pictures of the subject's world with scripts/assets.mjs (photographs, archival images, maps, engravings, footage), download them to assets/ and give them room: a hero picture, one per section that has a subject, a full-width band. At least four, usually six to twelve."
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "WARN",
+   "id": "measure",
+   "width": 1440,
+   "message": "Longest paragraph runs about 112 characters per line.",
+   "fix": "Cap paragraphs at 45–75 characters (max-width: 60ch).",
+   "alsoAt": [
+    768
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "small-text",
+   "width": 1440,
+   "message": "28 text blocks under 13px.",
+   "fix": "Nothing meant to be read goes below 13px.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "off-centre",
+   "width": 1440,
+   "message": "The margins differ: 136px on the left, 161px on the right, at 1440px.",
+   "fix": "Put the navigation and the content on one pair of margins; check for padding on one side only, a scrollbar gutter, or a header on another inset than the page.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "empty-middle",
+   "width": 1440,
+   "message": "1 section(s) have content at both edges and 9839px of nothing between: \"Разберём ваши процессы за 30 минут\"",
+   "fix": "Bring the two parts together on the grid, or put the picture or figure of the section in the middle. An empty middle third reads as a hole, the same as an empty half.",
+   "alsoAt": [
+    768
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "small-title",
+   "width": 1440,
+   "message": "The h1 is 20px (\"Разработка CRM, ERP и автоматизация бизнеса — Ташк\").",
+   "fix": "Set the title at display size, or make the large text of the first screen the h1.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "covered-text",
+   "width": 1440,
+   "message": "Large text lies under another element at some scroll position: \"−38%\" (screen 7, 100% hidden); \"2,1 s\" (screen 7, 100% hidden); \"−24%\" (screen 7, 100% hidden); \"200+\" (screen 7, 100% hidden)",
+   "fix": "Nothing may sit on top of a headline or statement. Move the picture, shorten the pinned run, or raise the text above it (z-index) and give it a ground.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "still-page",
+   "width": 1440,
+   "message": "Only 2 element(s) moved while the page loaded and scrolled.",
+   "fix": "Build the motion layer (SKILL.md step 9, references/motion.md): the signature move, an entrance for the parts of every section, feedback on every control, and one moving picture. Transform and opacity only, with a reduced-motion fallback."
+  },
+  {
+   "level": "FAIL",
+   "id": "headline-lines",
+   "width": 390,
+   "message": "5 headline(s) wrap past two lines at 390px: \"Превращаем хаос в систему\" → 3 lines (4 words, 40.3px); \"Тот же бизнес — через 90 дней с ZOLVI\" → 3 lines (9 words, 26.2px); \"Системы для бизнеса: CRM, ERP, POS, боты и AI\" → 3 lines (9 words, 26.2px); \"Сколько времени вернёт автоматизация?\" → 3 lines (4 words, 26.2px)",
+   "fix": "Cut words first (a headline is a title, not a sentence). Then give it a wider measure. Lower the size only as a last resort and never below the scale you chose. A real statement paragraph belongs in a <p> or <blockquote> at 24px or less."
+  },
+  {
+   "level": "WARN",
+   "id": "glass",
+   "width": 390,
+   "message": "2 backdrop-blur surfaces.",
+   "fix": "One blurred sticky bar at most; glass cards are a tell."
+  },
+  {
+   "level": "WARN",
+   "id": "side-scroll",
+   "width": 390,
+   "message": "1 row(s) scroll sideways with content past their edge.",
+   "fix": "Jurors and most visitors read a row cut at the edge as clipped, not as scrollable. Wrap it onto more lines, or end it inside the grid."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "C:\\Users\\Victus\\Desktop\\zolvi\\design-audit\\before\\inspect\\desktop-fold.jpg",
+   "pages": [
+    "C:\\Users\\Victus\\Desktop\\zolvi\\design-audit\\before\\inspect\\desktop-page-01.jpg",
+    "C:\\Users\\Victus\\Desktop\\zolvi\\design-audit\\before\\inspect\\desktop-page-02.jpg",
+    "C:\\Users\\Victus\\Desktop\\zolvi\\design-audit\\before\\inspect\\desktop-page-03.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "C:\\Users\\Victus\\Desktop\\zolvi\\design-audit\\before\\inspect\\tablet-fold.jpg",
+   "pages": [
+    "C:\\Users\\Victus\\Desktop\\zolvi\\design-audit\\before\\inspect\\tablet-page-01.jpg",
+    "C:\\Users\\Victus\\Desktop\\zolvi\\design-audit\\before\\inspect\\tablet-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "C:\\Users\\Victus\\Desktop\\zolvi\\design-audit\\before\\inspect\\mobile-fold.jpg",
+   "pages": [
+    "C:\\Users\\Victus\\Desktop\\zolvi\\design-audit\\before\\inspect\\mobile-page-01.jpg",
+    "C:\\Users\\Victus\\Desktop\\zolvi\\design-audit\\before\\inspect\\mobile-page-02.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

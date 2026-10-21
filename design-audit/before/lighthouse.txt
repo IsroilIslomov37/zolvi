@@ -1,0 +1,17 @@
+/ru
+  performance 82 (< 90) · accessibility 100 · best-practices 100 · seo 100
+  LCP 3.2 s · CLS 0 · TBT 380 ms · FCP 1.4 s
+  runs (perf): 76, 82, 94
+  report: reports\lighthouse\ru.html
+
+/ru/uslugi/razrabotka-crm
+  performance 92 · accessibility 100 · best-practices 100 · seo 100
+  LCP 3.1 s · CLS 0 · TBT 100 ms · FCP 1.2 s
+  runs (perf): 92, 92, 94
+  report: reports\lighthouse\ru_uslugi_razrabotka-crm.html
+
+/ru/ceny
+  performance 98 · accessibility 100 · best-practices 100 · seo 100
+  LCP 2.4 s · CLS 0 · TBT 50 ms · FCP 1.2 s
+  runs (perf): 95, 98, 98
+  report: reports\lighthouse\ru_ceny.html
