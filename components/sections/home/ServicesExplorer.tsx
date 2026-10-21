@@ -158,7 +158,9 @@ export function ServicesExplorer({
                 >
                   {card.name}
                 </Link>
-                <span className="mt-0.5 line-clamp-2 text-sm text-muted lg:line-clamp-1">{card.summary}</span>
+                <span className="mt-0.5 line-clamp-2 text-sm text-muted lg:line-clamp-1">
+                  {card.summary}
+                </span>
               </span>
               <Icon
                 name="arrow"

@@ -76,10 +76,7 @@ export function Page({ locale, routeKey }: PageProps) {
           {industries.map((s) => {
             const l = s.locales[locale]
             return (
-              <li
-                key={s.id}
-                className="card group relative flex flex-col p-6 transition hover:border-line-strong"
-              >
+              <li key={s.id} className="card card-interactive group relative flex flex-col p-6">
                 <span className="mb-5 grid size-11 place-items-center rounded-control bg-accent/12 text-accent-text">
                   <Icon name={s.icon} />
                 </span>

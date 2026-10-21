@@ -6,10 +6,11 @@ import { getDictionary } from '@/lib/dictionary'
 import type { L10n, Locale } from '@/lib/i18n'
 import { pathFor, type RouteKey } from '@/lib/routes'
 import { breadcrumbLd, graph } from '@/lib/seo'
-import { CaseCards } from '@/components/sections/CaseCards'
+import { CaseCards, casePreview } from '@/components/sections/CaseCards'
 import { PageHero } from '@/components/sections/PageHero'
 import { Icon } from '@/components/ui/Icon'
 import { JsonLd } from '@/components/ui/JsonLd'
+import { MiniPreview } from '@/components/ui/MiniPreview'
 import { Section } from '@/components/ui/Section'
 import { Todo } from '@/components/ui/Todo'
 import type { PageMeta, PageProps } from './types'
@@ -119,23 +120,32 @@ export function Page({ locale, routeKey }: PageProps) {
         eyebrow={industry?.locales[locale].name}
         title={c.h1}
         lead={c.lead}
+        aside={
+          <div className="panel overflow-hidden">
+            <div className="h-48 bg-surface-2/50 p-4 sm:h-56">
+              <MiniPreview kind={casePreview[item.industryId] ?? 'crm'} />
+            </div>
+            <div className="border-t border-line p-6 sm:p-8">
+              <p className="text-sm text-muted">{t.results}</p>
+              <p className="mt-3 font-display text-5xl leading-none font-bold tracking-tight text-accent-text sm:text-6xl">
+                {item.metric}
+              </p>
+            </div>
+          </div>
+        }
       >
-        <dl className="mt-10 grid gap-4 sm:grid-cols-3">
-          <div className="card p-5">
-            <dt className="text-sm text-muted">{t.results}</dt>
-            <dd className="mt-2 font-display text-3xl font-bold text-accent-text">{item.metric}</dd>
-          </div>
-          <div className="card p-5">
+        <dl className="mt-10 flex flex-wrap gap-x-12 gap-y-6">
+          <div>
             <dt className="text-sm text-muted">{t.client}</dt>
-            <dd className="mt-2 font-semibold">{item.client ?? <Todo>{t.clientTodo}</Todo>}</dd>
+            <dd className="mt-1.5 font-semibold">{item.client ?? <Todo>{t.clientTodo}</Todo>}</dd>
           </div>
-          <div className="card p-5">
+          <div>
             <dt className="text-sm text-muted">{t.industry}</dt>
-            <dd className="mt-2 font-semibold">
+            <dd className="mt-1.5 font-semibold">
               {industry && (
                 <Link
                   href={pathFor({ type: 'industry', id: industry.id }, locale)}
-                  className="hover:text-accent-text"
+                  className="underline-offset-4 hover:text-accent-text hover:underline"
                 >
                   {industry.locales[locale].name}
                 </Link>
@@ -170,14 +180,14 @@ export function Page({ locale, routeKey }: PageProps) {
       </Section>
 
       <Section id="results" title={t.results}>
-        <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="grid gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
           {c.results.map((r) => (
-            <li key={r.label} className="card p-6">
+            <li key={r.label} className="border-l-2 border-accent pl-6">
               <p className="text-figure font-display font-bold text-accent-text">{r.value}</p>
               <p className="mt-3 text-muted">{r.label}</p>
             </li>
           ))}
-          <li className="card grid place-items-center border-dashed p-6">
+          <li className="flex items-center border-l-2 border-dashed border-line-strong pl-6">
             <Todo>{t.resultsTodo}</Todo>
           </li>
         </ul>
@@ -223,14 +233,16 @@ export function Page({ locale, routeKey }: PageProps) {
 
       <Section id="screenshots" title={t.screenshots} className="bg-bg-soft">
         <ul className="grid gap-4 md:grid-cols-2">
-          {[1, 2].map((n) => (
-            <li
-              key={n}
-              className="grid aspect-[16/10] place-items-center rounded-card border border-dashed border-line-strong bg-surface"
-            >
-              <Todo>
-                {t.screenshotTodo} {n}
-              </Todo>
+          {(['crm', 'erp'] as const).map((kind, i) => (
+            <li key={kind}>
+              <div className="panel aspect-[16/10] p-4">
+                <MiniPreview kind={i === 0 ? (casePreview[item.industryId] ?? kind) : kind} />
+              </div>
+              <p className="mt-3">
+                <Todo>
+                  {t.screenshotTodo} {i + 1}
+                </Todo>
+              </p>
             </li>
           ))}
         </ul>

@@ -72,7 +72,7 @@ export function Page({ locale, routeKey }: PageProps) {
       <Section id="posts" className="bg-bg-soft">
         <ul className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {posts.map((p) => (
-            <li key={p.id} className="card group relative flex flex-col p-6">
+            <li key={p.id} className="card card-interactive group relative flex flex-col p-6">
               <p className="flex items-center gap-3 text-sm text-muted">
                 <time dateTime={p.date.toISOString()}>
                   {formatDate(p.date.toISOString(), locale)}

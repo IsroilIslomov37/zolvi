@@ -11,6 +11,7 @@ import { FaqList } from '@/components/ui/FaqList'
 import { Icon } from '@/components/ui/Icon'
 import { JsonLd } from '@/components/ui/JsonLd'
 import { Section } from '@/components/ui/Section'
+import { Rich } from '@/components/ui/Todo'
 import type { PageMeta, PageProps } from './types'
 
 const copy: L10n<{
@@ -156,7 +157,8 @@ export function Page({ locale, routeKey }: PageProps) {
       />
 
       <Section id="plans" title={c.plansTitle} className="bg-bg-soft">
-        <PricingCards locale={locale} ctaLabel={c.cta} />
+        <PricingCards locale={locale} ctaLabel={c.cta} only={['start', 'business', 'enterprise']} />
+        <SupportPlan locale={locale} ctaLabel={c.cta} />
       </Section>
 
       <Section id="factors" title={c.factorsTitle}>
@@ -171,7 +173,7 @@ export function Page({ locale, routeKey }: PageProps) {
       </Section>
 
       <Section id="by-service" title={c.tableTitle} className="bg-bg-soft">
-        <div className="overflow-x-auto rounded-card border border-line bg-surface">
+        <div className="overflow-x-auto rounded-panel border border-line bg-surface">
           <table className="w-full min-w-[40rem] text-left">
             <thead className="border-b border-line text-sm text-muted">
               <tr>
@@ -220,13 +222,51 @@ export function Page({ locale, routeKey }: PageProps) {
         </div>
       </Section>
 
-      <Section id="faq" title={c.faqTitle}>
-        <div className="max-w-4xl">
-          <FaqList items={paymentFaq[locale]} />
-        </div>
+      <Section id="faq" title={c.faqTitle} layout="split">
+        <FaqList items={paymentFaq[locale]} />
       </Section>
 
       <JsonLd data={graph(faqLd(paymentFaq[locale]), breadcrumbLd(crumbs))} />
     </>
+  )
+}
+
+/** The monthly support plan: a wide band under the three build packages. */
+function SupportPlan({ locale, ctaLabel }: { locale: Locale; ctaLabel: string }) {
+  const plan = getPlan('support')
+  const copy = plan.locales[locale]
+  return (
+    <div className="panel mt-4 grid gap-8 p-6 sm:p-8 lg:grid-cols-12 lg:items-center">
+      <div className="lg:col-span-4">
+        <h3 className="font-sans text-xl font-bold tracking-tight">{copy.name}</h3>
+        <p className="mt-2 text-muted">{copy.for}</p>
+        <p className="mt-6 font-display text-3xl font-bold tracking-tight">
+          <PriceTag value={plan.priceFrom} locale={locale} unit={copy.unit} />
+        </p>
+      </div>
+      <ul className="grid gap-3 sm:grid-cols-2 lg:col-span-5">
+        {copy.includes.map((item) => (
+          <li key={item} className="flex gap-3">
+            <span className="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-accent/15 text-accent-text">
+              <Icon name="check" className="size-3.5" />
+            </span>
+            <span>
+              <Rich text={item} />
+            </span>
+          </li>
+        ))}
+      </ul>
+      <div className="lg:col-span-3 lg:text-right">
+        <a
+          href="#audit"
+          data-track="cta"
+          data-track-label="plan-support"
+          data-plan="support"
+          className="btn btn-secondary w-full lg:w-auto"
+        >
+          {ctaLabel}
+        </a>
+      </div>
+    </div>
   )
 }

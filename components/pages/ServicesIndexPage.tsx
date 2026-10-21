@@ -134,10 +134,7 @@ export function Page({ locale, routeKey }: PageProps) {
           >
             <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {list.map((s) => (
-                <li
-                  key={s.id}
-                  className="card group relative flex flex-col p-6 transition hover:border-line-strong"
-                >
+                <li key={s.id} className="card card-interactive group relative flex flex-col p-6">
                   <span className="mb-5 grid size-11 place-items-center rounded-control bg-accent/12 text-accent-text">
                     <Icon name={s.icon} />
                   </span>

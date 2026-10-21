@@ -8,7 +8,7 @@ import { getDictionary } from '@/lib/dictionary'
 import type { Locale } from '@/lib/i18n'
 import { pathFor, type RouteKey } from '@/lib/routes'
 import { breadcrumbLd, faqLd, graph, serviceLd } from '@/lib/seo'
-import type { Landing } from '@/lib/types'
+import type { DemoId, Landing } from '@/lib/types'
 import { LazyDemo } from '@/components/demos/LazyDemo'
 import { CaseCards } from '@/components/sections/CaseCards'
 import { PriceTag } from '@/components/sections/PricingCards'
@@ -17,9 +17,19 @@ import { Breadcrumbs } from '@/components/ui/Breadcrumbs'
 import { FaqList } from '@/components/ui/FaqList'
 import { Icon } from '@/components/ui/Icon'
 import { JsonLd } from '@/components/ui/JsonLd'
+import { Magnetic } from '@/components/ui/Magnetic'
+import { MiniPreview, type PreviewKind } from '@/components/ui/MiniPreview'
 import { Section } from '@/components/ui/Section'
 import { Rich } from '@/components/ui/Todo'
 import { site } from '@/lib/site'
+
+const previewFor: Record<DemoId, PreviewKind> = {
+  crm: 'crm',
+  erp: 'erp',
+  ai: 'ai',
+  'telegram-bot': 'bot',
+  pos: 'pos',
+}
 
 /** Shared layout of every service and industry page. */
 export function LandingTemplate({ item, locale }: { item: Landing; locale: Locale }) {
@@ -48,71 +58,87 @@ export function LandingTemplate({ item, locale }: { item: Landing; locale: Local
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden pt-8 pb-14 sm:pt-12 sm:pb-20">
+      <section className="relative overflow-hidden pt-8 pb-16 sm:pt-12 sm:pb-24">
         <div className="grid-bg pointer-events-none absolute inset-0" aria-hidden="true" />
         <div className="container-page relative">
           <Breadcrumbs items={crumbs} label={d.breadcrumbsLabel} />
-          <div className="mt-10 grid items-end gap-10 lg:grid-cols-[1.4fr_1fr]">
-            <div>
+          <div className="mt-10 grid items-center gap-12 lg:grid-cols-12">
+            <div className="lg:col-span-7">
               <span className="mb-6 grid size-14 place-items-center rounded-card bg-accent/12 text-accent-text">
                 <Icon name={item.icon} className="size-7" />
               </span>
               <h1 className="text-title font-bold">{c.h1}</h1>
-              <p className="mt-6 max-w-2xl text-lg text-muted">{c.lead}</p>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <a
-                  href="#audit"
-                  data-track="cta"
-                  data-track-label={`landing-${item.id}`}
-                  className="btn btn-primary"
-                >
-                  {d.cta.audit} <Icon name="arrow" className="size-4" />
-                </a>
+              <p className="measure text-lead mt-6 text-muted">{c.lead}</p>
+              <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
+                <Magnetic className="flex sm:inline-flex">
+                  <a
+                    href="#audit"
+                    data-track="cta"
+                    data-track-label={`landing-${item.id}`}
+                    className="btn btn-primary group w-full sm:w-auto"
+                  >
+                    {d.cta.audit}
+                    <Icon
+                      name="arrow"
+                      className="size-4 transition-transform group-hover:translate-x-0.5"
+                    />
+                  </a>
+                </Magnetic>
                 <a href={site.telegram.url} className="btn btn-secondary">
                   <Icon name="telegram" className="size-4" /> {d.cta.telegram}
                 </a>
               </div>
             </div>
-            <dl className="card grid grid-cols-2 divide-x divide-line">
-              <div className="p-5 sm:p-6">
-                <dt className="text-sm text-muted">{d.landing.timeline}</dt>
-                <dd className="mt-2 font-display text-xl font-bold sm:text-2xl">{c.timeline}</dd>
+            <div className="panel overflow-hidden lg:col-span-5">
+              <div className="h-52 bg-surface-2/50 p-4 sm:h-60">
+                <MiniPreview kind={item.demo ? previewFor[item.demo] : 'flow'} />
               </div>
-              <div className="p-5 sm:p-6">
-                <dt className="text-sm text-muted">{d.landing.price}</dt>
-                <dd className="mt-2 font-display text-xl font-bold sm:text-2xl">
-                  <PriceTag
-                    value={plan.priceFrom}
-                    locale={locale}
-                    unit={plan.locales[locale].unit}
-                  />
-                </dd>
-              </div>
-            </dl>
+              <dl className="grid grid-cols-2 divide-x divide-line border-t border-line">
+                <div className="p-5 sm:p-6">
+                  <dt className="text-sm text-muted">{d.landing.timeline}</dt>
+                  <dd className="mt-2 font-display text-xl font-bold sm:text-2xl">{c.timeline}</dd>
+                </div>
+                <div className="p-5 sm:p-6">
+                  <dt className="text-sm text-muted">{d.landing.price}</dt>
+                  <dd className="mt-2 font-display text-xl font-bold sm:text-2xl">
+                    <PriceTag
+                      value={plan.priceFrom}
+                      locale={locale}
+                      unit={plan.locales[locale].unit}
+                    />
+                  </dd>
+                </div>
+              </dl>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Who it is for + pains */}
       <Section id="pains" title={d.landing.pains} className="bg-bg-soft">
-        <div className="grid gap-10 lg:grid-cols-[1fr_2fr]">
-          <div>
-            <h3 className="font-sans text-sm font-semibold text-accent-text">
+        <div className="grid gap-10 lg:grid-cols-12 lg:gap-12">
+          <div className="lg:col-span-4">
+            <h3 className="font-sans text-base font-semibold text-accent-text">
               {d.landing.audience}
             </h3>
-            <ul className="mt-5 space-y-3">
+            <ul className="mt-5 space-y-4">
               {c.audience.map((a) => (
                 <li key={a} className="flex gap-3">
-                  <Icon name="check" className="mt-1 size-4 shrink-0 text-accent-text" />
+                  <span className="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-accent/15 text-accent-text">
+                    <Icon name="check" className="size-3.5" />
+                  </span>
                   <span>{a}</span>
                 </li>
               ))}
             </ul>
           </div>
-          <ul className="grid gap-4 sm:grid-cols-2">
+          <ul className="tone-before grid gap-x-10 gap-y-8 rounded-panel p-6 sm:grid-cols-2 sm:p-10 lg:col-span-8">
             {c.pains.map((p) => (
-              <li key={p.title} className="card p-6">
-                <h3 className="font-sans text-lg font-bold tracking-normal">{p.title}</h3>
+              <li key={p.title}>
+                <span className="grid size-9 place-items-center rounded-full bg-danger/15 text-danger">
+                  <Icon name="alert" className="size-4" />
+                </span>
+                <h3 className="mt-4 font-sans text-lg font-bold tracking-tight">{p.title}</h3>
                 <p className="mt-2 text-muted">{p.text}</p>
               </li>
             ))}
@@ -122,13 +148,13 @@ export function LandingTemplate({ item, locale }: { item: Landing; locale: Local
 
       {/* What's included */}
       <Section id="includes" title={d.landing.includes}>
-        <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {c.includes.map((inc, i) => (
-            <li key={inc.title} className="card p-6">
-              <span className="font-display text-sm font-bold text-accent-text">
-                {String(i + 1).padStart(2, '0')}
+        <ul className="grid gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+          {c.includes.map((inc) => (
+            <li key={inc.title} className="border-t border-line pt-6">
+              <span className="grid size-10 place-items-center rounded-control bg-accent text-accent-ink">
+                <Icon name="check" className="size-5" />
               </span>
-              <h3 className="mt-3 font-sans text-lg font-bold tracking-normal">{inc.title}</h3>
+              <h3 className="mt-5 font-sans text-lg font-bold tracking-tight">{inc.title}</h3>
               <p className="mt-2 text-muted">{inc.text}</p>
             </li>
           ))}
@@ -142,7 +168,7 @@ export function LandingTemplate({ item, locale }: { item: Landing; locale: Local
           {demo && (
             <Link
               href={pathFor({ type: 'demo', id: demo.id }, locale)}
-              className="mt-6 inline-flex items-center gap-1.5 font-bold text-accent-text"
+              className="mt-6 inline-flex items-center gap-1.5 font-semibold text-accent-text hover:underline"
             >
               {d.cta.demoFull} <Icon name="external" className="size-4" />
             </Link>
@@ -150,10 +176,10 @@ export function LandingTemplate({ item, locale }: { item: Landing; locale: Local
         </Section>
       )}
 
-      {/* Long-form copy */}
+      {/* Long-form copy with a sticky call to action beside it */}
       <section className="section-y">
-        <div className="container-page">
-          <div className="prose-zolvi max-w-3xl">
+        <div className="container-page grid gap-12 lg:grid-cols-12">
+          <div className="prose-zolvi lg:col-span-8">
             {c.sections.map((s) => (
               <Fragment key={s.h2}>
                 <h2>{s.h2}</h2>
@@ -165,14 +191,31 @@ export function LandingTemplate({ item, locale }: { item: Landing; locale: Local
               </Fragment>
             ))}
           </div>
+          <aside className="lg:col-span-4">
+            <div className="panel bg-surface-2 p-6 sm:p-8 lg:sticky lg:top-28">
+              <p className="font-display text-xl leading-snug font-bold">{d.landing.ctaTitle}</p>
+              <p className="mt-3 text-muted">{d.landing.ctaText}</p>
+              <a
+                href="#audit"
+                data-track="cta"
+                data-track-label={`landing-aside-${item.id}`}
+                className="btn btn-primary mt-6 w-full"
+              >
+                {d.cta.audit}
+              </a>
+              <a href={site.telegram.url} className="btn btn-ghost mt-2 w-full">
+                <Icon name="telegram" className="size-4" /> {d.cta.telegram}
+              </a>
+            </div>
+          </aside>
         </div>
       </section>
 
       {/* Process + price */}
       <Section id="process" title={d.landing.process} className="bg-bg-soft">
         <ProcessSteps locale={locale} />
-        <div className="mt-8 grid gap-4 md:grid-cols-[1fr_1.4fr]">
-          <div className="card flex flex-col justify-between gap-6 p-6 sm:p-8">
+        <div className="mt-16 grid gap-4 md:grid-cols-[1fr_1.4fr]">
+          <div className="panel flex flex-col justify-between gap-8 bg-surface-2 p-6 sm:p-8">
             <div>
               <p className="text-sm text-muted">{d.landing.timeline}</p>
               <p className="mt-2 font-display text-3xl font-bold">{c.timeline}</p>
@@ -186,12 +229,14 @@ export function LandingTemplate({ item, locale }: { item: Landing; locale: Local
               </p>
             </div>
           </div>
-          <div className="card p-6 sm:p-8">
+          <div className="panel p-6 sm:p-8">
             <p className="text-muted">{d.landing.priceNote}</p>
-            <ul className="mt-5 space-y-2.5">
+            <ul className="mt-6 space-y-3">
               {plan.locales[locale].includes.map((inc) => (
-                <li key={inc} className="flex gap-2.5">
-                  <Icon name="check" className="mt-1 size-4 shrink-0 text-accent-text" />
+                <li key={inc} className="flex gap-3">
+                  <span className="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-accent/15 text-accent-text">
+                    <Icon name="check" className="size-3.5" />
+                  </span>
                   <span>
                     <Rich text={inc} />
                   </span>
@@ -200,7 +245,7 @@ export function LandingTemplate({ item, locale }: { item: Landing; locale: Local
             </ul>
             <Link
               href={pathFor({ type: 'pricing' }, locale)}
-              className="mt-6 inline-flex items-center gap-1.5 font-bold text-accent-text"
+              className="mt-8 inline-flex items-center gap-1.5 font-semibold text-accent-text hover:underline"
             >
               {d.nav.pricing} <Icon name="arrow" className="size-4" />
             </Link>
@@ -209,10 +254,10 @@ export function LandingTemplate({ item, locale }: { item: Landing; locale: Local
       </Section>
 
       <Section id="why" title={d.why.title}>
-        <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <ul className="grid gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
           {d.why.items.map((w) => (
-            <li key={w.title} className="border-t-2 border-accent pt-5">
-              <h3 className="font-sans text-lg font-bold tracking-normal">{w.title}</h3>
+            <li key={w.title} className="border-t-2 border-accent pt-6">
+              <h3 className="font-sans text-lg font-bold tracking-tight">{w.title}</h3>
               <p className="mt-2 text-muted">{w.text}</p>
             </li>
           ))}
@@ -221,14 +266,19 @@ export function LandingTemplate({ item, locale }: { item: Landing; locale: Local
 
       {item.caseId && (
         <Section id="case" title={d.landing.case} className="bg-bg-soft">
-          <CaseCards locale={locale} ids={[item.caseId]} />
+          <div className="lg:w-1/2">
+            <CaseCards locale={locale} ids={[item.caseId]} />
+          </div>
         </Section>
       )}
 
-      <Section id="faq" title={d.landing.faq} className={item.caseId ? '' : 'bg-bg-soft'}>
-        <div className="max-w-4xl">
-          <FaqList items={c.faq} />
-        </div>
+      <Section
+        id="faq"
+        title={d.landing.faq}
+        className={item.caseId ? '' : 'bg-bg-soft'}
+        layout="split"
+      >
+        <FaqList items={c.faq} />
       </Section>
 
       {/* Internal links: related services as cards (with summaries), industries as chips */}
@@ -236,12 +286,11 @@ export function LandingTemplate({ item, locale }: { item: Landing; locale: Local
         <Section id="related" title={d.landing.relatedServices} className="border-t border-line">
           <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {relatedServices.map((s) => (
-              <li
-                key={s.id}
-                className="card group relative flex flex-col p-5 transition hover:border-line-strong"
-              >
-                <Icon name={s.icon} className="size-5 text-accent-text" />
-                <h3 className="mt-4 font-sans text-base font-bold tracking-normal">
+              <li key={s.id} className="card card-interactive group relative flex flex-col p-6">
+                <span className="grid size-10 place-items-center rounded-control bg-accent/12 text-accent-text">
+                  <Icon name={s.icon} className="size-5" />
+                </span>
+                <h3 className="mt-5 font-sans text-base font-bold tracking-tight">
                   <Link
                     href={pathFor({ type: 'service', id: s.id }, locale)}
                     className="after:absolute after:inset-0"
@@ -249,7 +298,11 @@ export function LandingTemplate({ item, locale }: { item: Landing; locale: Local
                     {s.locales[locale].name}
                   </Link>
                 </h3>
-                <p className="mt-2 text-sm text-muted">{s.locales[locale].summary}</p>
+                <p className="mt-2 flex-1 text-sm text-muted">{s.locales[locale].summary}</p>
+                <Icon
+                  name="arrow"
+                  className="mt-5 size-4 text-muted transition-transform group-hover:translate-x-1 group-hover:text-text"
+                />
               </li>
             ))}
           </ul>
@@ -267,7 +320,7 @@ export function LandingTemplate({ item, locale }: { item: Landing; locale: Local
                   <li key={s.id}>
                     <Link
                       href={pathFor({ type: 'industry', id: s.id }, locale)}
-                      className="inline-flex items-center gap-2 rounded-full border border-line-strong px-4 py-2 text-sm font-semibold transition hover:border-accent"
+                      className="inline-flex min-h-10 items-center gap-2 rounded-full border border-line-strong px-4 text-sm font-semibold transition-colors hover:border-accent hover:bg-surface-2"
                     >
                       <Icon name={s.icon} className="size-4 text-accent-text" />
                       {s.locales[locale].name}

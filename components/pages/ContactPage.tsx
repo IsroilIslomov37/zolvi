@@ -106,11 +106,11 @@ function Channel({
   children: React.ReactNode
 }) {
   return (
-    <li className="card flex gap-4 p-6">
-      <span className="grid size-11 shrink-0 place-items-center rounded-control bg-accent/12 text-accent-text">
+    <li className="flex gap-4 border-t border-line py-6">
+      <span className="grid size-11 shrink-0 place-items-center rounded-control bg-surface-2 text-accent-text">
         <Icon name={icon} />
       </span>
-      <div>
+      <div className="min-w-0">
         <p className="text-sm text-muted">{label}</p>
         <div className="mt-1 text-lg font-semibold">{children}</div>
       </div>
@@ -134,10 +134,29 @@ export function Page({ locale, routeKey }: PageProps) {
         eyebrow={d.nav.contact}
         title={c.h1}
         lead={c.lead}
+        aside={
+          <div className="panel bg-surface-2 p-6 sm:p-8">
+            <span className="grid size-12 place-items-center rounded-full bg-accent text-accent-ink">
+              <Icon name="telegram" className="size-6" />
+            </span>
+            <p className="mt-6 text-sm text-muted">
+              {c.telegram} · {c.telegramNote}
+            </p>
+            <p className="mt-1 font-display text-2xl font-bold tracking-tight">
+              {site.telegram.handle}
+            </p>
+            <a href={site.telegram.url} className="btn btn-primary mt-6 w-full">
+              <Icon name="telegram" className="size-4" /> {d.cta.telegram}
+            </a>
+            <a href={`mailto:${site.email}`} className="btn btn-ghost mt-2 w-full">
+              <Icon name="mail" className="size-4" /> {site.email}
+            </a>
+          </div>
+        }
       />
 
       <Section id="channels" title={c.channels} className="bg-bg-soft">
-        <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="grid gap-x-10 sm:grid-cols-2 lg:grid-cols-3">
           <Channel icon="telegram" label={`${c.telegram} · ${c.telegramNote}`}>
             <a href={site.telegram.url} className="hover:text-accent-text">
               {site.telegram.handle}
@@ -183,7 +202,7 @@ export function Page({ locale, routeKey }: PageProps) {
             )}
           </Channel>
         </ul>
-        <p className="mt-10 max-w-2xl text-muted">{c.formNote}</p>
+        <p className="measure mt-10 text-muted">{c.formNote}</p>
       </Section>
 
       <Section id="map" title={c.mapTitle}>
@@ -191,12 +210,19 @@ export function Page({ locale, routeKey }: PageProps) {
           <iframe
             title={c.mapTitle}
             loading="lazy"
-            className="aspect-[16/9] w-full rounded-card border border-line"
+            className="aspect-[16/9] w-full rounded-panel border border-line"
             src={`https://www.openstreetmap.org/export/embed.html?bbox=${geo.lng - 0.01},${geo.lat - 0.006},${geo.lng + 0.01},${geo.lat + 0.006}&layer=mapnik&marker=${geo.lat},${geo.lng}`}
           />
         ) : (
-          <div className="grid aspect-[16/9] w-full place-items-center rounded-card border border-dashed border-line-strong bg-surface sm:aspect-[21/9]">
-            <Todo>{c.mapTodo}</Todo>
+          <div className="relative grid h-72 w-full place-items-center overflow-hidden rounded-panel border border-line bg-surface">
+            <div className="grid-bg absolute inset-0" aria-hidden="true" />
+            <div className="relative flex flex-col items-center gap-4 text-center">
+              <span className="grid size-14 place-items-center rounded-full bg-accent text-accent-ink shadow-float">
+                <Icon name="pin" className="size-6" />
+              </span>
+              <p className="text-muted">{d.footer.city}</p>
+              <Todo>{c.mapTodo}</Todo>
+            </div>
           </div>
         )}
       </Section>

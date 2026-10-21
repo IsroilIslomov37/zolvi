@@ -8,7 +8,7 @@ import { Icon } from '@/components/ui/Icon'
 import { MiniPreview, type PreviewKind } from '@/components/ui/MiniPreview'
 
 /** Which mock-up best shows the system built in a case, by industry. */
-const previewFor: Record<string, PreviewKind> = {
+export const casePreview: Record<string, PreviewKind> = {
   hotels: 'crm',
   restaurants: 'pos',
   retail: 'erp',
@@ -29,7 +29,7 @@ export function CaseCards({ locale, ids }: { locale: Locale; ids?: string[] }) {
             className="card card-interactive group relative flex flex-col overflow-hidden"
           >
             <div className="h-40 border-b border-line bg-surface-2/50 p-4 sm:h-44">
-              <MiniPreview kind={previewFor[c.industryId] ?? 'crm'} />
+              <MiniPreview kind={casePreview[c.industryId] ?? 'crm'} />
             </div>
             <div className="flex flex-1 flex-col p-6 sm:p-8">
               <span className="self-start rounded-full bg-surface-2 px-3 py-1 text-sm font-medium text-muted">
