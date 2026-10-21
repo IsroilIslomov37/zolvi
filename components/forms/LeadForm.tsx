@@ -1,6 +1,6 @@
 'use client'
 
-import { useId, useState, type FormEvent } from 'react'
+import { useEffect, useId, useState, type FormEvent } from 'react'
 import { track } from '@/lib/analytics'
 import type { Dictionary } from '@/lib/dictionary'
 import type { Locale } from '@/lib/i18n'
@@ -15,17 +15,31 @@ export function LeadForm({
   privacyHref,
   telegramUrl,
   defaultBusiness = '',
+  plans,
 }: {
   locale: Locale
   t: Dictionary['form']
   privacyHref: string
   telegramUrl: string
   defaultBusiness?: string
+  plans: { id: string; name: string }[]
 }) {
   const id = useId()
   const [status, setStatus] = useState<Status>('idle')
   const [phone, setPhone] = useState('')
+  const [plan, setPlan] = useState('')
   const [errors, setErrors] = useState<{ name?: boolean; phone?: boolean }>({})
+
+  // Package cards link to #audit with data-plan; preselect that package here.
+  useEffect(() => {
+    const onClick = (e: MouseEvent) => {
+      const el = (e.target as Element | null)?.closest('[data-plan]')
+      const picked = el?.getAttribute('data-plan')
+      if (picked && plans.some((p) => p.id === picked)) setPlan(picked)
+    }
+    document.addEventListener('click', onClick)
+    return () => document.removeEventListener('click', onClick)
+  }, [plans])
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
@@ -45,6 +59,7 @@ export function LeadForm({
           name,
           phone: digits,
           business: form.get('business') ?? '',
+          plan: plans.find((p) => p.id === plan)?.name ?? '',
           comment: form.get('comment') ?? '',
           website: form.get('website') ?? '',
           locale,
@@ -57,6 +72,7 @@ export function LeadForm({
       track('lead_submit', {
         page: location.pathname,
         business: String(form.get('business') ?? ''),
+        plan,
       })
     } catch {
       setStatus('error')
@@ -145,6 +161,25 @@ export function LeadForm({
           {t.businessTypes.map((b) => (
             <option key={b} value={b}>
               {b}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      <div>
+        <label htmlFor={`${id}-plan`} className={label}>
+          {t.plan}
+        </label>
+        <select
+          id={`${id}-plan`}
+          value={plan}
+          onChange={(e) => setPlan(e.target.value)}
+          className={field}
+        >
+          <option value="">{t.planPlaceholder}</option>
+          {plans.map((p) => (
+            <option key={p.id} value={p.id}>
+              {p.name}
             </option>
           ))}
         </select>

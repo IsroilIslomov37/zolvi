@@ -1,4 +1,5 @@
 import { LeadForm } from '@/components/forms/LeadForm'
+import { plans } from '@/content/pricing'
 import { Icon } from '@/components/ui/Icon'
 import { getDictionary } from '@/lib/dictionary'
 import type { Locale } from '@/lib/i18n'
@@ -49,6 +50,7 @@ export function AuditCta({
           privacyHref={pathFor({ type: 'privacy' }, locale)}
           telegramUrl={site.telegram.url}
           defaultBusiness={defaultBusiness}
+          plans={plans.map((p) => ({ id: p.id, name: p.locales[locale].name }))}
         />
       </div>
     </section>

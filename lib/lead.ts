@@ -5,6 +5,7 @@ export const leadSchema = z.object({
   /** Normalized to +998XXXXXXXXX before validation. */
   phone: z.string().regex(/^\+998\d{9}$/),
   business: z.string().trim().max(80).optional().default(''),
+  plan: z.string().trim().max(80).optional().default(''),
   comment: z.string().trim().max(1000).optional().default(''),
   locale: z.enum(['uz', 'ru', 'en']),
   page: z.string().max(300).optional().default(''),

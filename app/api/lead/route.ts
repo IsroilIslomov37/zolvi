@@ -25,6 +25,7 @@ function telegramText(lead: Lead) {
     `<b>Ism:</b> ${escapeHtml(lead.name)}`,
     `<b>Telefon:</b> ${lead.phone}`,
     lead.business && `<b>Biznes:</b> ${escapeHtml(lead.business)}`,
+    lead.plan && `<b>Paket:</b> ${escapeHtml(lead.plan)}`,
     lead.comment && `<b>Izoh:</b> ${escapeHtml(lead.comment)}`,
     `<b>Til:</b> ${lead.locale}`,
     lead.page && `<b>Sahifa:</b> ${escapeHtml(lead.page)}`,

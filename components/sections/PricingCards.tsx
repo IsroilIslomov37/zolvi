@@ -71,6 +71,7 @@ export function PricingCards({
               href="#audit"
               data-track="cta"
               data-track-label={`plan-${plan.id}`}
+              data-plan={plan.id}
               className={`btn mt-7 ${featured ? 'btn-primary' : 'btn-secondary'}`}
             >
               {ctaLabel}

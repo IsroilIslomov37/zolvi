@@ -46,6 +46,8 @@ export default async function LocaleLayout({ children, params }: LayoutProps<'/[
     <html
       lang={localeMeta[locale].htmlLang}
       className={`${manrope.variable} ${unbounded.variable}`}
+      // Lets Next.js switch off smooth scrolling while it resets scroll on navigation.
+      data-scroll-behavior="smooth"
       suppressHydrationWarning
     >
       <head>
