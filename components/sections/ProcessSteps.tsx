@@ -1,28 +1,33 @@
 import { home } from '@/content/home'
 import type { Locale } from '@/lib/i18n'
 
-/** The five delivery stages, shared by the home page and every landing page. */
+/** The five delivery stages as a timeline, shared by the home page and every landing page. */
 export function ProcessSteps({ locale }: { locale: Locale }) {
   const { steps } = home[locale].process
   return (
-    <ol className="grid gap-4 md:grid-cols-5">
+    <ol className="grid gap-10 md:grid-cols-5 md:gap-6">
       {steps.map((step, i) => (
-        <li key={step.title} className="card relative flex flex-col p-5">
-          <span className="mb-4 flex items-center gap-3">
-            <span className="grid size-9 place-items-center rounded-full bg-accent font-display text-sm font-bold text-accent-ink">
-              {i + 1}
-            </span>
-            <span className="text-xs font-semibold text-accent-text">{step.when}</span>
+        <li key={step.title} className="relative pl-16 md:pt-16 md:pl-0">
+          {i < steps.length - 1 && (
+            <span
+              aria-hidden="true"
+              className="absolute top-12 -bottom-10 left-6 w-px bg-line-strong md:top-6 md:right-[-1.5rem] md:bottom-auto md:left-12 md:h-px md:w-auto"
+            />
+          )}
+          <span
+            className={`absolute top-0 left-0 grid size-12 place-items-center rounded-full font-display text-base font-bold ${
+              i === 0
+                ? 'bg-accent text-accent-ink'
+                : 'border border-line-strong bg-surface text-text'
+            }`}
+          >
+            {i + 1}
           </span>
-          <h3 className="font-sans text-lg font-bold tracking-normal">{step.title}</h3>
-          <ul className="mt-3 space-y-1.5 text-sm text-muted">
+          <p className="text-sm font-semibold text-accent-text">{step.when}</p>
+          <h3 className="mt-1 font-sans text-xl font-bold tracking-tight">{step.title}</h3>
+          <ul className="mt-3 space-y-1.5 text-muted">
             {step.items.map((item) => (
-              <li key={item} className="flex gap-2">
-                <span aria-hidden="true" className="text-accent-text">
-                  —
-                </span>
-                {item}
-              </li>
+              <li key={item}>{item}</li>
             ))}
           </ul>
         </li>

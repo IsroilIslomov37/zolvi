@@ -21,10 +21,7 @@ export function IndustryMarquee({ locale }: { locale: Locale }) {
       </li>
     ))
   return (
-    <section
-      aria-label={marquee.label}
-      className="marquee overflow-hidden border-y border-line bg-bg-soft py-6"
-    >
+    <section aria-label={marquee.label} className="marquee marquee-fade overflow-hidden py-8">
       <ul className="animate-marquee flex w-max">
         {row(false)}
         {row(true)}

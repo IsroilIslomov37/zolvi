@@ -105,7 +105,7 @@ export function SavingsCalculator({ copy }: { copy: Copy }) {
         />
       </div>
 
-      <div className="card flex flex-col p-6 sm:p-8" aria-live="polite">
+      <div className="panel flex flex-col bg-surface-2 p-6 sm:p-8" aria-live="polite">
         <p className="eyebrow">{copy.resultTitle}</p>
         <p className="text-figure mt-5 font-display font-bold">
           {lo}–{hi}

@@ -5,6 +5,15 @@ import { getDictionary } from '@/lib/dictionary'
 import type { Locale } from '@/lib/i18n'
 import { pathFor } from '@/lib/routes'
 import { Icon } from '@/components/ui/Icon'
+import { MiniPreview, type PreviewKind } from '@/components/ui/MiniPreview'
+
+/** Which mock-up best shows the system built in a case, by industry. */
+const previewFor: Record<string, PreviewKind> = {
+  hotels: 'crm',
+  restaurants: 'pos',
+  retail: 'erp',
+  'field-service': 'flow',
+}
 
 export function CaseCards({ locale, ids }: { locale: Locale; ids?: string[] }) {
   const d = getDictionary(locale)
@@ -15,26 +24,37 @@ export function CaseCards({ locale, ids }: { locale: Locale; ids?: string[] }) {
         const copy = c.locales[locale]
         const industry = industries.find((i) => i.id === c.industryId)
         return (
-          <li key={c.id} className="card group relative flex flex-col overflow-hidden p-6 sm:p-8">
-            <div className="flex items-start justify-between gap-6">
-              <p className="eyebrow">{industry?.locales[locale].name}</p>
-              <span className="font-display text-3xl font-bold text-accent-text sm:text-4xl">
+          <li
+            key={c.id}
+            className="card card-interactive group relative flex flex-col overflow-hidden"
+          >
+            <div className="h-40 border-b border-line bg-surface-2/50 p-4 sm:h-44">
+              <MiniPreview kind={previewFor[c.industryId] ?? 'crm'} />
+            </div>
+            <div className="flex flex-1 flex-col p-6 sm:p-8">
+              <span className="self-start rounded-full bg-surface-2 px-3 py-1 text-sm font-medium text-muted">
+                {industry?.locales[locale].name}
+              </span>
+              <p className="mt-6 font-display text-5xl leading-none font-bold tracking-tight text-accent-text">
                 {c.metric}
+              </p>
+              <h3 className="mt-5 font-sans text-xl font-bold tracking-tight sm:text-2xl">
+                <Link
+                  href={pathFor({ type: 'case', id: c.id }, locale)}
+                  className="after:absolute after:inset-0"
+                >
+                  {copy.name}
+                </Link>
+              </h3>
+              <p className="mt-2 flex-1 text-muted">{copy.summary}</p>
+              <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-accent-text">
+                {d.cta.more}
+                <Icon
+                  name="arrow"
+                  className="size-4 transition-transform group-hover:translate-x-1"
+                />
               </span>
             </div>
-            <h3 className="mt-6 font-sans text-xl font-bold tracking-normal sm:text-2xl">
-              <Link
-                href={pathFor({ type: 'case', id: c.id }, locale)}
-                className="after:absolute after:inset-0"
-              >
-                {copy.name}
-              </Link>
-            </h3>
-            <p className="mt-3 flex-1 text-muted">{copy.summary}</p>
-            <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-bold text-accent-text">
-              {d.cta.more}
-              <Icon name="arrow" className="size-4 transition group-hover:translate-x-1" />
-            </span>
           </li>
         )
       })}

@@ -18,6 +18,7 @@ import { FaqList } from '@/components/ui/FaqList'
 import { Icon } from '@/components/ui/Icon'
 import { JsonLd } from '@/components/ui/JsonLd'
 import { Section } from '@/components/ui/Section'
+import { CountUp } from '@/components/ui/CountUp'
 import { Todo } from '@/components/ui/Todo'
 import type { PageMeta, PageProps } from './types'
 
@@ -142,35 +143,54 @@ export function Page({ locale }: PageProps) {
       </Section>
 
       <Section id="numbers" eyebrow={c.stats.eyebrow} title={c.stats.title}>
-        <dl className="grid gap-4 min-[420px]:grid-cols-2 lg:grid-cols-4">
+        <dl className="grid gap-x-6 gap-y-12 min-[420px]:grid-cols-2 lg:grid-cols-4">
           {c.stats.items.map((s) => (
-            <div key={s.label} className="card p-6">
-              <dt className="text-sm text-muted">{s.label}</dt>
-              <dd className="text-figure mt-3 font-display font-bold">{s.value}</dd>
-              <dd className="mt-3">
+            <div key={s.label} className="flex flex-col border-l-2 border-accent pl-5 sm:pl-6">
+              <dt className="order-2 mt-3 text-muted">{s.label}</dt>
+              <dd className="order-1 font-display text-4xl leading-none font-bold tracking-tight min-[420px]:text-3xl lg:text-4xl">
+                <CountUp value={s.value} />
+              </dd>
+              <dd className="order-3 mt-3">
                 <Todo>{c.stats.confirm}</Todo>
               </dd>
             </div>
           ))}
         </dl>
 
-        <div className="mt-20">
-          <p className="eyebrow mb-4">{c.testimonials.eyebrow}</p>
-          <h2 className="text-heading font-bold">{c.testimonials.title}</h2>
-          <p className="mt-4 max-w-2xl text-lg text-muted">{c.testimonials.intro}</p>
-          <ul className="mt-10 grid gap-4 md:grid-cols-3">
+        <div className="mt-24 lg:mt-32">
+          <div className="flex flex-wrap items-end justify-between gap-6">
+            <div className="max-w-3xl">
+              <p className="eyebrow mb-4">{c.testimonials.eyebrow}</p>
+              <h2 className="text-heading font-bold">{c.testimonials.title}</h2>
+              <p className="measure text-lead mt-5 text-muted">{c.testimonials.intro}</p>
+            </div>
+          </div>
+          {/* Swipeable row on phones, three columns from md up. */}
+          <ul className="-mx-4 mt-12 flex snap-x snap-mandatory scroll-px-4 gap-4 overflow-x-auto px-4 pb-4 md:mx-0 md:grid md:grid-cols-3 md:overflow-visible md:px-0 md:pb-0">
             {[1, 2, 3].map((n) => (
-              <li key={n} className="card flex flex-col gap-6 p-6">
+              <li
+                key={n}
+                className="card flex w-[85%] shrink-0 snap-start flex-col gap-8 p-6 sm:p-8 md:w-auto"
+              >
                 <Icon name="quote" className="size-8 text-accent-text" />
-                <p className="flex-1">
+                <blockquote className="flex-1 text-lg">
                   <Todo>{c.testimonials.placeholder}</Todo>
-                </p>
-                <div className="flex items-center gap-3">
+                </blockquote>
+                <div className="flex items-center gap-4 border-t border-line pt-6">
                   <span
-                    className="size-11 rounded-full border border-dashed border-line-strong"
+                    className="grid size-12 shrink-0 place-items-center rounded-full bg-surface-2 text-muted"
+                    aria-hidden="true"
+                  >
+                    <Icon name="crm" className="size-5" />
+                  </span>
+                  <span className="min-w-0 flex-1 space-y-1.5" aria-hidden="true">
+                    <span className="block h-2.5 w-28 rounded-full bg-line-strong" />
+                    <span className="block h-2 w-40 max-w-full rounded-full bg-line" />
+                  </span>
+                  <span
+                    className="h-6 w-14 shrink-0 rounded-md border border-dashed border-line-strong"
                     aria-hidden="true"
                   />
-                  <span className="text-sm text-muted">— · — · —</span>
                 </div>
               </li>
             ))}
@@ -204,10 +224,14 @@ export function Page({ locale }: PageProps) {
         </Link>
       </Section>
 
-      <Section id="faq" eyebrow={c.faq.eyebrow} title={c.faq.title} className="bg-bg-soft">
-        <div className="max-w-4xl">
-          <FaqList items={c.faq.items} />
-        </div>
+      <Section
+        id="faq"
+        eyebrow={c.faq.eyebrow}
+        title={c.faq.title}
+        className="bg-bg-soft"
+        layout="split"
+      >
+        <FaqList items={c.faq.items} />
       </Section>
 
       <JsonLd data={graph(faqLd(c.faq.items))} />

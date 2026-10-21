@@ -36,10 +36,11 @@ export function PricingCards({
   only?: PlanId[]
   highlight?: PlanId
 }) {
+  const d = getDictionary(locale)
   const list = only ? plans.filter((p) => only.includes(p.id)) : plans
   return (
     <ul
-      className={`grid gap-4 ${list.length >= 4 ? 'md:grid-cols-2 xl:grid-cols-4' : 'md:grid-cols-3'}`}
+      className={`grid items-stretch gap-4 ${list.length >= 4 ? 'md:grid-cols-2 xl:grid-cols-4' : 'lg:grid-cols-3'}`}
     >
       {list.map((plan) => {
         const copy = plan.locales[locale]
@@ -47,35 +48,48 @@ export function PricingCards({
         return (
           <li
             key={plan.id}
-            className={`card flex flex-col p-6 sm:p-7 ${featured ? 'border-accent shadow-[0_0_0_1px_var(--accent)]' : ''}`}
+            className={`relative flex flex-col rounded-panel border p-6 sm:p-8 ${
+              featured
+                ? 'border-accent bg-surface-2 shadow-elev-2'
+                : 'border-line bg-surface shadow-elev-1'
+            }`}
           >
-            <h3 className="font-sans text-xl font-bold tracking-normal">{copy.name}</h3>
-            <p className="mt-2 min-h-12 text-sm text-muted">{copy.for}</p>
-            <p className="mt-6 font-display text-2xl font-bold">
+            <div className="flex items-start justify-between gap-3">
+              <h3 className="font-sans text-xl font-bold tracking-tight">{copy.name}</h3>
+              {featured && (
+                <span className="rounded-full bg-accent px-3 py-1 text-xs font-semibold text-accent-ink">
+                  {d.landing.recommended}
+                </span>
+              )}
+            </div>
+            <p className="mt-2 min-h-12 text-muted">{copy.for}</p>
+            <p className="mt-8 font-display text-3xl font-bold tracking-tight">
               <PriceTag value={plan.priceFrom} locale={locale} unit={copy.unit} />
             </p>
-            <p className="mt-2 flex items-center gap-2 text-sm text-muted">
+            <p className="mt-3 flex items-center gap-2 text-sm text-muted">
               <Icon name="clock" className="size-4" /> {copy.timeline}
             </p>
-            <ul className="mt-6 flex-1 space-y-2.5 border-t border-line pt-6 text-sm">
+            <a
+              href="#audit"
+              data-track="cta"
+              data-track-label={`plan-${plan.id}`}
+              data-plan={plan.id}
+              className={`btn mt-8 ${featured ? 'btn-primary' : 'btn-secondary'}`}
+            >
+              {ctaLabel}
+            </a>
+            <ul className="mt-8 flex-1 space-y-3 border-t border-line pt-8">
               {copy.includes.map((item) => (
-                <li key={item} className="flex gap-2.5">
-                  <Icon name="check" className="mt-0.5 size-4 shrink-0 text-accent-text" />
+                <li key={item} className="flex gap-3">
+                  <span className="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-accent/15 text-accent-text">
+                    <Icon name="check" className="size-3.5" />
+                  </span>
                   <span>
                     <Rich text={item} />
                   </span>
                 </li>
               ))}
             </ul>
-            <a
-              href="#audit"
-              data-track="cta"
-              data-track-label={`plan-${plan.id}`}
-              data-plan={plan.id}
-              className={`btn mt-7 ${featured ? 'btn-primary' : 'btn-secondary'}`}
-            >
-              {ctaLabel}
-            </a>
           </li>
         )
       })}

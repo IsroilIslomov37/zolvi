@@ -43,6 +43,7 @@ const dictionaries = {
       timeline: 'Odatiy muddat',
       price: 'Narx',
       priceFrom: 'dan',
+      recommended: 'Tavsiya etamiz',
       priceNote:
         'Yakuniy narx bepul auditdan keyin, jarayonlaringiz xaritasi asosida aniq belgilanadi.',
       case: 'Keys',
@@ -175,6 +176,7 @@ const dictionaries = {
       timeline: 'Типичный срок',
       price: 'Стоимость',
       priceFrom: 'от',
+      recommended: 'Рекомендуем',
       priceNote:
         'Итоговая стоимость фиксируется после бесплатного аудита — по карте ваших процессов.',
       case: 'Кейс',
@@ -307,6 +309,7 @@ const dictionaries = {
       timeline: 'Typical timeline',
       price: 'Price',
       priceFrom: 'from',
+      recommended: 'Recommended',
       priceNote: 'The final price is fixed after the free audit, based on a map of your processes.',
       case: 'Case study',
       faq: 'FAQ',

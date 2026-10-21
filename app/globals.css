@@ -205,7 +205,7 @@
 
   /* Fluid headings mapped onto the scale (mobile → desktop). */
   .text-display {
-    font-size: clamp(2.5rem, 1.75rem + 3.8vw, 4.75rem);
+    font-size: clamp(2.5rem, 1.9rem + 2.6vw, 3.75rem);
     line-height: 1.04;
     letter-spacing: -0.035em;
   }
@@ -367,12 +367,11 @@
     overflow-wrap: anywhere;
   }
 
+  /* Dot grid: the same texture as the hero, still and faded toward the edges. */
   .grid-bg {
-    background-image:
-      linear-gradient(var(--line) 1px, transparent 1px),
-      linear-gradient(90deg, var(--line) 1px, transparent 1px);
-    background-size: 56px 56px;
-    mask-image: radial-gradient(ellipse at 50% 30%, black 20%, transparent 75%);
+    background-image: radial-gradient(var(--line-strong) 1px, transparent 1.6px);
+    background-size: 28px 28px;
+    mask-image: radial-gradient(ellipse at 50% 30%, black 15%, transparent 70%);
   }
 
   /* Long-form text: blog, policy, landing sections */
@@ -539,4 +538,74 @@ header:has(.mobile-menu[data-open]) {
   line-height: 0.9;
   letter-spacing: -0.04em;
   color: var(--surface-2);
+}
+
+/* ---------- Hero ---------- */
+/* Dots sit tilted and slightly scattered in chaos (--p 0) and line up as --p reaches 1. */
+.hero-grid {
+  background-image: radial-gradient(var(--line-strong) 1px, transparent 1.6px);
+  background-size: 28px 28px;
+  mask-image: radial-gradient(ellipse 60% 55% at 72% 42%, #000 25%, transparent 75%);
+  transform: rotate(calc(4deg * (1 - min(var(--p, 1), 1))))
+    scale(calc(1.06 - 0.06 * min(var(--p, 1), 1)));
+  opacity: calc(0.6 + 0.4 * min(var(--p, 1), 1));
+}
+@media (max-width: 1023px) {
+  .hero-grid {
+    mask-image: radial-gradient(ellipse 90% 45% at 50% 75%, #000 25%, transparent 75%);
+  }
+}
+
+/* ---------- Before / after ---------- */
+.tone-before {
+  background: color-mix(in oklab, var(--danger) 9%, var(--surface));
+}
+.tone-after {
+  background: color-mix(in oklab, var(--navy) 50%, var(--surface));
+}
+:root[data-theme='light'] .tone-before {
+  background: color-mix(in oklab, var(--danger) 6%, var(--surface));
+}
+:root[data-theme='light'] .tone-after {
+  background: color-mix(in oklab, var(--navy) 10%, var(--surface));
+}
+
+/* ---------- FAQ accordion ---------- */
+:root {
+  interpolate-size: allow-keywords;
+}
+.faq details::details-content {
+  block-size: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition:
+    block-size var(--duration-base) var(--ease-out),
+    opacity var(--duration-base) var(--ease-out),
+    content-visibility var(--duration-base) allow-discrete;
+}
+.faq details[open]::details-content {
+  block-size: auto;
+  opacity: 1;
+}
+
+/* ---------- Marquee edges ---------- */
+.marquee-fade {
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.12);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.animate-pop-in {
+  animation: pop-in var(--duration-slow) var(--ease-out) both;
 }

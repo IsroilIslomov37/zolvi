@@ -8,21 +8,24 @@ type Card = { chaos: string; order: string; value: string }
 /**
  * Where each card lies in the chaos state, as an offset from its dashboard slot
  * (in % of the card itself, so it scales with the panel) plus a rotation.
+ * `depth` is how far the card drifts with the cursor (px at the panel edge).
  */
 const scatter = [
-  { x: '4%', y: '13%', r: -8 },
-  { x: '-4%', y: '0%', r: 6 },
-  { x: '58%', y: '-13%', r: -4 },
-  { x: '-108%', y: '80%', r: 9 },
-  { x: '113%', y: '-73%', r: -10 },
-  { x: '-58%', y: '13%', r: 5 },
+  { x: '-14%', y: '-22%', r: -7, depth: 14 },
+  { x: '16%', y: '14%', r: 6, depth: 22 },
+  { x: '34%', y: '-8%', r: -4, depth: 10 },
+  { x: '-30%', y: '30%', r: 8, depth: 26 },
+  { x: '10%', y: '-38%', r: -9, depth: 18 },
+  { x: '-12%', y: '22%', r: 4, depth: 12 },
 ]
 const orderIcons: IconName[] = ['phone', 'package', 'sheet', 'truck', 'chart', 'chat']
 const bars = [72, 48, 90, 60, 82, 38]
+const spark = [30, 42, 38, 55, 50, 64, 61, 72, 70, 84, 80, 92]
 
 /**
- * Problem cards scattered over the panel line up into a dashboard as the visitor
- * scrolls or moves the pointer. Progress lives in a CSS variable (--p) updated in
+ * Problem cards scattered around the panel spring into a dashboard when the panel
+ * comes into view (and on the toggle). Progress lives in CSS variables on the hero
+ * section (--p for order, --mx/--my for the cursor), integrated as a spring in
  * requestAnimationFrame, so React never re-renders while animating.
  */
 export function ChaosToOrder({
@@ -33,143 +36,210 @@ export function ChaosToOrder({
   labels: { panel: string; toOrder: string; toChaos: string }
 }) {
   const ref = useRef<HTMLDivElement>(null)
-  const lockRef = useRef<number | null>(null)
+  const goalRef = useRef(0)
+  const kickRef = useRef<() => void>(() => {})
   const [ordered, setOrdered] = useState(false)
 
   useEffect(() => {
     const el = ref.current
     if (!el) return
+    const stage = el.closest('section') ?? el
     const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches
-    const docTop = el.getBoundingClientRect().top + scrollY
-    let scrollP = 0
-    let pointerP = 0
-    let current = 0
+    const finePointer = matchMedia('(pointer: fine)').matches
+    let p = 0
+    let v = 0
+    let mx = 0
+    let my = 0
+    let tx = 0
+    let ty = 0
     let raf = 0
     let lastOrdered = false
 
-    const target = () => lockRef.current ?? Math.max(scrollP, pointerP)
     const tick = () => {
-      const goal = target()
-      current = reduce ? goal : current + (goal - current) * 0.12
-      if (Math.abs(goal - current) < 0.001) current = goal
-      el.style.setProperty('--p', current.toFixed(3))
-      const isOrdered = current > 0.5
+      const goal = goalRef.current
+      if (reduce) {
+        p = goal
+        v = 0
+      } else {
+        // Under-damped spring: settles with a small overshoot.
+        v = (v + (goal - p) * 0.07) * 0.8
+        p += v
+      }
+      mx += (tx - mx) * 0.08
+      my += (ty - my) * 0.08
+      const settled =
+        Math.abs(goal - p) < 0.001 &&
+        Math.abs(v) < 0.0005 &&
+        Math.abs(tx - mx) < 0.002 &&
+        Math.abs(ty - my) < 0.002
+      if (settled) {
+        p = goal
+        mx = tx
+        my = ty
+      }
+      stage.style.setProperty('--p', p.toFixed(4))
+      stage.style.setProperty('--mx', mx.toFixed(4))
+      stage.style.setProperty('--my', my.toFixed(4))
+      const isOrdered = p > 0.5
       if (isOrdered !== lastOrdered) {
         lastOrdered = isOrdered
         setOrdered(isOrdered)
       }
-      raf = current === goal ? 0 : requestAnimationFrame(tick)
+      raf = settled ? 0 : requestAnimationFrame(tick)
     }
     const kick = () => {
       if (!raf) raf = requestAnimationFrame(tick)
     }
+    kickRef.current = kick
 
-    const onScroll = () => {
-      const vh = innerHeight
-      const start = Math.max(0, docTop - vh * 0.8)
-      const p = (scrollY - start) / (vh * 0.45)
-      scrollP = Math.min(1, Math.max(0, p))
-      kick()
-    }
-    let last: { x: number; y: number } | null = null
+    // Autoplay once the panel is properly on screen (on phones: as it scrolls in).
+    let timer = 0
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) return
+        io.disconnect()
+        timer = window.setTimeout(
+          () => {
+            goalRef.current = 1
+            kick()
+          },
+          reduce ? 0 : 900,
+        )
+      },
+      { threshold: 0.6 },
+    )
+    io.observe(el)
+
     const onPointer = (e: PointerEvent) => {
-      if (e.pointerType !== 'mouse') return
-      if (last)
-        pointerP = Math.min(1, pointerP + Math.hypot(e.clientX - last.x, e.clientY - last.y) / 700)
-      last = { x: e.clientX, y: e.clientY }
+      if (e.pointerType !== 'mouse' || reduce) return
+      const r = stage.getBoundingClientRect()
+      tx = ((e.clientX - r.left) / r.width) * 2 - 1
+      ty = ((e.clientY - r.top) / r.height) * 2 - 1
       kick()
     }
-    const onKick = () => kick()
-
-    const hero = el.closest('section') ?? el
-    addEventListener('scroll', onScroll, { passive: true })
-    hero.addEventListener('pointermove', onPointer as EventListener, { passive: true })
-    el.addEventListener('zolvi:kick', onKick)
-    onScroll()
+    const onLeave = () => {
+      tx = 0
+      ty = 0
+      kick()
+    }
+    if (finePointer) {
+      stage.addEventListener('pointermove', onPointer as EventListener, { passive: true })
+      stage.addEventListener('pointerleave', onLeave)
+    }
     return () => {
       cancelAnimationFrame(raf)
-      removeEventListener('scroll', onScroll)
-      hero.removeEventListener('pointermove', onPointer as EventListener)
-      el.removeEventListener('zolvi:kick', onKick)
+      clearTimeout(timer)
+      io.disconnect()
+      stage.removeEventListener('pointermove', onPointer as EventListener)
+      stage.removeEventListener('pointerleave', onLeave)
     }
   }, [])
 
   const toggle = () => {
-    lockRef.current = ordered ? 0 : 1
-    ref.current?.dispatchEvent(new Event('zolvi:kick'))
+    goalRef.current = ordered ? 0 : 1
+    kickRef.current()
   }
 
   return (
     <div className="relative">
+      {/* Dashboard frame: faint while the cards are scattered, solid once they settle. */}
+      <div
+        style={{ transform: 'translate(calc(var(--mx) * -6px), calc(var(--my) * -6px))' }}
+        className="absolute -inset-3 sm:-inset-5"
+      >
+        <div
+          aria-hidden="true"
+          style={{ opacity: 'calc(0.45 + 0.55 * min(var(--p), 1))' }}
+          className="panel absolute inset-0"
+        />
+        <div className="relative flex items-center justify-between gap-3 border-b border-line py-2 pr-2 pl-4">
+          <span className="flex items-center gap-2 text-sm font-semibold text-muted">
+            <span className="size-2 rounded-full bg-success" aria-hidden="true" />
+            ZOLVI · Dashboard
+          </span>
+          <button
+            type="button"
+            onClick={toggle}
+            aria-pressed={ordered}
+            className="btn btn-ghost btn-sm min-h-9 px-3"
+          >
+            <Icon name={ordered ? 'close' : 'layers'} className="size-4" />
+            {ordered ? labels.toChaos : labels.toOrder}
+          </button>
+        </div>
+        {/* Weekly trend strip along the bottom of the dashboard */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-x-4 bottom-4 flex h-[9%] items-end gap-1 sm:inset-x-5"
+        >
+          {spark.map((h, i) => (
+            <span
+              key={i}
+              style={{
+                height: `${h}%`,
+                transform: 'scaleY(min(var(--p), 1))',
+                transitionDelay: `${i * 20}ms`,
+              }}
+              className={`flex-1 origin-bottom rounded-sm ${i === spark.length - 1 ? 'bg-accent' : 'bg-navy'}`}
+            />
+          ))}
+        </div>
+      </div>
+
       <div
         ref={ref}
         role="img"
         aria-label={labels.panel}
-        style={{ '--p': 0 } as CSSProperties}
-        className="relative aspect-[5/4] w-full select-none"
+        className="pointer-events-none relative aspect-[4/5] w-full select-none sm:aspect-[5/4]"
       >
-        {/* Dashboard frame fades in as the cards settle */}
-        <div
-          aria-hidden="true"
-          style={{ opacity: 'var(--p)' }}
-          className="absolute -inset-3 rounded-panel border border-line bg-surface/60 shadow-float sm:-inset-5"
-        >
-          <div className="flex items-center gap-1.5 border-b border-line px-4 py-2.5">
-            <span className="size-2 rounded-full bg-[#ff6b5b]" />
-            <span className="size-2 rounded-full bg-accent" />
-            <span className="size-2 rounded-full bg-[#4ade80]" />
-            <span className="ml-3 font-semibold text-muted">ZOLVI · Dashboard</span>
-          </div>
-        </div>
-        <div aria-hidden="true" className="absolute inset-x-0 top-8 bottom-0 sm:top-10">
+        <div aria-hidden="true" className="absolute inset-x-0 top-12 bottom-[14%] sm:top-14">
           {cards.slice(0, 6).map((card, i) => {
             const s = scatter[i]
             const col = i % 2
             const row = Math.floor(i / 2)
+            const rest = '(1 - var(--p))'
             return (
               <div
                 key={card.chaos}
                 style={
                   {
-                    left: `${col * 52}%`,
-                    top: `${row * 34}%`,
-                    transform: `translate(calc(${s.x} * (1 - var(--p))), calc(${s.y} * (1 - var(--p)))) rotate(calc(${s.r}deg * (1 - var(--p))))`,
-                    zIndex: 6 - i,
+                    left: `${col * 51.5}%`,
+                    top: `${row * 34.5}%`,
+                    transform: `translate(calc(${s.x} * ${rest} + var(--mx) * ${s.depth}px), calc(${s.y} * ${rest} + var(--my) * ${s.depth}px)) rotate(calc(${s.r}deg * ${rest}))`,
+                    zIndex: i % 3 === 1 ? 3 : 6 - i,
                   } as CSSProperties
                 }
-                className="absolute h-[30%] w-[48%] will-change-transform"
+                className="absolute h-[31%] w-[48.5%] rounded-card bg-surface-2 will-change-transform"
               >
                 {/* Chaos face */}
                 <div
                   style={{ opacity: 'calc(1 - var(--p))' }}
-                  className="absolute inset-0 flex flex-col justify-between rounded-card border border-[#ff8a5b]/30 bg-[linear-gradient(160deg,#3a2418,#2a1b16)] p-3 text-[#ffd6c2] shadow-lg sm:p-4"
+                  className="absolute inset-0 flex flex-col justify-between rounded-card border border-danger/35 bg-danger/10 p-3 shadow-float sm:p-4"
                 >
-                  <span className="grid size-6 place-items-center rounded-full bg-[#ff6b5b]/20 text-xs font-black text-[#ff9a85]">
-                    !
+                  <span className="grid size-6 place-items-center rounded-full bg-danger/20 text-danger">
+                    <Icon name="alert" className="size-3.5" />
                   </span>
-                  <span className="text-[11px] leading-snug font-bold sm:text-sm">
+                  <span className="text-xs leading-snug font-semibold text-text sm:text-sm">
                     {card.chaos}
                   </span>
                 </div>
                 {/* Order face */}
                 <div
                   style={{ opacity: 'var(--p)' }}
-                  className="absolute inset-0 flex flex-col justify-between rounded-card border border-line bg-surface-2 p-3 sm:p-4"
+                  className="absolute inset-0 flex flex-col justify-between rounded-card border border-line p-3 sm:p-4"
                 >
-                  <div className="flex items-center justify-between">
-                    <span className="text-[10px] font-semibold text-muted sm:text-xs">
-                      {card.order}
-                    </span>
-                    <Icon name={orderIcons[i]} className="size-3.5 text-accent sm:size-4" />
+                  <div className="flex items-start justify-between gap-2">
+                    <span className="text-xs leading-snug text-muted">{card.order}</span>
+                    <Icon name={orderIcons[i]} className="size-4 shrink-0 text-accent-text" />
                   </div>
                   <div>
-                    <div className="text-[11px] leading-tight font-extrabold text-text sm:text-base">
+                    <div className="text-sm leading-tight font-bold text-text sm:text-base">
                       {card.value}
                     </div>
                     <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-line">
                       <div
-                        className="h-full rounded-full bg-accent"
-                        style={{ width: `${bars[i]}%` }}
+                        className="h-full origin-left rounded-full bg-accent"
+                        style={{ width: `${bars[i]}%`, transform: 'scaleX(min(var(--p), 1))' }}
                       />
                     </div>
                   </div>
@@ -179,15 +249,6 @@ export function ChaosToOrder({
           })}
         </div>
       </div>
-      <button
-        type="button"
-        onClick={toggle}
-        aria-pressed={ordered}
-        className="btn btn-secondary mx-auto mt-8 flex min-h-10 py-2 text-sm sm:mt-10"
-      >
-        <Icon name={ordered ? 'close' : 'layers'} className="size-4" />
-        {ordered ? labels.toChaos : labels.toOrder}
-      </button>
     </div>
   )
 }
