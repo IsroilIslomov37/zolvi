@@ -36,7 +36,7 @@ export function NotFoundContent() {
                   <ul className="mt-5 space-y-2">
                     {links.map((link) => (
                       <li key={link.href}>
-                        <Link href={link.href} className="text-muted hover:text-text">
+                        <Link href={link.href} className="tap text-muted hover:text-text">
                           {link.label}
                         </Link>
                       </li>

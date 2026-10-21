@@ -615,6 +615,25 @@ header:has(.mobile-menu[data-open]) {
   animation: pop-in var(--duration-slow) var(--ease-out) both;
 }
 
+/* ---------- Tap area ---------- */
+/* Grows the hit area of a small link or control to at least 44×44px without
+   changing its look or the layout. ::before, because cards use ::after for
+   their stretched links. */
+@layer components {
+  .tap {
+    position: relative;
+  }
+  .tap::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: max(100%, 44px);
+    height: max(100%, 44px);
+    translate: -50% -50%;
+  }
+}
+
 /* ---------- Reveal on scroll ---------- */
 /* Groups are marked by RevealObserver; children rise in with a 70ms stagger.
    `backwards` fill only holds the start frame during the delay, so hover

@@ -123,10 +123,10 @@ export async function Page({ locale, routeKey }: PageProps) {
                   <h2 id="toc-title" className="font-sans text-sm font-semibold text-muted">
                     {d.blog.toc}
                   </h2>
-                  <ol className="mt-4 space-y-2 text-sm">
+                  <ol className="mt-4 space-y-3 text-sm lg:space-y-2">
                     {toc.map((h) => (
                       <li key={h.id}>
-                        <a href={`#${h.id}`} className="text-muted hover:text-text">
+                        <a href={`#${h.id}`} className="tap text-muted hover:text-text">
                           {h.text}
                         </a>
                       </li>
@@ -139,12 +139,12 @@ export async function Page({ locale, routeKey }: PageProps) {
                   <h2 id="post-related" className="font-sans text-sm font-semibold text-muted">
                     {d.blog.related}
                   </h2>
-                  <ul className="mt-4 space-y-2 text-sm">
+                  <ul className="mt-4 space-y-3 text-sm lg:space-y-2">
                     {relatedServices.map((s) => (
                       <li key={s.id}>
                         <Link
                           href={pathFor({ type: 'service', id: s.id }, locale)}
-                          className="flex items-center gap-2 font-semibold hover:text-accent-text"
+                          className="tap flex items-center gap-2 font-semibold hover:text-accent-text"
                         >
                           <Icon name={s.icon} className="size-4 text-accent-text" />
                           {s.locales[locale].name}
@@ -155,7 +155,7 @@ export async function Page({ locale, routeKey }: PageProps) {
                       <li key={s.id}>
                         <Link
                           href={pathFor({ type: 'industry', id: s.id }, locale)}
-                          className="flex items-center gap-2 font-semibold hover:text-accent-text"
+                          className="tap flex items-center gap-2 font-semibold hover:text-accent-text"
                         >
                           <Icon name={s.icon} className="size-4 text-accent-text" />
                           {s.locales[locale].name}

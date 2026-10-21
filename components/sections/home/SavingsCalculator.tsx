@@ -114,19 +114,19 @@ export function SavingsCalculator({ copy }: { copy: Copy }) {
         <p className="mt-4 text-sm text-muted">
           {fte} {copy.resultFte}
         </p>
-        <div className="mt-6 flex gap-3 rounded-control border border-line bg-bg p-4 text-sm">
+        <div className="mt-6 flex gap-3 rounded-control border border-line bg-bg p-4 text-base lg:text-sm">
           <Icon name="check" className="mt-0.5 size-4 shrink-0 text-accent-text" />
           {selectedProblem.effect}
         </div>
         <p className="mt-6 text-sm text-muted">{copy.recommended}:</p>
         <a
           href={selectedBusiness.href}
-          className="mt-1 inline-flex items-center gap-1.5 font-bold text-accent-text"
+          className="tap mt-1 inline-flex items-center gap-1.5 font-bold text-accent-text"
         >
           {selectedBusiness.solution}
           <Icon name="arrow" className="size-4" />
         </a>
-        <p className="mt-6 flex-1 text-xs text-muted">
+        <p className="mt-6 flex-1 text-sm text-muted">
           <Rich text={copy.disclaimer} />
         </p>
         <a
@@ -174,7 +174,7 @@ function Range({
         max={max}
         value={value}
         onChange={(e) => onChange(Number(e.target.value))}
-        className="w-full accent-[var(--accent)]"
+        className="h-11 w-full cursor-pointer accent-[var(--accent)]"
       />
     </div>
   )

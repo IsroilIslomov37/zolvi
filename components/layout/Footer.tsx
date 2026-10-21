@@ -29,7 +29,7 @@ export function Footer({ locale, paths }: { locale: Locale; paths: L10n<string> 
     { name: 'Telegram', icon: 'telegram', href: site.telegram.url },
     { name: 'LinkedIn', icon: 'linkedin', href: site.linkedin },
   ]
-  const linkClass = 'text-muted transition-colors hover:text-text'
+  const linkClass = 'tap text-muted transition-colors hover:text-text'
   return (
     <footer className="overflow-hidden bg-bg-soft pb-24 md:pb-0">
       <div className="container-page grid gap-12 pt-16 pb-12 sm:grid-cols-2 lg:grid-cols-12 lg:pt-24">
@@ -162,7 +162,7 @@ function FooterColumn({
   return (
     <div className={className}>
       <h2 className="mb-5 font-sans text-sm font-semibold text-text">{title}</h2>
-      <ul className="space-y-2.5 text-sm">{children}</ul>
+      <ul className="space-y-3.5 text-sm lg:space-y-2.5">{children}</ul>
     </div>
   )
 }

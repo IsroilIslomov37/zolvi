@@ -308,7 +308,7 @@ export function Page({ locale, routeKey }: PageProps) {
               <a
                 href={site.telegram.url}
                 aria-label="Telegram"
-                className="grid size-9 place-items-center rounded-lg border border-line hover:border-accent"
+                className="grid size-11 place-items-center rounded-lg border border-line hover:border-accent"
               >
                 <Icon name="telegram" className="size-4" />
               </a>
@@ -316,7 +316,7 @@ export function Page({ locale, routeKey }: PageProps) {
                 <a
                   href={site.linkedin}
                   aria-label="LinkedIn"
-                  className="grid size-9 place-items-center rounded-lg border border-line hover:border-accent"
+                  className="grid size-11 place-items-center rounded-lg border border-line hover:border-accent"
                 >
                   <Icon name="linkedin" className="size-4" />
                 </a>
@@ -346,7 +346,7 @@ export function Page({ locale, routeKey }: PageProps) {
           <div className="grid gap-1 px-6 py-4 sm:grid-cols-[14rem_1fr]">
             <dt className="text-muted">Email</dt>
             <dd>
-              <a href={`mailto:${site.email}`} className="hover:text-accent-text">
+              <a href={`mailto:${site.email}`} className="tap hover:text-accent-text">
                 {site.email}
               </a>
             </dd>

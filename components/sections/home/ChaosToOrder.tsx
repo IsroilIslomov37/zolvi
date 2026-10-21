@@ -161,7 +161,7 @@ export function ChaosToOrder({
             type="button"
             onClick={toggle}
             aria-pressed={ordered}
-            className="btn btn-ghost btn-sm min-h-9 px-3"
+            className="tap btn btn-ghost btn-sm min-h-9 px-3"
           >
             <Icon name={ordered ? 'close' : 'layers'} className="size-4" />
             {ordered ? labels.toChaos : labels.toOrder}

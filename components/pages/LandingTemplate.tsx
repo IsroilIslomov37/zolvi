@@ -168,7 +168,7 @@ export function LandingTemplate({ item, locale }: { item: Landing; locale: Local
           {demo && (
             <Link
               href={pathFor({ type: 'demo', id: demo.id }, locale)}
-              className="mt-6 inline-flex items-center gap-1.5 font-semibold text-accent-text hover:underline"
+              className="tap mt-6 inline-flex items-center gap-1.5 font-semibold text-accent-text hover:underline"
             >
               {d.cta.demoFull} <Icon name="external" className="size-4" />
             </Link>
@@ -245,7 +245,7 @@ export function LandingTemplate({ item, locale }: { item: Landing; locale: Local
             </ul>
             <Link
               href={pathFor({ type: 'pricing' }, locale)}
-              className="mt-8 inline-flex items-center gap-1.5 font-semibold text-accent-text hover:underline"
+              className="tap mt-8 inline-flex items-center gap-1.5 font-semibold text-accent-text hover:underline"
             >
               {d.nav.pricing} <Icon name="arrow" className="size-4" />
             </Link>
@@ -298,7 +298,9 @@ export function LandingTemplate({ item, locale }: { item: Landing; locale: Local
                     {s.locales[locale].name}
                   </Link>
                 </h3>
-                <p className="mt-2 flex-1 text-sm text-muted">{s.locales[locale].summary}</p>
+                <p className="mt-2 flex-1 text-base text-muted lg:text-sm">
+                  {s.locales[locale].summary}
+                </p>
                 <Icon
                   name="arrow"
                   className="mt-5 size-4 text-muted transition-transform group-hover:translate-x-1 group-hover:text-text"
@@ -320,7 +322,7 @@ export function LandingTemplate({ item, locale }: { item: Landing; locale: Local
                   <li key={s.id}>
                     <Link
                       href={pathFor({ type: 'industry', id: s.id }, locale)}
-                      className="inline-flex min-h-10 items-center gap-2 rounded-full border border-line-strong px-4 text-sm font-semibold transition-colors hover:border-accent hover:bg-surface-2"
+                      className="inline-flex min-h-11 items-center gap-2 rounded-full border border-line-strong px-4 text-sm font-semibold transition-colors hover:border-accent hover:bg-surface-2"
                     >
                       <Icon name={s.icon} className="size-4 text-accent-text" />
                       {s.locales[locale].name}

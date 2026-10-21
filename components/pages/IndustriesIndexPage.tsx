@@ -88,7 +88,7 @@ export function Page({ locale, routeKey }: PageProps) {
                     {l.name}
                   </Link>
                 </h3>
-                <p className="mt-2 flex-1 text-sm text-muted">{l.summary}</p>
+                <p className="mt-2 flex-1 text-base text-muted lg:text-sm">{l.summary}</p>
                 <ul className="mt-4 space-y-1.5 text-sm">
                   {l.pains.slice(0, 2).map((p) => (
                     <li key={p.title} className="flex gap-2 text-muted">

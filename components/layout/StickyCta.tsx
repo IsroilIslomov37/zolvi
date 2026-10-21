@@ -21,7 +21,7 @@ export function StickyCta({ locale }: { locale: Locale }) {
         <a
           href={site.telegram.url}
           aria-label={d.cta.telegram}
-          className="btn btn-secondary w-12 bg-bg px-0"
+          className="btn btn-secondary w-12 shrink-0 bg-bg px-0"
         >
           <Icon name="telegram" />
         </a>
@@ -29,7 +29,7 @@ export function StickyCta({ locale }: { locale: Locale }) {
           <a
             href={phoneHref(site.phone)}
             aria-label={d.cta.call}
-            className="btn btn-secondary w-12 bg-bg px-0"
+            className="btn btn-secondary w-12 shrink-0 bg-bg px-0"
           >
             <Icon name="phone" />
           </a>

@@ -81,7 +81,7 @@ export function ServicesExplorer({
       <button
         type="button"
         onClick={() => openDemo(card.demo!, card.name)}
-        className="relative z-10 inline-flex min-h-8 items-center gap-1.5 rounded-full border border-line-strong px-3 text-xs font-semibold text-muted transition-colors hover:border-accent hover:text-text"
+        className="tap relative z-10 inline-flex min-h-8 items-center gap-1.5 rounded-full border border-line-strong px-3 text-xs font-semibold text-muted transition-colors hover:border-accent hover:text-text"
       >
         <Icon name="play" className="size-3" />
         {labels.demo}
@@ -97,7 +97,7 @@ export function ServicesExplorer({
             type="button"
             aria-pressed={filter === f}
             onClick={() => setFilter(f)}
-            className={`min-h-10 rounded-full border px-4 text-sm font-semibold transition-colors ${
+            className={`min-h-11 rounded-full border px-4 text-sm font-semibold transition-colors ${
               filter === f
                 ? 'border-text bg-text text-bg'
                 : 'border-line-strong text-muted hover:bg-surface-2 hover:text-text'
@@ -158,7 +158,7 @@ export function ServicesExplorer({
                 >
                   {card.name}
                 </Link>
-                <span className="mt-0.5 line-clamp-2 text-sm text-muted lg:line-clamp-1">
+                <span className="mt-0.5 line-clamp-2 text-base text-muted lg:line-clamp-1 lg:text-sm">
                   {card.summary}
                 </span>
               </span>

@@ -199,7 +199,7 @@ export function Page({ locale, routeKey }: PageProps) {
                     <th scope="row" className="px-5 py-4 font-semibold">
                       <Link
                         href={pathFor({ type: 'service', id: s.id }, locale)}
-                        className="inline-flex items-center gap-2 hover:text-accent-text"
+                        className="tap inline-flex items-center gap-2 hover:text-accent-text"
                       >
                         <Icon name={s.icon} className="size-4 text-accent-text" />
                         {s.locales[locale].name}

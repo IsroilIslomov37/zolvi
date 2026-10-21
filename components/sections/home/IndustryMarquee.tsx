@@ -13,7 +13,7 @@ export function IndustryMarquee({ locale }: { locale: Locale }) {
         <Link
           href={pathFor({ type: 'industry', id: item.id }, locale)}
           tabIndex={hidden ? -1 : undefined}
-          className="flex items-center gap-6 px-6 font-display text-xl font-bold whitespace-nowrap text-muted transition hover:text-text sm:text-2xl"
+          className="flex items-center gap-6 px-6 py-2 font-display text-xl font-bold whitespace-nowrap text-muted transition hover:text-text sm:text-2xl"
         >
           {item.label}
           <span className="size-1.5 rounded-full bg-accent" aria-hidden="true" />

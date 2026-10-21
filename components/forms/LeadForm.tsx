@@ -239,8 +239,8 @@ export function LeadForm({
           </span>
         </p>
       )}
-      <p className="text-xs text-muted">
-        <a href={privacyHref} className="underline underline-offset-2 hover:text-text">
+      <p className="text-sm text-muted">
+        <a href={privacyHref} className="tap underline underline-offset-2 hover:text-text">
           {t.consent}
         </a>
       </p>

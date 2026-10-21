@@ -1,23 +1,17 @@
 /ru
-  performance 93 · accessibility 100 · best-practices 100 · seo 100
-  LCP 3.2 s · CLS 0 · TBT 50 ms · FCP 1.2 s
-  runs (perf): 91, 93, 93
+  performance 92 · accessibility 100 · best-practices 100 · seo 100
+  LCP 3.2 s · CLS 0 · TBT 100 ms · FCP 1.3 s
+  runs (perf): 73, 92, 97
   report: reports\lighthouse\ru.html
 
 /
-  performance 92 · accessibility 100 · best-practices 100 · seo 100
-  LCP 3.3 s · CLS 0 · TBT 50 ms · FCP 1.3 s
-  runs (perf): 85, 92, 97
+  performance 93 · accessibility 100 · best-practices 100 · seo 100
+  LCP 3.2 s · CLS 0 · TBT 50 ms · FCP 1.1 s
+  runs (perf): 92, 93, 93
   report: reports\lighthouse\home.html
 
 /ru/uslugi/razrabotka-crm
   performance 94 · accessibility 100 · best-practices 100 · seo 100
-  LCP 3.0 s · CLS 0 · TBT 30 ms · FCP 1.1 s
-  runs (perf): 94, 94, 97
+  LCP 3.1 s · CLS 0 · TBT 30 ms · FCP 1.1 s
+  runs (perf): 83, 94, 94
   report: reports\lighthouse\ru_uslugi_razrabotka-crm.html
-
-/ru/ceny
-  performance 94 · accessibility 100 · best-practices 100 · seo 100
-  LCP 3.0 s · CLS 0 · TBT 30 ms · FCP 1.1 s
-  runs (perf): 94, 94, 97
-  report: reports\lighthouse\ru_ceny.html

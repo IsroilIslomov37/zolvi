@@ -172,7 +172,7 @@ export function Page({ locale, routeKey }: PageProps) {
             )}
           </Channel>
           <Channel icon="mail" label={c.email}>
-            <a href={`mailto:${site.email}`} className="break-all hover:text-accent-text">
+            <a href={`mailto:${site.email}`} className="tap break-all hover:text-accent-text">
               {site.email}
             </a>
           </Channel>

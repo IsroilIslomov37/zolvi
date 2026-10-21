@@ -32,7 +32,7 @@ export function DemoFrame({
         {actions}
       </div>
       <div className="p-3 sm:p-5">{children}</div>
-      <p className="border-t border-line px-4 py-2.5 text-xs text-muted">{note}</p>
+      <p className="border-t border-line px-4 py-2.5 text-sm text-muted">{note}</p>
     </div>
   )
 }
@@ -47,4 +47,4 @@ export const fmtNumber = (n: number) => new Intl.NumberFormat('ru-RU').format(n)
 
 export const currency: L10n<string> = { uz: "so'm", ru: 'сум', en: 'UZS' }
 
-export const smallBtn = 'btn btn-primary min-h-8 rounded-lg px-3 py-1.5 text-xs'
+export const smallBtn = 'tap btn btn-primary min-h-8 rounded-lg px-3 py-1.5 text-xs'

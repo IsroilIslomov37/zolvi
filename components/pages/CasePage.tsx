@@ -145,7 +145,7 @@ export function Page({ locale, routeKey }: PageProps) {
               {industry && (
                 <Link
                   href={pathFor({ type: 'industry', id: industry.id }, locale)}
-                  className="underline-offset-4 hover:text-accent-text hover:underline"
+                  className="tap underline-offset-4 hover:text-accent-text hover:underline"
                 >
                   {industry.locales[locale].name}
                 </Link>
@@ -219,7 +219,7 @@ export function Page({ locale, routeKey }: PageProps) {
                 <li key={s.id}>
                   <Link
                     href={pathFor({ type: 'service', id: s.id }, locale)}
-                    className="inline-flex items-center gap-2 rounded-full border border-line-strong px-4 py-2 text-sm font-semibold transition hover:border-accent"
+                    className="inline-flex min-h-11 items-center gap-2 rounded-full border border-line-strong px-4 text-sm font-semibold transition hover:border-accent"
                   >
                     <Icon name={s.icon} className="size-4 text-accent-text" />
                     {s.locales[locale].name}

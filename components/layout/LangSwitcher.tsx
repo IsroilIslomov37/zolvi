@@ -25,7 +25,7 @@ export function LangSwitcher({
               aria-current={l === locale ? 'true' : undefined}
               title={localeMeta[l].label}
               className={`grid place-items-center rounded-lg px-2.5 transition-colors ${
-                large ? 'min-h-10 min-w-11' : 'min-h-8 min-w-9'
+                large ? 'min-h-11 min-w-11' : 'min-h-11 min-w-11 lg:min-h-8 lg:min-w-9'
               } ${l === locale ? 'bg-surface-2 text-text' : 'text-muted hover:text-text'}`}
             >
               {localeMeta[l].short}

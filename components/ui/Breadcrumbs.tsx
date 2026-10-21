@@ -20,7 +20,7 @@ export function Breadcrumbs({
                 </span>
               ) : (
                 <>
-                  <Link href={item.path} className="hover:text-text">
+                  <Link href={item.path} className="tap hover:text-text">
                     {item.name}
                   </Link>
                   <span aria-hidden="true" className="opacity-50">

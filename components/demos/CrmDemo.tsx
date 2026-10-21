@@ -84,7 +84,7 @@ export default function CrmDemo({ locale }: { locale: Locale }) {
         </button>
       }
     >
-      <p className="mb-3 text-xs text-muted">{t.hint}</p>
+      <p className="mb-3 text-sm text-muted">{t.hint}</p>
       <div className="grid grid-cols-2 gap-2 md:grid-cols-4">
         {t.stages.map((stage, si) => {
           const items = leads.filter((l) => l.stage === si)
