@@ -43,7 +43,7 @@ export function SavingsCalculator({ copy }: { copy: Copy }) {
   const label = 'mb-2 block text-sm font-semibold'
 
   return (
-    <div className="grid gap-6 lg:grid-cols-[1fr_1fr]">
+    <div className="reveal-group grid gap-6 lg:grid-cols-[1fr_1fr]">
       <div className="card space-y-6 p-6 sm:p-8">
         <div>
           <label htmlFor={`${id}-b`} className={label}>

@@ -539,6 +539,11 @@ header:has(.mobile-menu[data-open]) {
   letter-spacing: -0.04em;
   color: var(--surface-2);
 }
+/* Drawn as generated content: it is decoration, so it stays out of the text that
+   contrast checks (and copy/paste) see. */
+.footer-wordmark::before {
+  content: attr(data-word);
+}
 
 /* ---------- Hero ---------- */
 /* Dots sit tilted and slightly scattered in chaos (--p 0) and line up as --p reaches 1. */
@@ -608,4 +613,30 @@ header:has(.mobile-menu[data-open]) {
 }
 .animate-pop-in {
   animation: pop-in var(--duration-slow) var(--ease-out) both;
+}
+
+/* ---------- Reveal on scroll ---------- */
+/* Groups are marked by RevealObserver; children rise in with a 70ms stagger.
+   `backwards` fill only holds the start frame during the delay, so hover
+   transforms on cards keep working once the entrance is over. */
+.js-reveal [data-reveal]:not([data-inview]) > * {
+  opacity: 0;
+}
+[data-reveal][data-inview=''] > * {
+  animation: reveal var(--duration-slow) var(--ease-out) backwards;
+  animation-delay: calc(var(--i, 0) * 70ms);
+}
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .js-reveal [data-reveal]:not([data-inview]) > * {
+    opacity: 1;
+  }
+  [data-reveal] > * {
+    animation: none !important;
+  }
 }

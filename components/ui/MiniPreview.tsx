@@ -10,6 +10,7 @@ export function MiniPreview({ kind }: { kind: PreviewKind }) {
   return (
     <div
       aria-hidden="true"
+      data-ui
       className="mini-preview pointer-events-none h-full w-full overflow-hidden rounded-control border border-line bg-bg p-3 transition-transform duration-500 ease-out group-hover:scale-[1.02]"
     >
       {kind === 'crm' && <Crm />}

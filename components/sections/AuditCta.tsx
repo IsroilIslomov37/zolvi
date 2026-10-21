@@ -26,7 +26,7 @@ export function AuditCta({
       className="section-y relative overflow-hidden"
     >
       <div className="grid-bg pointer-events-none absolute inset-0 opacity-60" aria-hidden="true" />
-      <div className="container-page relative grid items-start gap-10 lg:grid-cols-[1.1fr_1fr] lg:gap-16">
+      <div className="reveal-group container-page relative grid items-start gap-10 lg:grid-cols-[1.1fr_1fr] lg:gap-16">
         <div className="lg:sticky lg:top-28">
           <p className="eyebrow mb-4">{d.form.title}</p>
           <h2 id="audit-title" className="text-heading font-bold">

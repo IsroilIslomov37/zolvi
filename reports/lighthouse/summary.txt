@@ -1,11 +1,23 @@
+/ru
+  performance 93 · accessibility 100 · best-practices 100 · seo 100
+  LCP 3.2 s · CLS 0 · TBT 50 ms · FCP 1.2 s
+  runs (perf): 91, 93, 93
+  report: reports\lighthouse\ru.html
+
 /
-  performance 97 · accessibility 100 · best-practices 100 · seo 100
-  LCP 2.7 s · CLS 0 · TBT 40 ms · FCP 1.0 s
-  runs (perf): 95, 97, 97
+  performance 92 · accessibility 100 · best-practices 100 · seo 100
+  LCP 3.3 s · CLS 0 · TBT 50 ms · FCP 1.3 s
+  runs (perf): 85, 92, 97
   report: reports\lighthouse\home.html
 
-/xizmatlar/crm-tizimi
-  performance 97 · accessibility 100 · best-practices 100 · seo 100
-  LCP 2.7 s · CLS 0 · TBT 40 ms · FCP 0.9 s
-  runs (perf): 97, 97, 97
-  report: reports\lighthouse\xizmatlar_crm-tizimi.html
+/ru/uslugi/razrabotka-crm
+  performance 94 · accessibility 100 · best-practices 100 · seo 100
+  LCP 3.0 s · CLS 0 · TBT 30 ms · FCP 1.1 s
+  runs (perf): 94, 94, 97
+  report: reports\lighthouse\ru_uslugi_razrabotka-crm.html
+
+/ru/ceny
+  performance 94 · accessibility 100 · best-practices 100 · seo 100
+  LCP 3.0 s · CLS 0 · TBT 30 ms · FCP 1.1 s
+  runs (perf): 94, 94, 97
+  report: reports\lighthouse\ru_ceny.html

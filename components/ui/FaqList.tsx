@@ -8,7 +8,7 @@ import { Rich } from './Todo'
  */
 export function FaqList({ items }: { items: Faq[] }) {
   return (
-    <div className="faq divide-y divide-line border-y border-line">
+    <div className="faq reveal-group divide-y divide-line border-y border-line">
       {items.map((item) => (
         <details key={item.q} className="group">
           <summary className="flex cursor-pointer list-none items-center justify-between gap-6 rounded-control py-6 text-left transition-colors hover:text-accent-text [&::-webkit-details-marker]:hidden">

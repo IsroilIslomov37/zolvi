@@ -13,7 +13,10 @@ export function DemoFrame({
   actions?: ReactNode
 }) {
   return (
-    <div className="overflow-hidden rounded-card border border-line bg-surface text-text shadow-float">
+    <div
+      data-ui
+      className="overflow-hidden rounded-card border border-line bg-surface text-text shadow-float"
+    >
       <div className="flex flex-wrap items-center justify-between gap-3 border-b border-line bg-surface-2 px-4 py-3">
         <div className="flex items-center gap-3">
           <span className="flex gap-1.5" aria-hidden="true">

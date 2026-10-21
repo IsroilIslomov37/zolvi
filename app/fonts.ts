@@ -10,8 +10,10 @@ export const inter = Inter({
 })
 
 // One static weight keeps the preloaded file small; headings only use bold.
+// Cyrillic is preloaded too (12.8 kB): Unbounded is far wider than its Arial
+// fallback, so a late swap re-wraps the hero heading on /ru and shifts the layout.
 export const unbounded = Unbounded({
-  subsets: ['latin'],
+  subsets: ['latin', 'cyrillic'],
   weight: '700',
   display: 'swap',
   variable: '--font-unbounded',

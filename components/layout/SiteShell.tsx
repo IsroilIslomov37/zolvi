@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react'
 import { AuditCta } from '@/components/sections/AuditCta'
 import { JsonLd } from '@/components/ui/JsonLd'
+import { RevealObserver } from '@/components/ui/RevealObserver'
 import { getDictionary } from '@/lib/dictionary'
 import type { Locale } from '@/lib/i18n'
 import { alternatePaths, type RouteKey } from '@/lib/routes'
@@ -32,6 +33,7 @@ export function SiteShell({
       </main>
       <Footer locale={locale} paths={alternatePaths(routeKey)} />
       <StickyCta locale={locale} />
+      <RevealObserver />
       <JsonLd data={graph(organizationLd(locale, d.brandTagline), websiteLd(locale))} />
     </>
   )

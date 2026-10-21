@@ -141,9 +141,11 @@ export function Footer({ locale, paths }: { locale: Locale; paths: L10n<string> 
         </div>
       </div>
 
-      <p aria-hidden="true" className="footer-wordmark container-page select-none">
-        ZOLVI
-      </p>
+      <div
+        aria-hidden="true"
+        data-word="ZOLVI"
+        className="footer-wordmark container-page select-none"
+      />
     </footer>
   )
 }
